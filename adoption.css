@@ -1,0 +1,131 @@
+:root {
+    --background-orange: #ffd6b2;
+}
+
+
+
+#MAIN-CONTAINER{
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: var(--background-orange);
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  justify-content: left;
+}
+
+header{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  height: 30%;
+  width: 100%;
+  background-color: darkred;
+
+}
+
+main{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  height: 70%;
+  width: 100%;
+  background-color: darkcyan;
+}
+
+.carousel{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  height: 100%;
+  width: 45%;
+  background-color:coral;
+  justify-content: center;
+  align-items: center;  
+}
+
+.page{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  height: 100%;
+  width: 70%;
+  background-color: lightblue;
+}
+
+.filters{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  height: 20%;
+  width: 100%;
+  background-color:lightgreen;
+  justify-content: left;
+  align-items: center;
+}
+
+.filter-label{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  height: 70%;
+  width: 9%;
+  background-color: lightseagreen;
+  margin: 10px;
+  justify-content: center;
+  align-items: center; 
+  
+}
+
+.filter-node{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  height: 70%;
+  width: 9%;
+  border-radius: 50%;
+  background-color: darkgreen;
+  margin: 10px;
+  justify-content: center;
+  align-items: center; 
+  border: none;  
+}
+
+.information{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: lightskyblue;
+  justify-content: center;
+  align-items: center; 
+}
+
+.arrow{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  height: 10%;
+  width: 10%;
+  margin: 15px;
+  background-color: lightskyblue;
+  justify-content: center;
+  align-items: center;  
+  border: none;
+}
+
+.pet{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  height: 70%;
+  width: 60%;
+  margin: 15px;
+  background-color: pink;
+  justify-content: center;
+  align-items: center; 
+}
