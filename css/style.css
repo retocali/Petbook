@@ -1,13 +1,18 @@
+:root {
+    --main-color: #8BCBC8;
+    --accent-color: #FDAE84;
+}
+
 .html {
     margin: 0px;
     padding: 0px;
 }
 
 #top-border {
-    background-color: cornflowerblue;
+    background-color: var(--main-color);
     margin: 0px;
     border: 20px solid white;
-    border-bottom-color: coral;
+    border-bottom-color: var(--accent-color);
     
     color: white;
     padding: 5px;
@@ -21,26 +26,57 @@
 }
 
 .finger {
-    fill: cornflowerblue;
+    fill: var(--main-color);
     /* stroke: tomato; */
 }
 .pad {
-    fill: cornflowerblue;
+    fill: var(--main-color)
     /* stroke: tomato; */
 }
 .mainbutton {
-    stroke: #4668A5;
+    stroke: cornflowerblue;
     stroke-width: 5;
     fill: white;
 }
 
 .mainbutton:hover {
-    stroke: coral;
+    stroke: var(--accent-color);
     stroke-width: 10;
     fill: white;
 }
 
 .mainbuttontext {
     font-family: 'Lemon';
-    fill: whitesmoke;
+    fill: white;
+}
+
+#search {
+    background-color: var(--main-color);
+    color: var(--main-color);
+    padding: 5px;
+    text-align: left;
+    font-family: 'Lemon', cursive; 
+    font-size: 45px;
+    border: none;
+    border-radius: 20px;
+    width: 400px;
+}
+::placeholder {
+    color: white;
+}
+
+#search:hover, #search:focus {
+    background-color: var(--accent-color);
+    color: black;
+    opacity: .9;
+}
+#searchbutton {
+    font-size: 40px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+}
+
+button:hover {
+    opacity:1;
 }
