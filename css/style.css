@@ -36,18 +36,23 @@
 .mainbutton {
     stroke: cornflowerblue;
     stroke-width: 5;
-    fill: white;
+    fill: #FFFFFF00;
 }
 
 .mainbutton:hover {
     stroke: var(--accent-color);
     stroke-width: 10;
-    fill: white;
 }
 
 .mainbuttontext {
     font-family: 'Lemon';
     fill: white;
+}
+
+.profiletext {
+    font-family: 'Lemon';
+    fill: var(--main-color);
+    font-size: 40px;
 }
 
 #search {
