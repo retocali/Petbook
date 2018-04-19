@@ -1,0 +1,21 @@
+.html {
+    margin: 0px;
+    padding: 0px;
+}
+
+#top-border {
+    background-color: cornflowerblue;
+    
+    border: 20px solid white;
+    border-bottom-color: coral;
+    
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Lemon', cursive; 
+    font-size: 60px;
+}
+
+#body {
+    background: #e9f0fc;
+}
