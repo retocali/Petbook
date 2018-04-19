@@ -4,16 +4,20 @@
 }
 
 .html {
-    margin: 0px;
-    padding: 0px;
+    margin: 0px !important;
+    padding: 0px !important;
+    display: inline-block;
+}
+body {
+    margin: 0px !important;
+    padding: 0px !important;
 }
 
 #top-border {
+    margin: 0 !important;
     background-color: var(--main-color);
-    margin: 0px;
     border: 20px solid white;
     border-bottom-color: var(--accent-color);
-    
     color: white;
     padding: 5px;
     text-align: center;
