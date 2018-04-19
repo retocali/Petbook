@@ -3,8 +3,9 @@
     <head>
         <link href="https://fonts.googleapis.com/css?family=Lemon" rel="stylesheet"> 
         <link rel="stylesheet" href="css/style.css">
+        <script src="js/main.js"></script>
     </head>
-
+    <title>PetBook Main Page</title>
     <div id=top-border>
          PetBook
     </div>
@@ -12,20 +13,38 @@
     <body id=body>
         <div style="text-align:center">
             <svg height="800" width="1200">
-                    <circle cx="300" cy="400" r="100" stroke="cornflowerblue" stroke-width="7" fill="coral" />
-                    <circle cx="300" cy="405" r="95" stroke="cornflowerblue" stroke-width="5" fill="white" />
+                    <ellipse class="finger" id="explorePets" cx="310" cy="380" rx="80" ry="110"/>
+                    <text class="mainbuttontext" x="255" y="320"> Explore Pets </text>
+                    <a href="social.html">
+                        <circle class="mainbutton"  cx="310" cy="405" r="70"/>
+                    </a>
 
-                    <circle cx="475" cy="250" r="100" stroke="cornflowerblue" stroke-width="7" fill="coral" />
-                    <circle cx="475" cy="255" r="95" stroke="cornflowerblue" stroke-width="5" fill="white" />
+                    <ellipse class="finger" id="qaForum" cx="490" cy="200" rx="80" ry="110"/>
+                    <text class="mainbuttontext" x="440" y="140"> Q&A Forum </text>
+                    <a href="qa.html">
+                        <circle class="mainbutton" cx="490" cy="225" r="70"/>
+                    </a>
+                    
+                    <ellipse class="finger" id="newFeed" cx="710" cy="200" rx="80" ry="110"/>
+                    <text class="mainbuttontext" x="660" y="140"> News Feed </text>
+                    <a href="news.html">
+                        <circle class="mainbutton" cx="710" cy="225" r="70"/>
+                    </a>
 
-                    <circle cx="725" cy="250" r="100" stroke="cornflowerblue" stroke-width="7" fill="coral" />
-                    <circle cx="725" cy="255" r="95" stroke="cornflowerblue" stroke-width="5" fill="white" />
+                    <ellipse class="finger" id="services" cx="910" cy="380" rx="80" ry="110"/>
+                    <text class="mainbuttontext" x="870" y="300"> Adoption</text>
+                    <text class="mainbuttontext" x="860" y="325">& Services</text>
+                    <a href="services.html">
+                        <circle class="mainbutton" cx="910" cy="405" r="70"/>
+                    </a>
 
-                    <circle cx="900" cy="400" r="100" stroke="cornflowerblue" stroke-width="7" fill="coral" />
-                    <circle cx="900" cy="405" r="95" stroke="cornflowerblue" stroke-width="5" fill="white" />
-
-                    <ellipse cx="600" cy="550" rx="225" ry="200" stroke="cornflowerblue" stroke-width="7" fill="coral" />
-                    <ellipse cx="600" cy="555" rx="220" ry="190" stroke="cornflowerblue" stroke-width="5" fill="white" />
+                    <ellipse class="pad" cx="675" cy="575" rx="175" ry="150"/>
+                    <ellipse class="pad" cx="600" cy="490" rx="160" ry="175"/>
+                    <ellipse class="pad" cx="525" cy="575" rx="175" ry="150"/>
+                    <text class="mainbuttontext" x="550" y="370"> My Profile</text>
+                    <a href="login.html">
+                        <ellipse class="mainbutton" cx="600" cy="550" rx="160" ry="150"/>
+                    </a>
             </svg>
         </div>
     </body>

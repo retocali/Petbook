@@ -5,7 +5,7 @@
 
 #top-border {
     background-color: cornflowerblue;
-    
+    margin: 0px;
     border: 20px solid white;
     border-bottom-color: coral;
     
@@ -18,4 +18,29 @@
 
 #body {
     background: #e9f0fc;
+}
+
+.finger {
+    fill: cornflowerblue;
+    /* stroke: tomato; */
+}
+.pad {
+    fill: cornflowerblue;
+    /* stroke: tomato; */
+}
+.mainbutton {
+    stroke: #4668A5;
+    stroke-width: 5;
+    fill: white;
+}
+
+.mainbutton:hover {
+    stroke: coral;
+    stroke-width: 10;
+    fill: white;
+}
+
+.mainbuttontext {
+    font-family: 'Lemon';
+    fill: whitesmoke;
 }
