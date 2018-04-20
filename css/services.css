@@ -1,5 +1,5 @@
 :root {
-    --background-orange: cornflowerblue;
+    --background-orange: smokescreenwhite;
 }
 
 
@@ -84,9 +84,16 @@ main{
     border-radius: 50%;
 }
 
+
+
 .img{
   height: 120%;
   width: 90%;
+}
+
+.img:hover{
+  height: 125%;
+  width: 95%;
 }
 
 

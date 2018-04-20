@@ -5,7 +5,7 @@
 #MAIN-CONTAINER{
   display: flex;
   flex-wrap: nowrap;
-  background-color: cornflowerblue;
+  background-color: whitesmoke;
   flex-direction: column;
   height: 100vh;
   width: 100vw;
@@ -62,9 +62,9 @@ main{
   width: 40%;
   justify-content: left;
   align-items: center;
-  background-color: lightskyblue;
+  background-color: cornflowerblue;
   border: solid;
-  border-color: coral;
+  border-color: #4668A5;
   border-width: 4px;
   margin-bottom: 5px;
   margin-top: 4px;
@@ -89,7 +89,7 @@ main{
   height: 70%;
   width: 17%;
   border-radius: 50%;
-  background-color: coral;
+  background-color: #4668A5;
   margin: 10px;
   justify-content: center;
   align-items: center; 
@@ -102,19 +102,27 @@ main{
   flex-direction: column;
   height: 100%;
   width: 70%;
-  background-color: lightskyblue;
+  background-color: white;
   justify-content: center;
   align-items: center; 
+  border: solid;
+  border-color: #4668A5;
+  border-radius: 40px;
+  overflow: hidden;
+  border-collapse: collapse;
+  margin: 10px;
 }
 
 .arrow{
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
-  height: 15%;
-  width: 15%;
+  height: 12vh;
+  width: 12vh;
   margin: 0px;
   background-color: cornflowerblue;
+  margin: 2px;
+  border-radius: 300px;
   justify-content: center;
   align-items: center;  
   border: none;
@@ -131,6 +139,8 @@ main{
   align-items: center; 
   border: solid;
   border-width: 5px;
+  overflow: hidden;
+  border-radius: 100px;
   border-color: coral;
 }
 
@@ -140,8 +150,8 @@ main{
 }
 
 .arrowImg{
-  height: 100%;
-  width: 100%;
+  height: 80%;
+  width: 60%;
 }
 
 .info-row{
@@ -158,11 +168,13 @@ main{
   justify-content: center;
   align-items: center;
   margin-right: 4px;  
-  background-color: coral;
+  border: solid;
+  border-color: #4668A5;
+  background-color: cornflowerblue;
 }
 
 .labelText {
-    font-family: 'Lemon';
+    font-family: 'Helvetica';
     justify-content: center;
     align-items: center;  
     fill: whitesmoke;
@@ -173,8 +185,7 @@ main{
     font-family: 'Lemon';
     justify-content: center;
     align-items: center;  
-    fill: coral;
-    color: coral;
+    fill: white;
 }
 
 .blurb{
@@ -186,7 +197,7 @@ main{
 }
 
 .blurbText {
-    font-family: 'Jua';
+    font-family: 'Helvetica';
     justify-content: center;
     align-items: center;  
     fill: black;
@@ -194,17 +205,18 @@ main{
 }
 
 .adoption{
-  height: 150%;
-  width: 10%;
+  height: 90%;
+  width: 8%;
 }
 
 .adopt{
   display: flex;
-  height: 50%;
+  height: 100%;
   width: 100%;
   justify-content: center;
   align-items: center;
   background-color: green;
+  border-radius: 25px;
 }
 
 .cancel{
