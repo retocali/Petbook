@@ -3,11 +3,16 @@
 }
 
 body{
+    top:0px;
+    left: 0px;
+    border:0px;
     display: grid;
     grid-template-columns: 15% 15% 40% 15% 15%;
     grid-template-rows: 15% 15% 5% 15% 15% 15% 20%;
-    width:100vw;
+    width:95vw;
     height: 100vh; 
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
 }
 
 [id="explore_pets"]{
@@ -35,6 +40,16 @@ body{
     width: 100%;
     background-color: #555;
 }
+[id="forum_text"]{
+    position:relative; 
+    top: 31%; 
+    font-family: "Lemon";
+    font-size: 4vw;
+    text-align: center;
+    vertical-align: middle; 
+    border:0px;
+    margin: 0px;
+}
 
 [id="news"]{
     grid-column: 4;
@@ -53,3 +68,93 @@ body{
     border-radius:50%;
     background-color: orange;
 }
+
+
+[id="profile_button"]{
+    grid-column:1;
+    grid-row:4;
+    height: 100%;
+    width: 100%;
+    border-radius:50%;
+}
+[id="search_button"]{
+    grid-column:1;
+    grid-row:5;
+    height: 100%;
+    width: 100%;
+    border-radius:50%;
+}
+[id="question_button"]{
+    grid-column:1;
+    grid-row:6;
+    height: 100%;
+    width: 100%;
+    border-radius:50%;
+}
+
+[id="knowledge"]{
+    grid-column:5;
+    grid-row:4;
+    height: 100%;
+    width: 100%;
+    border-radius:50%;
+}
+[id="training"]{
+    grid-column:5;
+    grid-row:5;
+    height: 100%;
+    width: 100%;
+    border-radius:50%;
+}
+[id="care"]{
+    grid-column:5;
+    grid-row:6;
+    height: 100%;
+    width: 100%;
+    border-radius:50%;
+}
+
+.img{
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.main_buttons{
+    position:relative;
+}
+
+[id="forum_container"]{
+    grid-column: 2/5;
+    grid-row: 3/8;
+    height:100%;
+    width: 100%;
+    background-color: red; 
+    display: grid;
+    grid-template-rows: 10% 30% 30% 30%;
+    grid-row-gap: 5px;
+}
+
+.entry{
+    display:grid;
+    grid-template-rows: 15% 70% 15%;
+    grid-template-columns: 10% 70% 10% 10%;
+}
+
+[id="first_entry"]{
+    grid-row: 1;
+    background-color:blue;
+}
+
+[id="second_entry"]{
+    grid-row: 2;
+    background-color: black;
+}
+[id="third_entry"]{
+    grid-row:3;
+    background-color: yellow;
+}
+
+
+
+
+
