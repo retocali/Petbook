@@ -1,7 +1,7 @@
 :root {
-    --main-color: #8BCBC8;
+    --blue-color: #8BCBC8;
     --icing-color: #DAE9E4;
-    --accent-color: #FDAE84;
+    --orange-color: #FDAE84;
     --sakura-color: #ECC7C0;
     --cranberry-color: #3C2E3D;
 }
@@ -40,12 +40,6 @@ div{
   align-items: center;
   font-family: 'Lemon';
   color: var(--cranberry-color);
-
-}
-
-#navigation_bar{
-  height: 10%;
-  color: var(--main-color);
 }
 
 .arrow{
@@ -75,7 +69,7 @@ div{
   height: 15vw;
   margin: 2vw;
   border-radius: 50%;
-  background-color: var(--main-color);
+  background-color: var(--blue-color);
   display: inline-flex;
   background-size: cover;
   background-position: center center;
@@ -86,7 +80,7 @@ div{
 .text_label{
   font-weight: 1000;
   font-size: 4vw;
-  color: var(--main-color);
+  color: var(--orange-color);
   text-shadow: -2px 0 var(--cranberry-color), 0 2px var(--cranberry-color), 2px 0 var(--cranberry-color), 0 -2px var(--cranberry-color);
   opacity: 0;
   transition: opacity .1s linear;
@@ -96,7 +90,7 @@ div{
   width: 20vw;
   height: 20vw;
   margin: 1vw;
-  border: 3px solid var(--main-color);
+  border: 3px solid var(--orange-color);
   transition: width .1s linear;
   transition: height .1s linear;
 }
@@ -116,7 +110,7 @@ div{
   height: 15vw;
   margin: 2vw;
   border-radius: 50%;
-  background-color: var(--main-color);
+  background-color: var(--blue-color);
   display: inline-flex;
   background-size: cover;
   background-position: center center;
@@ -143,7 +137,7 @@ div{
   border-radius: 50%;
   display: inline-flex;
   background-color: var(--cranberry-color);
-  color: var(--main-color);
+  color: var(--blue-color);
 }
 
 .information_box{
@@ -151,7 +145,7 @@ div{
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--main-color);
+  background-color: var(--blue-color);
 }
 
 .information{
