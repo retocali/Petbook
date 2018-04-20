@@ -101,18 +101,6 @@ img{
   width: 70%;
 }
 
-#top-border {
-    background-color: #8BCBC8;
-    margin: 0px;
-    border: 20px solid white;
-    border-bottom-color: #FDAE84;
-    
-    color: white;
-    padding: 5px;
-    text-align: center;
-    font-family: 'Lemon', cursive; 
-    font-size: 60px;
-}
 
 .serviceText {
     font-family: 'Lemon';
