@@ -19,8 +19,8 @@ body {
 #top-border {
     margin: 0 !important;
     background-color: var(--main-color);
-    border: 20px solid var(--icing-color);
-    border-bottom-color: #e9f0fc;
+    border: 20px solid var(--blue-color);
+    border-bottom-color: var(--icing-color);
     color: white;
     padding: 5px;
     text-align: center;
@@ -29,7 +29,7 @@ body {
 }
 
 #body {
-    background: #e9f0fc;
+    background: var(--icing-color);
 }
 
 .finger {
