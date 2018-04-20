@@ -224,11 +224,13 @@ div#main, div.sides, div.catagories, div.type{
 .info_label{
   font-family: 'Helvetica';
   font-weight: 1000;
-  line-height: 30px;
+  font-size: 1.8vh;
+  line-height: 3.2vh;
 }
 .pet_info{
   font-family: 'Helvetica';
-  line-height: 30px;
+  font-size: 1.8vh;
+  line-height: 3.2vh;
 }
 .pet_grid{
   display: grid;
