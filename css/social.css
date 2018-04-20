@@ -23,7 +23,7 @@
 a {
     text-decoration: none !important;
 }
-main{
+main {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -34,7 +34,7 @@ main{
   align-self: center;
 }
 
-div{
+div#main, div.sides, div.catagories, div.type{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,17 +90,21 @@ div{
   width: 20vw;
   height: 20vw;
   margin: 1vw;
-  border: 3px solid var(--orange-color);
+  border: 5px solid var(--orange-color);
   transition: width .1s linear;
   transition: height .1s linear;
 }
-.type:hover .text_label{
+.type:hover .text_label {
   opacity: 1;
   transition: opacity .2s linear;
 }
 
 .carousel{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lemon';
+  color: var(--cranberry-color);
   flex-direction: column;
   width: 25vw;
 }
@@ -123,14 +127,28 @@ div{
 }
 
 .filter_box{
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lemon';
+  color: var(--cranberry-color);
   display: inline-flex;
   margin: .3vw;
 }
 
 #filter_label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lemon';
+  color: var(--cranberry-color);
   margin-right: .5vw;
 }
 .filter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lemon';
+  color: var(--cranberry-color);
   width: 35px;
   height: 35px;
   margin: .2vw;
@@ -141,18 +159,46 @@ div{
 }
 
 .information_box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--cranberry-color);
   width: 100%;
   height: 100%;
-  display: flex;
   flex-direction: column;
   background-color: var(--blue-color);
+  font-family: 'Helvetica';
 }
 
 .information{
-  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lemon';
+  color: var(--cranberry-color);
   width: 95%;
-  align-self: center;
   background-color: var(--icing-color);
-  display: grid;
-  grid-template-columns: repeat(1fr 1fr 1fr);
+  border-radius: 10px;
+}
+
+.info_labels{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--orange-color);
+}
+.pet_infos{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--orange-color);
+}
+
+#favorite{
+  height: 40px;
+}
+
+.info_label{
+  font-family: 'Helvetica';
+}
+.pet_info{
+  font-family: 'Helvetica';
 }
