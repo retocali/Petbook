@@ -208,7 +208,7 @@ div#main, div.sides, div.catagories, div.type{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--blue-color);
+  color: var(--icing-color);
   background-color: var(--cranberry-color);
   margin: 1vw;
   border-radius: 10px;
@@ -237,15 +237,19 @@ div#main, div.sides, div.catagories, div.type{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  flex-grow: 1;
+  flex-basis: 0;
+  min-height: 37vh;
   overflow-y: scroll;
 
 }
 .post{
-  height: 100px;
-  width: 100px; 
+  height: 22vh;
+  width: 22vh; 
   background-size: cover;
   background-position: center center;
   border-radius: 3px;
   border: 1px solid var(--cranberry-color);
-  margin: .5vw;
+  margin-right: 1vw;
+  margin-bottom: 1vw;
 }
