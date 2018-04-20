@@ -6,7 +6,7 @@
 
 <head>
 <meta charset="utf-8">
-<title>PetBook Adoption</title>
+<title>PetBook Social Reptiles</title>
 
 <!-- Use mobile-aware viewport -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,139 +23,37 @@
 <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
 
 </head>
-<div id=top-border>
-         PetBook
+<div id=navigation_bar>
+         Reptiles
     </div>
 <body id = "MAIN-CONTAINER">
 
     <main>
         <div class = "carousel">
-            <div id="upArrow" class="arrow">
-                <img class="arrowImg" src="img/upArrow.png"></img>
+            <img id="up_arrow" class="arrow" src="img/up_arrow_color.png"
+             onmouseover="shift_window()"></img>
+             <div class="pet_pic" style="background-image: url(img/turtle.jpg)">
             </div>
-
-            <div class="pet">
-                <img class="animal-pic" src="profiles/profile-pics/sheldon.png"></img>
-            </div>
-
-            <div id="downArrow" class="arrow">
-                <img class="arrowImg" src="img/downArrow.png"></img>
-            </div>
+             <img id="down_arrow" class="arrow" src="img/down_arrow_color.png"
+             onmouseover="shift_window()"></img>
 
         </div>
 
-        <div class = "page">
-            <div class = "filters">
-                <div class="filter-label">
-                    <text id="filterLabel"> Filters: </text>
-                </div>
-
-                <button class="filter-node">
-                    <text class="labelText" id="location"> Location </text>
-                </button>
-
-                <button class="filter-node">
-                    <text class="labelText" id="species"> Species </text>
-                </button>
-
-                <button class="filter-node">
-                    <text class="labelText" id="type">Type </text>
-                </button>
+        <div class = "pet_page">
+            <div class = "filter_box">
+                <div id = "filter_label">Filters: </div>
+                <div id = "filter_location" class = "filter">L</div>
+                <div id = "filter_species" class = "filter">S</div>
+                <div id = "filter_type" class = "filter">T</div>
             </div>
-
-            <div class = "information">
-                <div class="info-row">
-                    <div class="label">
-                        <text class="labelText" > Name </text>
-                    </div>
-
-                    <div class="blurb" id="name">
-                        <text class="blurbText" > Sheldon </text>
-                    </div>
-
-                    <div class="adoption">
-                        <div class="adopt">
-                            <img class="check" src="img/whiteCheck.png"></img>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-row">
-                    <div class="label">
-                        <text class="labelText" > User </text>
-                    </div>
-
-                    <div class="blurb" id="user">
-                        <text class="blurbText" > King_Leopold_IV </text>
-                    </div>
-
-                </div>
-
-                <div class="info-row">
-                    <div class="label">
-                        <text class="labelText" > Location </text>
-                    </div>
-
-                    <div class="blurb" id="location">
-                        <text class="blurbText" > Sheldon Court, NY </text>
-                    </div>
-
-                </div>
-
-                <div class="info-row">
-                    <div class="label">
-                        <text class="labelText" > Age </text>
-                    </div>
-
-                    <div class="blurb" id="age">
-                        <text class="blurbText" > 87 </text>
-                    </div>
-
-                </div>
-
-                <div class="info-row">
-                    <div class="label">
-                        <text class="labelText" > Type </text>
-                    </div>
-
-                    <div class="blurb" id="type">
-                        <text class="blurbText" > Argentinian Sand Turtle </text>
-                    </div>
-
-                </div>
-
-                <div class="info-row">
-                    <div class="label">
-                        <text class="labelText" > Status </text>
-                    </div>
-
-                    <div class="blurb" id="status">
-                        <text class="blurbText" > Feeling Lively </text>
-                    </div>
-
-                </div>
-
-                <div class="info-row">
-                    <div class="label">
-                        <text class="labelText" > Gender </text>
-                    </div>
-
-                    <div class="blurb" id="gender">
-                        <text class="blurbText" > Male </text>
-                    </div>
-
-                </div>
-
-                <div class="info-row">
-                    <div class="label">
-                        <text class="labelText" > Bio </text>
-                    </div>
-
-                    <div class="blurb" id="bio">
-                        <text class="blurbText" > Ruler of the State of New York. 
-                            Likes his cane and top hat </text>
-                    </div>
-
+            <div class = "information_box">
+                <div class = "information">
+                    <div>a</div>
+                    <div>b</div>
+                    <div>c</div>
+                    <div>d</div>
+                    <div>e</div>
+                    <div>f</div>
                 </div>
             </div>
 

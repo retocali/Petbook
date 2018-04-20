@@ -1,9 +1,4 @@
 
-function shift_window(direction){
-	if(direction == 1){
-		console.log("right");
-	}
-	if(direction == -1){
-		console.log("left");
-	}
+function shift_window(){
+	console.log('scroll');
 }
