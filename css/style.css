@@ -1,6 +1,9 @@
 :root {
     --main-color: #8BCBC8;
+    --icing-color: #DAE9E4;
     --accent-color: #FDAE84;
+    --sakura-color: #ECC7C0;
+    --cranberry-color: #3C2E3D;
 }
 
 .html {
@@ -16,8 +19,8 @@ body {
 #top-border {
     margin: 0 !important;
     background-color: var(--main-color);
-    border: 20px solid white;
-    border-bottom-color: var(--accent-color);
+    border: 20px solid var(--icing-color);
+    border-bottom-color: var(--cranberry-color);
     color: white;
     padding: 5px;
     text-align: center;
