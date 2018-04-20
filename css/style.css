@@ -79,7 +79,7 @@ body {
     font-size: 45px;
     border: none;
     border-radius: 20px;
-    width: 400px;
+    width: 20vw;
 }
 ::placeholder {
     color: white;
