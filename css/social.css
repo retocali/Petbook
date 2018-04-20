@@ -90,7 +90,7 @@ div#main, div.sides, div.catagories, div.type {
   width: 20vw;
   height: 20vw;
   margin: 1vw;
-  border: 3px solid var(--orange-color);
+  border: 5px solid var(--orange-color);
   transition: width .1s linear;
   transition: height .1s linear;
 }
@@ -146,13 +146,35 @@ div#main, div.sides, div.catagories, div.type {
   display: flex;
   flex-direction: column;
   background-color: var(--blue-color);
+  font-family: 'Helvetica';
 }
 
 .information{
-  height: 95%;
   width: 95%;
-  align-self: center;
   background-color: var(--icing-color);
-  display: grid;
-  grid-template-columns: repeat(1fr 1fr 1fr);
+  border-radius: 10px;
+}
+
+.info_labels{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--orange-color);
+
+}
+.pet_infos{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--orange-color);
+
+}
+
+#favorite{
+  height: 40px;
+}
+
+.info_label{
+  font-family: 'Helvetica';
+}
+.pet_info{
+  font-family: 'Helvetica';
 }
