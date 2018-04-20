@@ -230,8 +230,12 @@ div#main, div.sides, div.catagories, div.type{
   font-family: 'Helvetica';
   line-height: 30px;
 }
-.pet_grid{
-  display: grid;
+
+.posts_grid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: scroll;
 
 }
 .post{
@@ -239,6 +243,7 @@ div#main, div.sides, div.catagories, div.type{
   width: 100px; 
   background-size: cover;
   background-position: center center;
-  border-radius: 10px;
-  border: 2px solid var(--cranberry-color);
+  border-radius: 3px;
+  border: 1px solid var(--cranberry-color);
+  margin: .5vw;
 }
