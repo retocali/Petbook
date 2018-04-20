@@ -48,8 +48,8 @@ div{
 }
 
 .arrow{
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   margin: 20px;
   opacity: .5;
 }
@@ -59,43 +59,48 @@ div{
 }
 #left_arrow{
   position: relative;
-  top: 43%;
+  top: calc(50vh - 80px);
   left: 0%;
 }
 #right_arrow{
   position: relative;
-  top: 43%;
+  top: calc(50vh - 80px);
 }
 
 .type{
-  width: 125px;
-  height: 125px;
-  margin: 20px;
+  width: 15vw;
+  height: 15vw;
+  margin: 2vw;
   border-radius: 50%;
   background-color: var(--main-color);
   display: inline-flex;
   background-size: cover;
   background-position: center center;
+  transition: width .1s linear;
+  transition: height .1s linear;
 
 }
 
 .text_label{
+  font-weight: 1000;
+  font-size: 5vw;
+  color: var(--main-color);
+  text-shadow: -1px 0 var(--cranberry-color), 0 1px var(--cranberry-color), 1px 0 var(--cranberry-color), 0 -1px var(--cranberry-color);
   opacity: 0;
+  transition: opacity .1s linear;
 }
 
 .type:hover {
-  width: 200px;
-  height: 200px;
-  margin: 20px;
-  border: 2px solid var(--accent-color);
+  width: 20vw;
+  height: 20vw;
+  margin: 1vw;
+  border: 2px solid var(--main-color);
+  transition: width .1s linear;
+  transition: height .1s linear;
 }
 .type:hover .text_label{
   opacity: 1;
-  font-weight: 1000;
-  font-size: 40;
-  color: var(--cranberry-color);
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-
+  transition: opacity .2s linear;
 }
 
 .catagories{
