@@ -1,9 +1,11 @@
 :root {
     --blue-color: #8BCBC8;
     --icing-color: #DAE9E4;
-    --accent-color: #FDAE84;
+    --orange-color: #FDAE84;
     --sakura-color: #ECC7C0;
-    --main-color: #3C2E3D;
+    --cranberry-color: #3C2E3D;
+    --main-color: var(--cranberry-color);
+    --accent-color: var(--orange-color);
 }
 
 .html {
