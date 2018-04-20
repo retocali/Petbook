@@ -1,6 +1,3 @@
-:root{
-
-}
 
 body{
     top:0px;
@@ -138,7 +135,7 @@ body{
     grid-column: 2/4;
     background-color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 2vw;
+    font-size: 1.8vw;
     align-items: center;
     padding-left: 8px;
 }
