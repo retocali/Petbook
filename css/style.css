@@ -53,6 +53,12 @@ body {
     fill: white;
 }
 
+.navbartext {
+    font-size: 15px;
+    font-family: 'Lemon';
+    fill: white;
+}
+
 .profiletext {
     font-family: 'Lemon';
     fill: var(--main-color);
@@ -65,6 +71,7 @@ body {
     padding: 5px;
     text-align: left;
     font-family: 'Lemon', cursive; 
+    vertical-align: text-top;
     font-size: 45px;
     border: none;
     border-radius: 20px;
@@ -82,8 +89,10 @@ body {
 #searchbutton {
     font-size: 40px;
     background-color: var(--main-color);
+    vertical-align: text-top;
     color: white;
     border: none;
+    line-height: 60px;
 }
 
 button:hover {
