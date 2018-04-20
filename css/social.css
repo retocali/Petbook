@@ -266,3 +266,58 @@ div#main, div.sides, div.catagories, div.type{
   /* margin-right: 1vw; */
   /* margin-bottom: 1vw; */
 }
+
+
+
+.adopt{
+  height: 100px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  background-color: green;
+  align-items: center;
+  border-radius: 100px;
+}
+
+.check{
+  height: 100%;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.adoptionInfo{
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  font-family: 'Lemon';
+  color: var(--cranberry-color);
+  width: 75%;
+  height: 65%;
+  background-color: var(--icing-color);
+  border: 6px solid var(--cranberry-color);
+  border-radius: 10px;
+}
+
+
+.adoption-information-box{
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  color: var(--cranberry-color);
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  font-family: 'Helvetica';
+}
+
+.adoption-filter-box{
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lemon';
+  width: 100%;
+  height: 45%;
+  color: var(--cranberry-color);
+  display: inline-flex;
+  margin-top: .3vw;
+}

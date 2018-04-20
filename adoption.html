@@ -12,20 +12,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Load style sheets -->
-<link rel="stylesheet" href="css/adoption.css">
+<link rel="stylesheet" href="css/social.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- Constructible EventTarget polyfill — Only Chrome 64+ supports constructible EventTarget objects natively -->
-<script src="https://unpkg.com/event-target@latest/min.js"></script>
+<script src="js/social.js"></script>
 
 <!--<script src="game.js"></script>-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <link href="https://fonts.googleapis.com/css?family=Lemon" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body id = "MAIN-CONTAINER">
 <div id=top-border> 
            
         <div class="Search">
@@ -69,137 +69,60 @@
             </svg>
             
         </div>
+</div>
     
-    </div>
+<body id = "MAIN-CONTAINER">
 
     <main>
         <div class = "carousel">
-            <div id="upArrow" class="arrow">
-                <img class="arrowImg" src="img/upArrow.png"></img>
+            <img id="up_arrow" class="arrow" src="img/up_arrow_color.png"
+             onmouseover="shift_window()"></img>
+             <div class="pet_pic" style="background-image: url(profiles/profile-pics/sheldon.png)">
             </div>
-
-            <div class="pet">
-                <img class="animal-pic" src="profiles/profile-pics/sheldon.png"></img>
-            </div>
-
-            <div id="downArrow" class="arrow">
-                <img class="arrowImg" src="img/downArrow.png"></img>
-            </div>
+             <img id="down_arrow" class="arrow" src="img/down_arrow_color.png"
+             onmouseover="shift_window()"></img>
 
         </div>
 
-        <div class = "page">
-            <div class = "filters">
-                <div class="filter-label">
-                    <text class="filterLabel"> Filters: </text>
-                </div>
-
-                <button class="filter-node">
-                    <text class="filterLabel" id="location"> Location </text>
-                </button>
-
-                <button class="filter-node">
-                    <text class="filterLabel" id="species"> Species </text>
-                </button>
-
-                <button class="filter-node">
-                    <text class="filterLabel" id="type">Type </text>
-                </button>
+        <div class = "pet_page">
+            <div class = "adoption-filter-box">
+                <div id = "filter_label">Filters: </div>
+                <div id = "filter_location" class = "filter">L</div>
+                <div id = "filter_species" class = "filter">S</div>
+                <div id = "filter_type" class = "filter">T</div>
             </div>
+            <div class = "adoption-information-box">
+                <div class = "adoptionInfo">
+                    <div class = "info_labels">
+                        <div class="info_label">Name:</div>
+                        <div class="info_label">User:</div>
+                        <div class="info_label">Location:</div>
+                        <div class="info_label">Age:</div>
+                        <div class="info_label">Gender:</div>
+                        <div class="info_label">Species:</div>
+                        <div class="info_label">Status:</div>
+                        <div class="info_label">Bio:</div>
 
-            <div class = "information">
-                <div class="info-row">
-                    <div class="label">
-                        <text class="labelText" > Name </text>
+
                     </div>
+                    <div class="pet_infos">
+                        <div class="pet_info">Sheldon</div>
+                        <div class="pet_info">King_Leopold_IV</div>
+                        <div class="pet_info">Sheldon Court, NY</div>
+                        <div class="pet_info">87</div>
+                        <div class="pet_info">Male</div>
+                        <div class="pet_info">Argentinian Sand Turtle</div>
+                        <div class="pet_info">Feeling lively</div>
+                        <div class="pet_info">Ruler of the State of New York. Likes his cane and top hat</div>
 
-                    <div class="blurb" id="name">
-                        <text class="blurbText" > Sheldon </text>
                     </div>
-
-                    <div class="adoption">
+                    <div class="side_buttons">
                         <div class="adopt">
                             <img class="check" src="img/whiteCheck.png"></img>
                         </div>
+                        
+                        <div id="adopt_btn">Social</div>
                     </div>
-                </div>
-
-                <div class="info-row">
-                    <div class="label">
-                        <text class="labelText" > User </text>
-                    </div>
-
-                    <div class="blurb" id="user">
-                        <text class="blurbText" > King_Leopold_IV </text>
-                    </div>
-
-                </div>
-
-                <div class="info-row">
-                    <div class="label">
-                        <text class="labelText" > Location </text>
-                    </div>
-
-                    <div class="blurb" id="location">
-                        <text class="blurbText" > Sheldon Court, NY </text>
-                    </div>
-
-                </div>
-
-                <div class="info-row">
-                    <div class="label">
-                        <text class="labelText" > Age </text>
-                    </div>
-
-                    <div class="blurb" id="age">
-                        <text class="blurbText" > 87 </text>
-                    </div>
-
-                </div>
-
-                <div class="info-row">
-                    <div class="label">
-                        <text class="labelText" > Gender </text>
-                    </div>
-
-                    <div class="blurb" id="gender">
-                        <text class="blurbText" > Male </text>
-                    </div>
-
-                </div>
-
-                <div class="info-row">
-                    <div class="label">
-                        <text class="labelText" > Species </text>
-                    </div>
-
-                    <div class="blurb" id="type">
-                        <text class="blurbText" > Argentinian Sand Turtle </text>
-                    </div>
-
-                </div>
-
-                <div class="info-row">
-                    <div class="label">
-                        <text class="labelText" > Status </text>
-                    </div>
-
-                    <div class="blurb" id="status">
-                        <text class="blurbText" > Feeling Lively </text>
-                    </div>
-
-                </div>
-
-                <div class="info-row">
-                    <div class="label">
-                        <text class="labelText" > Bio </text>
-                    </div>
-
-                    <div class="blurb" id="bio">
-                        <text class="blurbText" > Ruler of the State of New York. 
-                            Likes his cane and top hat </text>
-                    </div>
-
                 </div>
             </div>
 
