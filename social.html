@@ -24,14 +24,24 @@
         Navigation
     </div>
     <main>
-        <div id="left_arrow" class="arrow">L</div>
+        <img id="left_arrow" class="arrow" src="img/left_arrow.png"
+             onmouseover="shift_window(-1)"></img>
         <div class = "catagories">
-            <div class="type">dog</div>
-            <div class="type">cat</div>
-            <div class="type">fish</div>
-            <div class="type">reptile</div>
+            <div class="type" style="background-image: url(img/dog.jpg)">
+                <div class="text_label">Dog</div>
+            </div>
+            <div class="type" style="background-image: url(img/cat.jpg)">
+                <div class="text_label">Cat</div>
+            </div>
+            <div class="type" style="background-image: url(img/fish.png)">
+                <div class="text_label">Fish</div>
+            </div>
+            <div class="type" style="background-image: url(img/turtle.jpg)">
+                <div class="text_label">Reptile</div>
+            </div>
         </div>
-        <div id="right_arrow" class="arrow">R</div>
+        <img id="right_arrow" class="arrow" src="img/right_arrow.png"
+             onmouseover="shift_window(1)"></img>
 
     </main>
 
