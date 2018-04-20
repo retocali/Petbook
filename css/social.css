@@ -43,11 +43,6 @@ div{
 
 }
 
-#navigation_bar{
-  height: 10%;
-  color: var(--main-color);
-}
-
 .arrow{
   width: 75px;
   height: 75px;
