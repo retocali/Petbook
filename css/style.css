@@ -27,6 +27,8 @@ body {
 
 #top-border {
     margin: 0 !important;
+    overflow: hidden;
+    white-space: nowrap;
     background-color: var(--main-color);
     /* border: 20px solid var(--blue-color); */
     color: white;
