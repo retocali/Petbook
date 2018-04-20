@@ -236,16 +236,3 @@ main{
   justify-content: center;
   align-items: center;
 }
-
-#top-border {
-    background-color: #8BCBC8;
-    margin: 0px;
-    border: 20px solid white;
-    border-bottom-color: #3C2E3D;
-    
-    color: white;
-    padding: 5px;
-    text-align: center;
-    font-family: 'Lemon', cursive; 
-    font-size: 60px;
-}
