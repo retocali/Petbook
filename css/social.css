@@ -19,21 +19,15 @@
   justify-content: left;
 }
 
-header{
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  height: 30%;
-  width: 100%;
-  background-color: darkred;
 
+a {
+    text-decoration: none !important;
 }
-
 main{
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  height: 100%;
+  height: 80%;
   width: 100%;
   background-color: var(--icing-color);
   justify-content: center;
@@ -44,13 +38,19 @@ div{
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Lemon';
+  color: var(--cranberry-color);
 
 }
 
+#navigation_bar{
+  height: 10%;
+  color: var(--main-color);
+}
+
 .arrow{
-  width: 100px;
-  height: 100px;
-  margin: 20px;
+  width: 75px;
+  height: 75px;
   opacity: .5;
 }
 .arrow:hover{
@@ -58,13 +58,16 @@ div{
 
 }
 #left_arrow{
-  position: relative;
-  top: calc(50vh - 80px);
-  left: 0%;
+  margin-right: 1vw;
 }
 #right_arrow{
-  position: relative;
-  top: calc(50vh - 80px);
+  margin-left: 1vw;
+}
+#up_arrow{
+  margin-bottom: 1vw;
+}
+#down_arrow{
+  margin-top: 1vw;
 }
 
 .type{
@@ -78,14 +81,13 @@ div{
   background-position: center center;
   transition: width .1s linear;
   transition: height .1s linear;
-
 }
 
 .text_label{
   font-weight: 1000;
-  font-size: 5vw;
+  font-size: 4vw;
   color: var(--main-color);
-  text-shadow: -1px 0 var(--cranberry-color), 0 1px var(--cranberry-color), 1px 0 var(--cranberry-color), 0 -1px var(--cranberry-color);
+  text-shadow: -2px 0 var(--cranberry-color), 0 2px var(--cranberry-color), 2px 0 var(--cranberry-color), 0 -2px var(--cranberry-color);
   opacity: 0;
   transition: opacity .1s linear;
 }
@@ -94,7 +96,7 @@ div{
   width: 20vw;
   height: 20vw;
   margin: 1vw;
-  border: 2px solid var(--main-color);
+  border: 3px solid var(--main-color);
   transition: width .1s linear;
   transition: height .1s linear;
 }
@@ -103,6 +105,60 @@ div{
   transition: opacity .2s linear;
 }
 
-.catagories{
+.carousel{
   display: flex;
+  flex-direction: column;
+  width: 25vw;
+}
+
+.pet_pic{
+  width: 15vw;
+  height: 15vw;
+  margin: 2vw;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  display: inline-flex;
+  background-size: cover;
+  background-position: center center;
+}
+
+.pet_page{
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
+}
+
+.filter_box{
+  display: inline-flex;
+  margin: .3vw;
+}
+
+#filter_label{
+  margin-right: .5vw;
+}
+.filter{
+  width: 35px;
+  height: 35px;
+  margin: .2vw;
+  border-radius: 50%;
+  display: inline-flex;
+  background-color: var(--cranberry-color);
+  color: var(--main-color);
+}
+
+.information_box{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-color);
+}
+
+.information{
+  height: 95%;
+  width: 95%;
+  align-self: center;
+  background-color: var(--icing-color);
+  display: grid;
+  grid-template-columns: repeat(1fr 1fr 1fr);
 }

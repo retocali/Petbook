@@ -1,0 +1,81 @@
+form {
+  /* Just to center the form on the page */
+  margin: 20px auto;
+  width: 300px;
+  /* To see the outline of the form */
+  padding: 1em;
+  border: 1px solid coral;
+  border-radius: 1em;
+  font-family:  Droid Sans;
+  background-color: white;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  /* To make sure that all labels have the same size and are properly aligned */
+  width: 90px;
+  text-align: right;
+  font-weight: bold;
+  color: cornflowerblue;
+  
+}
+
+.login, .logintextarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+  
+  /* To give the same size to all text fields */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* To harmonize the look & feel of text field border */
+  border: 1px solid #999;
+}
+
+.login:focus, .logintextarea:focus {
+  /* To give a little highlight on active elements */
+  border-color: #000;
+}
+
+.logintextarea {
+  /* To properly align multiline text fields with their labels */
+  vertical-align: top;
+
+  /* To give enough room to type some text */
+  height: 5em;
+}
+
+#password {
+  -webkit-text-security: disc;
+}
+/* Set a style for all buttons */
+.loginbutton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.loginbutton:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+#reset {
+  padding: 14px 20px;
+  background-color: grey;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+#reset, #signup {
+  width: 49%;
+}
+

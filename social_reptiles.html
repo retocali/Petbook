@@ -6,22 +6,25 @@
 
 <head>
 <meta charset="utf-8">
-<title>PetBook Services</title>
+<title>PetBook Social Reptiles</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Use mobile-aware viewport -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Load style sheets -->
-<link rel="stylesheet" href="css/services.css">
+<link rel="stylesheet" href="css/social.css">
 <link rel="stylesheet" href="css/style.css">
+
 <!-- Constructible EventTarget polyfill — Only Chrome 64+ supports constructible EventTarget objects natively -->
-<script src="https://unpkg.com/event-target@latest/min.js"></script>
+<script src="js/social.js"></script>
 
 <!--<script src="game.js"></script>-->
 
-<link href="https://fonts.googleapis.com/css?family=Lemon" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lemon" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+
 </head>
+
 <div id=top-border> 
            
         <div class="Search">
@@ -41,7 +44,7 @@
                     <circle class="mainbutton" cx="145" cy="35" r="30"/>
                 </a>
             </svg>
-            <input id="search" placeholder="Services">
+            <input id="search" placeholder="PetBook">
             <button id="searchbutton" type="submit"><i class="fa fa-search"></i></button> 
             
             <svg height="85" width="25vw">        
@@ -65,51 +68,37 @@
             </svg>
             
         </div>
-    
-    </div>
+</div>
     
 <body id = "MAIN-CONTAINER">
 
     <main>
-        <div id="non-categories">
-            <div class="user-pic" >
-                <img class="user-img" src="img/profile-pic.png">
-                </img>
+        <div class = "carousel">
+            <img id="up_arrow" class="arrow" src="img/up_arrow_color.png"
+             onmouseover="shift_window()"></img>
+             <div class="pet_pic" style="background-image: url(img/turtle.jpg)">
             </div>
+             <img id="down_arrow" class="arrow" src="img/down_arrow_color.png"
+             onmouseover="shift_window()"></img>
 
         </div>
 
-        <div id="categories">
-            <div id="Pet-Sitting" class="category">
-                <div class="labeler">
-                    <text class="serviceText" > Pet-Sitting </text>
-                </div>
-                <a class="linker" id="pet-sitting" class="category">
-                    <img class="img" src="img/walking-with-dog.png">
-                    </img>
-                </a>
+        <div class = "pet_page">
+            <div class = "filter_box">
+                <div id = "filter_label">Filters: </div>
+                <div id = "filter_location" class = "filter">L</div>
+                <div id = "filter_species" class = "filter">S</div>
+                <div id = "filter_type" class = "filter">T</div>
             </div>
-
-            <div id="Adoption" class="category">
-                <div class="labeler">
-                    <text class="serviceText" > Adoption </text>
+            <div class = "information_box">
+                <div class = "information">
+                    <div>a</div>
+                    <div>b</div>
+                    <div>c</div>
+                    <div>d</div>
+                    <div>e</div>
+                    <div>f</div>
                 </div>
-                <a class="linker" id="adoption" href="adoption.html" class="category">
-                    <object class = "img"data="img/adoption-pic.svg" type="image/svg+xml">
-                         fallback text
-                    </object>
-                </a>
-            </div>
-
-
-            <div id="Grooming" class="category">
-                <div class="labeler">
-                    <text class="serviceText" > Grooming </text>
-                </div>
-                <a class="linker" id="grooming" class="category">
-                    <object class = "img"data="img/grooming.svg" type="image/svg+xml">
-                    </object>
-                </a>
             </div>
 
         </div>
