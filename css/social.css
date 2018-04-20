@@ -33,7 +33,7 @@ main{
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  height: 100%;
+  height: 80%;
   width: 100%;
   background-color: var(--icing-color);
   justify-content: center;
@@ -47,10 +47,13 @@ div{
 
 }
 
+#navigation_bar{
+  height: 10%;
+}
+
 .arrow{
   width: 100px;
   height: 100px;
-  margin: 20px;
   opacity: .5;
 }
 .arrow:hover{
@@ -58,13 +61,10 @@ div{
 
 }
 #left_arrow{
-  position: relative;
-  top: calc(50vh - 80px);
-  left: 0%;
+  margin-right: 1vw;
 }
 #right_arrow{
-  position: relative;
-  top: calc(50vh - 80px);
+  margin-left: 1vw;
 }
 
 .type{
@@ -78,14 +78,14 @@ div{
   background-position: center center;
   transition: width .1s linear;
   transition: height .1s linear;
-
 }
 
 .text_label{
+  font-family: 'Lemon';
   font-weight: 1000;
-  font-size: 5vw;
+  font-size: 4vw;
   color: var(--main-color);
-  text-shadow: -1px 0 var(--cranberry-color), 0 1px var(--cranberry-color), 1px 0 var(--cranberry-color), 0 -1px var(--cranberry-color);
+  text-shadow: -2px 0 var(--cranberry-color), 0 2px var(--cranberry-color), 2px 0 var(--cranberry-color), 0 -2px var(--cranberry-color);
   opacity: 0;
   transition: opacity .1s linear;
 }
@@ -103,6 +103,3 @@ div{
   transition: opacity .2s linear;
 }
 
-.catagories{
-  display: flex;
-}
