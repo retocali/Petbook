@@ -23,7 +23,7 @@
 a {
     text-decoration: none !important;
 }
-main{
+main {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -34,7 +34,7 @@ main{
   align-self: center;
 }
 
-div{
+div#main, div.sides, div.catagories, div.type {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,7 +94,7 @@ div{
   transition: width .1s linear;
   transition: height .1s linear;
 }
-.type:hover .text_label{
+.type:hover .text_label {
   opacity: 1;
   transition: opacity .2s linear;
 }
