@@ -98,9 +98,13 @@ div#main, div.sides, div.catagories, div.type{
   opacity: 1;
   transition: opacity .2s linear;
 }
-
+.selection {
+  display: flex;
+  flex-direction: column;
+}
 .carousel{
   display: flex;
+  margin-top: 10vh;
   justify-content: center;
   align-items: center;
   font-family: 'Lemon';
@@ -137,9 +141,8 @@ div#main, div.sides, div.catagories, div.type{
 
 #filter_label{
   display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: 'Lemon';
+  font-size: 3vh;
   color: var(--cranberry-color);
   margin-right: .5vw;
 }
@@ -175,11 +178,21 @@ div#main, div.sides, div.catagories, div.type{
   align-items: left;
   font-family: 'Lemon';
   color: var(--cranberry-color);
-  width: 95%;
+  width: 90%;
   height: 95%;
   background-color: var(--icing-color);
   border: 6px solid var(--cranberry-color);
-  border-radius: 10px;
+  border-radius: 20px;
+}
+::-webkit-scrollbar {
+  background-color: var(--cranberry-color);
+}
+::-webkit-scrollbar-thumb {
+  background-color: #5C4E5D; 
+}
+::-webkit-scrollbar-button {
+  background-color: #5C4E5D;
+  border: 1px solid var(--cranberry-color); 
 }
 
 .info_labels{
@@ -195,7 +208,7 @@ div#main, div.sides, div.catagories, div.type{
 }
 
 #favorite{
-  height: 40px;
+  height: 8vh;
   margin: 5px;
   display: flex;
   justify-content: center;
@@ -203,8 +216,8 @@ div#main, div.sides, div.catagories, div.type{
 }
 
 #adopt_btn{
-  height: 40px;
-  width: 80px;
+  height: 6vh;
+  width: 12vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,8 +261,8 @@ div#main, div.sides, div.catagories, div.type{
   width: 22vh; 
   background-size: cover;
   background-position: center center;
-  border-radius: 3px;
+  /* border-radius: 3px; */
   border: 1px solid var(--cranberry-color);
-  margin-right: 1vw;
-  margin-bottom: 1vw;
+  /* margin-right: 1vw; */
+  /* margin-bottom: 1vw; */
 }
