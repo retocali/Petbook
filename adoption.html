@@ -24,6 +24,8 @@
 <link rel="stylesheet" href="css/style.css">
 
 </head>
+
+<body id = "MAIN-CONTAINER">
 <div id=top-border> 
            
         <div class="Search">
@@ -69,7 +71,6 @@
         </div>
     
     </div>
-<body id = "MAIN-CONTAINER">
 
     <main>
         <div class = "carousel">
@@ -90,19 +91,19 @@
         <div class = "page">
             <div class = "filters">
                 <div class="filter-label">
-                    <text id="filterLabel"> Filters: </text>
+                    <text class="filterLabel"> Filters: </text>
                 </div>
 
                 <button class="filter-node">
-                    <text class="labelText" id="location"> Location </text>
+                    <text class="filterLabel" id="location"> Location </text>
                 </button>
 
                 <button class="filter-node">
-                    <text class="labelText" id="species"> Species </text>
+                    <text class="filterLabel" id="species"> Species </text>
                 </button>
 
                 <button class="filter-node">
-                    <text class="labelText" id="type">Type </text>
+                    <text class="filterLabel" id="type">Type </text>
                 </button>
             </div>
 
@@ -158,7 +159,18 @@
 
                 <div class="info-row">
                     <div class="label">
-                        <text class="labelText" > Type </text>
+                        <text class="labelText" > Gender </text>
+                    </div>
+
+                    <div class="blurb" id="gender">
+                        <text class="blurbText" > Male </text>
+                    </div>
+
+                </div>
+
+                <div class="info-row">
+                    <div class="label">
+                        <text class="labelText" > Species </text>
                     </div>
 
                     <div class="blurb" id="type">
@@ -174,17 +186,6 @@
 
                     <div class="blurb" id="status">
                         <text class="blurbText" > Feeling Lively </text>
-                    </div>
-
-                </div>
-
-                <div class="info-row">
-                    <div class="label">
-                        <text class="labelText" > Gender </text>
-                    </div>
-
-                    <div class="blurb" id="gender">
-                        <text class="blurbText" > Male </text>
                     </div>
 
                 </div>
