@@ -30,6 +30,7 @@ body{
     width: 100%;
     border-radius:50%;
     background-color: #8BCBC8;
+    border-width: 1px;
 }
 [id="search_button"]{
     grid-column:1;
@@ -38,6 +39,7 @@ body{
     width: 100%;
     border-radius:50%;
     background-color: #8BCBC8;
+    border-width: 1px;
 }
 [id="question_button"]{
     grid-column:1;
@@ -46,6 +48,7 @@ body{
     width: 100%;
     border-radius:50%;
     background-color: #8BCBC8;
+    border-width: 1px;
 }
 
 [id="knowledge"]{
@@ -55,6 +58,7 @@ body{
     width: 100%;
     border-radius:50%;
     background-color: #8BCBC8;
+    border-width: 1px;
 }
 [id="training"]{
     grid-column:5;
@@ -63,6 +67,7 @@ body{
     width: 100%;
     border-radius:50%;
     background-color: #8BCBC8;
+    border-width: 1px;
 }
 [id="care"]{
     grid-column:5;
@@ -71,6 +76,7 @@ body{
     width: 100%;
     border-radius:50%;
     background-color: #8BCBC8;
+    border-width: 1px;
 }
 
 .img{
@@ -118,12 +124,13 @@ body{
 .popularity{
     grid-row: 1;
     grid-column: 1;
-    background-color: #00cec9; 
+    background-color: cornflowerblue; 
     font-family: 'Helvetica';
     color: white;
     text-align: center;
     font-weight:bold;
     padding-bottom:2px;
+    font-size: 1.7vw;
     height: 110%;
 }
 .main_text{
@@ -131,7 +138,7 @@ body{
     grid-column: 2/4;
     background-color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 30px;
+    font-size: 2vw;
     align-items: center;
     padding-left: 8px;
 }
@@ -142,6 +149,7 @@ body{
     width: 100%;
     background-color: #8BCBC8;
     position: relative;
+    border-width: 1px;
 }
 .down{
     grid-row: 3;
@@ -150,16 +158,23 @@ body{
     width: 100%;
     background-color: #8BCBC8;
     position: relative; 
+    border-width: 1px;
 }
 .favorite{
     grid-row: 1;
     grid-column: 4;
     background-color: #8BCBC8;
+    border-width: 1px;
 }
 .comment{
     grid-row:3;
     grid-column:1;
     background-color: yellow;
+    border-width: 1px;
+}
+.popularity_num{
+    -webkit-margin-before:0em;
+    -webkit-margin-after:0em;
 }
 
 
