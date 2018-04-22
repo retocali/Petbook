@@ -39,8 +39,6 @@ function goUp(){
     if(petCount > 4){
         petCount = 0;
     }
-    console.log(typeCount)
-    console.log(petCount)
     if(typeCount == 0){
         if(data.reptiles[petCount].adoptable == true){
             document.getElementById("pet_name").innerHTML = data.reptiles[petCount].petName;
@@ -145,8 +143,6 @@ function goDown(){
     if(petCount < 0){
         petCount = 4;
     }
-    console.log(typeCount)
-    console.log(petCount)
     if(typeCount == 0){
         if(data.reptiles[petCount].adoptable == true){
             document.getElementById("pet_name").innerHTML = data.reptiles[petCount].petName;

@@ -111,7 +111,7 @@ function Data() {
       "gender": "Male",
       "species": "Chihuahua",
       "status": "Quero TacoBell",
-      "bio": "",
+      "bio": "Eats tacos and only tacos.  Surprisingly not obese",
       "profilePics" : [
       
       ],
@@ -174,7 +174,7 @@ function Data() {
       "gender": "Male",
       "species": "Argentinian Sand Turtle",
       "status": "Feeling Lively",
-      "bio": "Feeling lively",
+      "bio": "Ruler of New York.  Loves his top hat and cane",
       "profilePics" : [
       
       ],
