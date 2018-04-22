@@ -225,13 +225,15 @@ function Data() {
       "status": "I AM FIRE. I AM DEATH.",
       "bio": "Likes money.  Likes to make money.  Likes to kill to make money",
       "profilePics" : [
-      "img/SmaugSmile.jpg"
-
+      "img/SmaugSmile.jpg",
+      "img/SmaugAttack.jpg",
+      "img/SmaugMad.jpg"
       ],
       "catagory": "reptile",
       "adopted": false,
       "adoptable" : true,
     },
+
     {
       "petName": "MasterOfBurgs",
       "userName": "SandwichKingII",
@@ -242,12 +244,15 @@ function Data() {
       "status": "Medium Well",
       "bio": "Master of the burger arts, this turt is all about the burgers.  Please, no pickles",
       "profilePics" : [
-      
+      "img/Burger.jpg",
+      "img/Burger2.jpg",
+      "img/SBurger3.jpg"
       ],
       "catagory": "reptile",
       "adopted": false,
       "adoptable" : false,
     },
+
     {
       "petName": "Smaug2",
       "userName": "Frodoo2",
@@ -258,7 +263,9 @@ function Data() {
       "status": "I AM DRAGON. I AM DEATH",
       "bio": "Likes money.  Likes to make money.  Likes to make money to compensate.",
       "profilePics" : [
-      
+      "img/lizardShark.jpg",
+      "img/hatlizard.jpg",
+      "img/huehue.jpg"
       ],
       "catagory": "reptile",
       "adopted": false,
