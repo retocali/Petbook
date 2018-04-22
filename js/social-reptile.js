@@ -9,19 +9,7 @@ Util.events(document, {
 	"DOMContentLoaded": function() {
 		data = new Data();
 
-        document.getElementById("pet_name").innerHTML = data.reptiles[petCount].petName;
-        document.getElementById("user").innerHTML = data.reptiles[petCount].userName;
-        document.getElementById("location").innerHTML = data.reptiles[petCount].location;
-        document.getElementById("age").innerHTML = data.reptiles[petCount].age;
-        document.getElementById("gender").innerHTML = data.reptiles[petCount].gender;
-        document.getElementById("species").innerHTML = data.reptiles[petCount].species;
-        document.getElementById("status").innerHTML = data.reptiles[petCount].status;
-        document.getElementById("bio").innerHTML = data.reptiles[petCount].bio;
-
-
-        //html for the posts
-        var petpost = document.getElementById("pet-post");
-        petpost.innerHTML = "";
+        update_html();
 
 		Util.one("#up_arrow").addEventListener('click', function(e) {
 			goUp();
@@ -42,8 +30,6 @@ function goUp(){
     }
     if(data.reptiles[petCount].catagory == 'reptile'){
         update_html();
-        var petpost = document.getElementById("pet-post");
-        petpost.innerHTML = "";
     }
     else{
         goUp();
@@ -58,8 +44,6 @@ function goDown(){
     }
     if(data.reptiles[petCount].catagory == 'reptile'){
         update_html();
-        var petpost = document.getElementById("pet-post");
-        petpost.innerHTML = "";
     }
     else{
         goUp();
@@ -79,7 +63,19 @@ function update_html(){
     document.getElementById("bio").innerHTML = data.reptiles[petCount].bio;
 
     document.getElementById("pet_pic").style="background-image: url(profiles/profile-pics/"+ data.reptiles[petCount].petName+".jpg)";
-        
+    
+
+    var petpost = document.getElementById("pet_posts");
+    petpost.innerHTML = "";
+
+    var posts="";
+    var post_pics = data.reptiles[petCount].profilePics;
+    for(var i=0; i<post_pics.length; i++){
+        var pic_location = post_pics[i];
+        var post_html = "<div class=\"post\" style=\"background-image: url("+pic_location+")\"></div>";
+        posts += post_html;
+    }
+    petpost.innerHTML = posts;
 }
 
 

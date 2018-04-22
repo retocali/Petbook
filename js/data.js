@@ -186,7 +186,12 @@ function Data() {
       "species": "Argentinian Sand Turtle",
       "status": "Feeling Lively",
       "bio": "Ruler of New York.  Loves his top hat and cane",
-      "profilePics" : [
+      "profilePics" : [ 'img/turtle.jpg',
+                        'img/turtle_lettuce.jpg',
+                        'img/turtle_fish.jpg',
+                        'img/cool_turtle.jpg',
+                        'img/top_turtle.jpg',
+                        'img/turtle_strawberry.jpg'
       
       ],
       "catagory": "reptile",
