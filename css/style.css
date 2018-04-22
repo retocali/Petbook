@@ -40,8 +40,9 @@ body {
     text-align: center;
     font-family: 'Lemon', cursive; 
     font-size: 6vh;
+    height: 10vh;
 }
-.title {
+.title {    
     color: white;
     padding: .5vh;
     text-align: center;
