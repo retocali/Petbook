@@ -86,13 +86,6 @@ div#main, div.sides, div.catagories, div.type{
   transition: opacity .1s linear;
 }
 
-.carousel_box{
-  max-width: 80vw;
-  display: flex;
-  flex-direction: row;
-  background-color: var(--sakura-color);
-  overflow-x: hidden;
-}
 .type:hover {
   width: 20vw;
   height: 20vw;

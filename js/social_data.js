@@ -1,4 +1,4 @@
-function Data() {
+function SocialData() {
   /**
    * Usage:
    *  
@@ -9,23 +9,28 @@ function Data() {
     {
       "catagory": "Dogs",
       "image": 'img/dog.jpg',
+      "href": 'social_dogs.html',
     },
     {
       "catagory": "Cats",
-      "image": 'img/cat.jpg'
+      "image": 'img/cat.jpg',
+      "href": 'social_cats.html'
     },
     {
       "catagory": "Fish",
-      "image": 'img/fish.png'
+      "image": 'img/fish.png',
+      "href": 'social_fish.html'
     },
     {
       "catagory": "Reptiles",
-      "image": 'img/turtle.jpg'
+      "image": 'img/turtle.jpg',
+      "href": 'social_reptiles.html'
     },
 
     {
       "catagory": "Birds",
-      "image": 'img/bird.jpg'      
+      "image": 'img/bird.jpg',
+      "href": 'social_birds.html'      
     },
   ];
 
