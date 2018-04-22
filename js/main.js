@@ -7,6 +7,7 @@ Util.events(document, {
 		console.log('hello??');
 		var data = new Data();
 		console.log(data.cats);
+		console.log(data.allData);
 	},
 
 	// Keyboard events arrive here
