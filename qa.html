@@ -19,6 +19,9 @@ FORUM Q&A
 
 <!-- Constructible EventTarget polyfill — Only Chrome 64+ supports constructible EventTarget objects natively -->
 <script src="https://unpkg.com/event-target@latest/min.js"></script>
+<script src="js/util.js"></script>
+<script src="js/qa.js"></script>
+
 
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Lemon" rel="stylesheet">
@@ -77,19 +80,24 @@ FORUM Q&A
     </button>
     <button type="button" id="search_button" class="main_buttons">
         <img src="img/lupa.png" class="img">
+        <p class="labels">Search</p>
     </button>
     <button type="button" id="question_button" class="main_buttons">
         <img src="img/question_mark.png" class="img">
+        <p class="labels">Make a question</p>
     </button>
 
     <button type="button" id="knowledge" class="main_buttons">
         <img src="img/open-book.svg" class="img">
+        <p class="labels">General Knowledge</p>
     </button>
     <button type="button" id="training" class="main_buttons">
         <img src="img/dumbbell.svg" class="img">
+        <p class="labels">Training</p>
     </button>
     <button type="button" id="care" class="main_buttons">
         <img src="img/red-cross.svg" class="img">
+        <p class="labels">Care</p>
     </button>
 
     <div id="forum_container">
