@@ -1,4 +1,13 @@
 function Data() {
+  /**
+   * Usage:
+   *  
+   *  Each species has their own member variable with there profiles
+   *
+   *  Every profile is under the member variable "allData" 
+   *  and points to each species using a string as a key
+   * 
+   */
   this.cats = [
     {
       "petName": "Miki",
@@ -8,10 +17,12 @@ function Data() {
       "gender": "Female",
       "species": "Tabbycat",
       "status": "Miki's a butt",
+
       "bio": "Miki loves her mouse toys and lasers",
       "profilePics" : [
         
-      ]
+      ],
+      "adoptable" : false,
     },
     {
       "petName": "Tom",
@@ -24,7 +35,8 @@ function Data() {
       "bio": "Always out on the lookout for Jerry",
       "profilePics" : [
         
-      ]
+      ],
+      "adoptable" : true,
     },
     {
       "petName": "Fluffy",
@@ -37,7 +49,8 @@ function Data() {
       "bio": "meow?",
       "profilePics" : [
         
-      ]
+      ],
+      "adoptable" : true,
     },
     {
       "petName": "Simba",
@@ -50,7 +63,8 @@ function Data() {
       "bio": "I just can't wait to be king",
       "profilePics" : [
         
-      ]
+      ],
+      "adoptable" : false,
     },
 
     {
@@ -64,22 +78,80 @@ function Data() {
       "bio": "Most everyone's mad here",
       "profilePics" : [
         
-      ]
+      ],
+      "adoptable" : false,
     },
   ];
   this.dogs = [
     {
-      "petName": "",
-      "userName": "",
-      "location": "",
-      "age": "",
-      "gender": "",
-      "species": "",
-      "status": "",
+      "petName": "Luna",
+      "userName": "rodger",
+      "location": "California",
+      "age": "11",
+      "gender": "Female",
+      "species": "Husky",
+      "status": "Woof",
+      "bio": "Hates baths",
+      "profilePics" : [
+      
+      ],
+      "adoptable" : false,
+    },
+    {
+      "petName": "Rocky",
+      "userName": "hamburger321",
+      "location": "Utah",
+      "age": "6",
+      "gender": "Male",
+      "species": "Chihuahua",
+      "status": "I bite strangers",
       "bio": "",
       "profilePics" : [
       
-      ]
+      ],
+      "adoptable" : true,
+    },
+    {
+      "petName": "Sebastian",
+      "userName": "ivan_snow",
+      "location": "Minnesota",
+      "age": "18",
+      "gender": "Male",
+      "species": "Great Dane",
+      "status": "View's nice up here",
+      "bio": "4 feet tall",
+      "profilePics" : [
+      
+      ],
+      "adoptable" : true,
+    },
+    {
+      "petName": "Coco",
+      "userName": "elsa_icy",
+      "location": "Canada",
+      "age": "9",
+      "gender": "Female",
+      "species": "Poodle",
+      "status": "fluff fluff",
+      "bio": "diva doggo",
+      "profilePics" : [
+      
+      ],
+      "adoptable" : false,
+    },
+    {
+      "petName": "Bailey",
+      "userName": "10richard01",
+      "location": "Massachusetts",
+      "age": "3",
+      "gender": "Female",
+      "species": "Golden Retriver",
+      "status": "Loooooooves People",
+      "bio": "Friendliest Doggo in town, 2 years in a row",
+      "profilePics" : [
+      
+      ],
+      "adoptable" : true,
     },
   ];
 
@@ -95,7 +167,8 @@ function Data() {
       "bio": "",
       "profilePics" : [
       
-      ]
+      ],
+      "adoptable" : false,
     },
   ];
 
@@ -111,7 +184,8 @@ function Data() {
       "bio": "",
       "profilePics" : [
       
-      ]
+      ],
+      "adoptable" : false,
     },
   ];
 
@@ -127,7 +201,8 @@ function Data() {
       "bio": "",
       "profilePics" : [
       
-      ]
+      ],
+      "adoptable" : false,
     },
   ];
   this.allData = {
