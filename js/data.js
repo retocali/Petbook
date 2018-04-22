@@ -17,11 +17,11 @@ function Data() {
       "gender": "Female",
       "species": "Tabbycat",
       "status": "Miki's a butt",
-
       "bio": "Miki loves her mouse toys and lasers",
       "profilePics" : [
         
       ],
+      "catagory": "cat",
       "adopted": false,
       "adoptable" : false,
     },
@@ -37,6 +37,7 @@ function Data() {
       "profilePics" : [
         
       ],
+      "catagory": "cat",
       "adopted": false,
       "adoptable" : true,
     },
@@ -52,6 +53,7 @@ function Data() {
       "profilePics" : [
         
       ],
+      "catagory": "cat",
       "adopted": false,
       "adoptable" : true,
     },
@@ -67,6 +69,7 @@ function Data() {
       "profilePics" : [
         
       ],
+      "catagory": "cat",
       "adopted": false,
       "adoptable" : false,
     },
@@ -83,6 +86,7 @@ function Data() {
       "profilePics" : [
         
       ],
+      "catagory": "cat",
       "adopted": false,
       "adoptable" : false,
     },
@@ -100,6 +104,7 @@ function Data() {
       "profilePics" : [
       
       ],
+      "catagory": "dog",
       "adopted": false,
       "adoptable" : false,
     },
@@ -115,6 +120,7 @@ function Data() {
       "profilePics" : [
       
       ],
+      "catagory": "dog",
       "adopted": false,
       "adoptable" : true,
     },
@@ -125,11 +131,13 @@ function Data() {
       "age": "18",
       "gender": "Male",
       "species": "Great Dane",
+      "catagory": "dog",
       "status": "View's nice up here",
       "bio": "4 feet tall",
       "profilePics" : [
       
       ],
+      "catagory": "dog",
       "adopted": false,
       "adoptable" : true,
     },
@@ -140,11 +148,13 @@ function Data() {
       "age": "9",
       "gender": "Female",
       "species": "Poodle",
+      "catagory": "dog",
       "status": "fluff fluff",
       "bio": "diva doggo",
       "profilePics" : [
       
       ],
+      "catagory": "dog",
       "adopted": false,
       "adoptable" : false,
     },
@@ -160,6 +170,7 @@ function Data() {
       "profilePics" : [
       
       ],
+      "catagory": "dog",
       "adopted": false,
       "adoptable" : true,
     },
@@ -178,6 +189,7 @@ function Data() {
       "profilePics" : [
       
       ],
+      "catagory": "reptile",
       "adopted": false,
       "adoptable" : true,
     },
@@ -193,6 +205,7 @@ function Data() {
       "profilePics" : [
       
       ],
+      "catagory": "reptile",
       "adopted": false,
       "adoptable" : false,
     },
@@ -208,6 +221,7 @@ function Data() {
       "profilePics" : [
       
       ],
+      "catagory": "reptile",
       "adopted": false,
       "adoptable" : true,
     },
@@ -223,6 +237,7 @@ function Data() {
       "profilePics" : [
       
       ],
+      "catagory": "reptile",
       "adopted": false,
       "adoptable" : false,
     },
@@ -238,6 +253,7 @@ function Data() {
       "profilePics" : [
       
       ],
+      "catagory": "reptile",
       "adopted": false,
       "adoptable" : true,
     },
@@ -256,6 +272,7 @@ function Data() {
       "profilePics" : [
       
       ],
+      "catagory": "bird",
       "adopted": false,
       "adoptable" : true,
     },
@@ -272,6 +289,7 @@ function Data() {
       "profilePics" : [
       
       ],
+      "catagory": "bird",
       "adopted": false,
       "adoptable" : true,
     },
@@ -288,6 +306,7 @@ function Data() {
       "profilePics" : [
       
       ],
+      "catagory": "bird",
       "adopted": false,
       "adoptable" : false,
     },
@@ -303,6 +322,7 @@ function Data() {
       "profilePics" : [
       
       ],
+      "catagory": "bird",
       "adopted": false,
       "adoptable" : true,
     },
@@ -318,6 +338,7 @@ function Data() {
       "profilePics" : [
       
       ],
+      "catagory": "bird",
       "adopted": false,
       "adoptable" : false,
     },
@@ -336,6 +357,7 @@ function Data() {
       "profilePics" : [
       
       ],
+      "catagory": "fish",
       "adopted": false,
       "adoptable" : true,
     },
@@ -352,6 +374,7 @@ function Data() {
       "profilePics" : [
       
       ],
+      "catagory": "fish",
       "adopted": false,
       "adoptable" : true,
     },
@@ -367,6 +390,7 @@ function Data() {
       "profilePics" : [
       
       ],
+      "catagory": "fish",
       "adopted": false,
       "adoptable" : true,
     },
@@ -383,6 +407,7 @@ function Data() {
       "profilePics" : [
       
       ],
+      "catagory": "fish",
       "adopted": false,
       "adoptable" : false,
     },
@@ -399,6 +424,7 @@ function Data() {
       "profilePics" : [
       
       ],
+      "catagory": "fish",
       "adopted": false,
       "adoptable" : false,
     },
