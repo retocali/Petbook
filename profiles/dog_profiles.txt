@@ -1,0 +1,46 @@
+Name: Luna
+User: Rodger
+Location: California
+Age: 11
+Gender: Female
+Species: Husky
+Status: Woof
+Bio: I hate baths.
+
+Name: Rocky
+User: hamburger321
+Location: Utah
+Age: 6
+Gender: Male
+Species: Chihuahua
+Status: I bit strangers.
+Bio: 
+
+
+Name: Sebastian
+User: evon
+Location: Michigan
+Age: 18
+Gender: Male
+Species: Great Dane
+Status: View's nice up here.
+Bio: I'm 4 feet tall.
+
+
+Name: Coco
+User: elsa
+Location: Canada
+Age: 9
+Gender: Female
+Species: Poodle
+Status: fluff fluff
+Bio: diva doggo
+
+Name: Bailey
+User: richard
+Location: Massachusetts
+Age: 3
+Gender: Female
+Species: Golden Retriver
+Status: I love people
+Bio: Friendliest dog in town.

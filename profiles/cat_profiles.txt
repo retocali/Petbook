@@ -1,0 +1,45 @@
+Name: Miki
+User: Ruby Duby
+Location: Washington D.C.
+Age: 3
+Gender: Female
+Species: cat
+Status: Miki's a butt
+Bio: Miki loves her mouse toys and lasers.
+
+Name: Tom
+User: cartoon123
+Location: California
+Age: 15
+Gender: Male
+Species: cat
+Status: cat fight
+Bio: Tom looking for Jerry.
+
+
+Name: Fluffy
+User: jeanie
+Location: Virginia
+Age: 20
+Gender: Female
+Species: cat
+Status: looking for a sunny place to nap
+Bio: meow?
+
+Name: Simba
+User: lion_king
+Location: New York
+Age: 4
+Gender: Male
+Species: cat
+Status: training to be king
+Bio: hakuna matata
+
+Name: Cheshire Cat
+User: wanderer123
+Location: Boston
+Age: ??
+Gender: Male
+Species: cat
+Status: i can be invisible
+Bio: Find me in Wonderland.
