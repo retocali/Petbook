@@ -62,22 +62,23 @@ a:hover, a:active {
 }
 .mainbutton {
     stroke: cornflowerblue;
-    stroke-width: 5;
+    stroke-width: .5vh;
     fill: #FFFFFF00;
 }
 
 .mainbutton:hover {
     stroke: var(--sakura-color);
-    stroke-width: 10;
+    stroke-width: 1vh;
 }
 
 .mainbuttontext {
     font-family: 'Lemon';
     fill: white;
+    font-size: 1.6vh;
 }
 
 .navbartext {
-    font-size: 15px;
+    font-size: 1.6vh;
     font-family: 'Lemon';
     fill: white;
 }
@@ -85,19 +86,20 @@ a:hover, a:active {
 .profiletext {
     font-family: 'Lemon';
     fill: var(--main-color);
-    font-size: 40px;
+    font-size: 4vh;
 }
 
 #search {
     background-color: var(--main-color);
     color: var(--main-color);
-    padding: 5px;
+    padding: 0.5vh;
+    margin-top: 0.7vh;
     text-align: left;
     font-family: Helvetica; 
     vertical-align: text-top;
-    font-size: 45px;
+    font-size: 4.5vh;
     border: none;
-    border-radius: 20px;
+    border-radius: 2vh;
     width: 2vw;
 }
 ::placeholder {
@@ -111,12 +113,13 @@ a:hover, a:active {
     width: 10vw;
 }
 #searchbutton {
-    font-size: 40px;
+    font-size: 4vh;
+    margin-top: 0.7vh;
     background-color: var(--main-color);
     vertical-align: text-top;
     color: white;
     border: none;
-    line-height: 60px;
+    line-height: 6vh;
 }
 
 button:hover {
