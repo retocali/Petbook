@@ -21,14 +21,14 @@ Util.events(document, {
             else{
                 var other_button=document.getElementById("up_"+elt.id.substring(elt.id.length-1));
             } 
-            if (color!="red"){
-                elt.style.backgroundColor="red";
+            if (color!="#ECC7C0"){
+                elt.style.backgroundColor="#ECC7C0";
                 //make the other button the other color
                 other_button.style.backgroundColor="#3C2E3D";
             }
             else{
                 elt.style.backgroundColor="#3C2E3D";
-                other_button.style.backgroundColor="red";
+                other_button.style.backgroundColor="#ECC7C0";
             }
         }
         var up_button=document.getElementById("up_1");
