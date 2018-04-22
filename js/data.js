@@ -246,7 +246,7 @@ function Data() {
       "profilePics" : [
       "img/Burger.jpg",
       "img/Burger2.jpg",
-      "img/SBurger3.jpg"
+      "img/Burger3.jpg"
       ],
       "catagory": "reptile",
       "adopted": false,

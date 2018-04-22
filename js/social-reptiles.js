@@ -70,6 +70,7 @@ function update_html(){
 
     var posts="";
     var post_pics = data.reptiles[petCount].profilePics;
+    
     for(var i=0; i<post_pics.length; i++){
         var pic_location = post_pics[i];
         var post_html = "<div class=\"post\" style=\"background-image: url("+pic_location+")\"></div>";
