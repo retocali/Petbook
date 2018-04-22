@@ -3,11 +3,14 @@ var petCount = 0;
 
 var data;
 
+var currentPet;
+
 Util.events(document, {
 	// Final initalization entry point: the Javascript code inside this block
 	// runs at the end of start-up when the DOM is ready
 	"DOMContentLoaded": function() {
 		data = new Data();
+        currentPet = data.reptiles[petCount];
 
         document.getElementById("pet_name").innerHTML = data.reptiles[petCount].petName;
         document.getElementById("user").innerHTML = data.reptiles[petCount].userName;
@@ -17,13 +20,30 @@ Util.events(document, {
         document.getElementById("species").innerHTML = data.reptiles[petCount].species;
         document.getElementById("status").innerHTML = data.reptiles[petCount].status;
         document.getElementById("bio").innerHTML = data.reptiles[petCount].bio;
-
 		Util.one("#up_arrow").addEventListener('click', function(e) {
 			goUp();
 		});
 
         Util.one("#down_arrow").addEventListener('click', function(e) {
 			goDown();
+		});
+        Util.one("#adopt").addEventListener('click', function(e) {
+			if(currentPet.adopted == false){
+                var adopt = document.getElementById("adopt");
+                var button=document.getElementById("adoptButton");
+                button.setAttribute("src", "img/whiteX.png")
+                adopt.setAttribute("class", "cancel")
+                button.setAttribute("class", "X")
+                currentPet.adopted = true;
+            }
+            else{
+                var adopt = document.getElementById("adopt");
+                var button=document.getElementById("adoptButton");
+                button.setAttribute("src", "img/whiteCheck.png")
+                adopt.setAttribute("class", "adopt")
+                button.setAttribute("class", "check")
+                currentPet.adopted = false;
+            }
 		}); 
 	},
     
@@ -50,6 +70,8 @@ function goUp(){
             document.getElementById("status").innerHTML = data.reptiles[petCount].status;
             document.getElementById("bio").innerHTML = data.reptiles[petCount].bio;
 
+            currentPet = data.reptiles[petCount];
+
             document.getElementById("pet_pic").style="background-image: url(profiles/profile-pics/"+ data.reptiles[petCount].petName+".jpg)";
         }
         else{
@@ -67,6 +89,8 @@ function goUp(){
             document.getElementById("species").innerHTML = data.birds[petCount].species;
             document.getElementById("status").innerHTML = data.birds[petCount].status;
             document.getElementById("bio").innerHTML = data.birds[petCount].bio;
+
+            currentPet = data.birds[petCount];
 
             document.getElementById("pet_pic").style="background-image: url(profiles/profile-pics/"+ data.birds[petCount].petName+".jpg)";
         }
@@ -86,6 +110,8 @@ function goUp(){
             document.getElementById("status").innerHTML = data.cats[petCount].status;
             document.getElementById("bio").innerHTML = data.cats[petCount].bio;
 
+            currentPet = data.cats[petCount];
+
             document.getElementById("pet_pic").style="background-image: url(profiles/profile-pics/"+ data.cats[petCount].petName+".jpg)";
         }
         else{
@@ -102,6 +128,8 @@ function goUp(){
             document.getElementById("species").innerHTML = data.dogs[petCount].species;
             document.getElementById("status").innerHTML = data.dogs[petCount].status;
             document.getElementById("bio").innerHTML = data.dogs[petCount].bio;
+
+            currentPet = data.dogs[petCount];
 
             document.getElementById("pet_pic").style="background-image: url(profiles/profile-pics/"+ data.dogs[petCount].petName+".jpg)";
         }
@@ -120,13 +148,28 @@ function goUp(){
             document.getElementById("status").innerHTML = data.fish[petCount].status;
             document.getElementById("bio").innerHTML = data.fish[petCount].bio;
 
+            currentPet =  data.fish[petCount];
+
             document.getElementById("pet_pic").style="background-image: url(profiles/profile-pics/"+ data.fish[petCount].petName+".jpg)";
         }
         else{
             goUp();
         }
     }
-
+    if(currentPet.adopted == false){
+        var adopt = document.getElementById("adopt");
+        var button=document.getElementById("adoptButton");
+        button.setAttribute("src", "img/whiteCheck.png")
+        adopt.setAttribute("class", "adopt")
+        button.setAttribute("class", "check")
+    }
+    else{
+        var adopt = document.getElementById("adopt");
+        var button=document.getElementById("adoptButton");
+        button.setAttribute("src", "img/whiteX.png")
+        adopt.setAttribute("class", "cancel")
+        button.setAttribute("class", "X")
+    }
 }
 
 
@@ -143,7 +186,7 @@ function goDown(){
     if(petCount < 0){
         petCount = 4;
     }
-    if(typeCount == 0){
+if(typeCount == 0){
         if(data.reptiles[petCount].adoptable == true){
             document.getElementById("pet_name").innerHTML = data.reptiles[petCount].petName;
             document.getElementById("user").innerHTML = data.reptiles[petCount].userName;
@@ -153,6 +196,8 @@ function goDown(){
             document.getElementById("species").innerHTML = data.reptiles[petCount].species;
             document.getElementById("status").innerHTML = data.reptiles[petCount].status;
             document.getElementById("bio").innerHTML = data.reptiles[petCount].bio;
+
+            currentPet = data.reptiles[petCount];
 
             document.getElementById("pet_pic").style="background-image: url(profiles/profile-pics/"+ data.reptiles[petCount].petName+".jpg)";
         }
@@ -172,6 +217,8 @@ function goDown(){
             document.getElementById("status").innerHTML = data.birds[petCount].status;
             document.getElementById("bio").innerHTML = data.birds[petCount].bio;
 
+            currentPet = data.birds[petCount];
+
             document.getElementById("pet_pic").style="background-image: url(profiles/profile-pics/"+ data.birds[petCount].petName+".jpg)";
         }
         else{
@@ -190,6 +237,8 @@ function goDown(){
             document.getElementById("status").innerHTML = data.cats[petCount].status;
             document.getElementById("bio").innerHTML = data.cats[petCount].bio;
 
+            currentPet = data.cats[petCount];
+
             document.getElementById("pet_pic").style="background-image: url(profiles/profile-pics/"+ data.cats[petCount].petName+".jpg)";
         }
         else{
@@ -206,6 +255,8 @@ function goDown(){
             document.getElementById("species").innerHTML = data.dogs[petCount].species;
             document.getElementById("status").innerHTML = data.dogs[petCount].status;
             document.getElementById("bio").innerHTML = data.dogs[petCount].bio;
+
+            currentPet = data.dogs[petCount];
 
             document.getElementById("pet_pic").style="background-image: url(profiles/profile-pics/"+ data.dogs[petCount].petName+".jpg)";
         }
@@ -224,13 +275,28 @@ function goDown(){
             document.getElementById("status").innerHTML = data.fish[petCount].status;
             document.getElementById("bio").innerHTML = data.fish[petCount].bio;
 
+            currentPet =  data.fish[petCount];
+
             document.getElementById("pet_pic").style="background-image: url(profiles/profile-pics/"+ data.fish[petCount].petName+".jpg)";
         }
         else{
             goDown();
         }
     }
-
+    if(currentPet.adopted == false){
+        var adopt = document.getElementById("adopt");
+        var button=document.getElementById("adoptButton");
+        button.setAttribute("src", "img/whiteCheck.png")
+        adopt.setAttribute("class", "adopt")
+        button.setAttribute("class", "check")
+    }
+    else{
+        var adopt = document.getElementById("adopt");
+        var button=document.getElementById("adoptButton");
+        button.setAttribute("src", "img/whiteX.png")
+        adopt.setAttribute("class", "cancel")
+        button.setAttribute("class", "X")
+    }
 }
 
 

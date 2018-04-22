@@ -192,7 +192,6 @@ function Data() {
                         'img/cool_turtle.jpg',
                         'img/top_turtle.jpg',
                         'img/turtle_strawberry.jpg'
-      
       ],
       "catagory": "reptile",
       "adopted": false,
@@ -208,7 +207,9 @@ function Data() {
       "status": "GRAAAARRR",
       "bio": "Protects and destroys cities.  He does whatever",
       "profilePics" : [
-      
+      "img/ReptarBack.png",
+      "img/ReptarDance.png",
+      "img/ReptarRoar.jpg"
       ],
       "catagory": "reptile",
       "adopted": false,
@@ -224,7 +225,8 @@ function Data() {
       "status": "I AM FIRE. I AM DEATH.",
       "bio": "Likes money.  Likes to make money.  Likes to kill to make money",
       "profilePics" : [
-      
+      "img/SmaugSmile.jpg"
+
       ],
       "catagory": "reptile",
       "adopted": false,
