@@ -12,17 +12,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Load style sheets -->
-<link rel="stylesheet" href="css/social.css">
+<link rel="stylesheet" href="css/adoption.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!-- Constructible EventTarget polyfill — Only Chrome 64+ supports constructible EventTarget objects natively -->
-<script src="js/social.js"></script>
 
 <!--<script src="game.js"></script>-->
 
 <link href="https://fonts.googleapis.com/css?family=Lemon" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+
+<script src="js/data.js"></script> 
+<script src="js/util.js"></script> 
+<script src="js/adoption.js"></script>
+
+
+
 
 </head>
 
@@ -77,7 +81,7 @@
         <div class = "carousel">
             <img id="up_arrow" class="arrow" src="img/up_arrow_color.png"
              onmouseover="shift_window()"></img>
-             <div class="pet_pic" style="background-image: url(profiles/profile-pics/sheldon.png)">
+             <div class="pet_pic" id="pet_pic" style="background-image: url(profiles/profile-pics/sheldon.png)">
             </div>
              <img id="down_arrow" class="arrow" src="img/down_arrow_color.png"
              onmouseover="shift_window()"></img>
@@ -106,14 +110,14 @@
 
                     </div>
                     <div class="pet_infos">
-                        <div class="pet_info">Sheldon</div>
-                        <div class="pet_info">King_Leopold_IV</div>
-                        <div class="pet_info">Sheldon Court, NY</div>
-                        <div class="pet_info">87</div>
-                        <div class="pet_info">Male</div>
-                        <div class="pet_info">Argentinian Sand Turtle</div>
-                        <div class="pet_info">Feeling lively</div>
-                        <div class="pet_info">Ruler of the State of New York. Likes his cane and top hat</div>
+                        <div class="pet_info" id="pet_name"></div>
+                        <div class="pet_info" id="user"></div>
+                        <div class="pet_info" id="location"></div>
+                        <div class="pet_info" id="age"></div>
+                        <div class="pet_info" id="gender"></div>
+                        <div class="pet_info" id="species"></div>
+                        <div class="pet_info" id="status"></div>
+                        <div class="pet_info" id="bio"></div>
 
                     </div>
                     <div class="side_buttons">
