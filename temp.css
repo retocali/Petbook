@@ -35,7 +35,6 @@ body{
     justify-self: center;
     border-radius:50%;
     border: 5px solid #8BCBC8  !important;
-    background-color: white;
     border-width: 1px;
 }
 [id="profile_button"]{
@@ -54,14 +53,17 @@ body{
 [id="knowledge"]{
     grid-column:5;
     grid-row:4;
+    background-color:var(--orange-color);
 }
 [id="training"]{
     grid-column:5;
     grid-row:5;
+    background-color: white;
 }
 [id="care"]{
     grid-column:5;
     grid-row:6;
+    background-color: white;
 }
 
 .img{
@@ -92,12 +94,14 @@ body{
     grid-column:5;
     grid-row: 2;
     height:100%;
+    background-color:#DAE9E4;
 
 }
 [id="right_button"]{
     grid-column: 5;
     grid-row:2;
     height:100%;
+    background-color:#DAE9E4;
 }
 [id="page_panel"]{
     grid-column: 5;
@@ -169,6 +173,18 @@ body{
     font-size: 1.8vw;
     align-items: center;
     padding-left: 8px;
+
+    display:grid;
+    grid-template-rows: 60% 40% ; 
+    overflow-y: scroll;
+}
+
+.comments{
+    grid-row:2;
+    text-indent: 10%;
+    font-size:1.5vw;
+    font-weight:lighter;
+    
 }
 .popularity{
     grid-row: 1;
