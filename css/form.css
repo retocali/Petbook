@@ -80,3 +80,21 @@ label {
   width: 49%;
 }
 
+
+#signupmessage {
+  min-height: 20vh;
+  width: 20vw;
+  /* To see the outline of the form */
+  position: absolute;
+  top: 25vh;
+  left:39.5vw;
+
+  border: 1vh solid var(--main-color);
+  border-radius: 1vw;
+  color: black;
+  font-family:  Lemon, cursive;
+  text-align: center;
+  font-size: 4vh;
+  background-color: white;
+
+}

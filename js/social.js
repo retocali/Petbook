@@ -10,11 +10,11 @@ Util.events(document, {
         update_html();
 
 		Util.one("#left_arrow").addEventListener('click', function(e) {
-			goLeft();
+			goRight();
 		});
 
         Util.one("#right_arrow").addEventListener('click', function(e) {
-			goRight();
+			goLeft();
 		}); 
 	},
     
