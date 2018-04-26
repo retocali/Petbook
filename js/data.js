@@ -206,12 +206,12 @@ function Data() {
       "species": "Argentinian Sand Turtle",
       "status": "Feeling Lively",
       "bio": "Ruler of New York.  Loves his top hat and cane",
-      "profilePics" : [ 'img/turtle.jpg',
-                        'img/turtle_lettuce.jpg',
-                        'img/turtle_fish.jpg',
-                        'img/cool_turtle.jpg',
-                        'img/top_turtle.jpg',
-                        'img/turtle_strawberry.jpg'
+      "profilePics" : [ 'profiles/profile-posts/Sheldon1.jpg',
+                        'profiles/profile-posts/Sheldon2.jpg',
+                        'profiles/profile-posts/Sheldon3.jpg',
+                        'profiles/profile-posts/Sheldon4.jpg',
+                        'profiles/profile-posts/Sheldon5.jpg',
+                        'profiles/profile-posts/Sheldon6.jpg'
       ],
       "catagory": "reptile",
       "adopted": false,
@@ -226,10 +226,8 @@ function Data() {
       "species": "Reptar Species",
       "status": "GRAAAARRR",
       "bio": "Protects and destroys cities.  He does whatever",
-      "profilePics" : [
-      "img/ReptarBack.png",
-      "img/ReptarDance.png",
-      "img/ReptarRoar.jpg"
+      "profilePics" : [ "profiles/profile-posts/Reptar1.png",
+                        "profiles/profile-posts/Reptar2.png",
       ],
       "catagory": "reptile",
       "adopted": false,
@@ -244,10 +242,9 @@ function Data() {
       "species": "Smol lizard",
       "status": "I AM FIRE. I AM DEATH.",
       "bio": "Likes money.  Likes to make money.  Likes to kill to make money",
-      "profilePics" : [
-      "img/SmaugSmile.jpg",
-      "img/SmaugAttack.jpg",
-      "img/SmaugMad.jpg"
+      "profilePics" : [ "profiles/profile-posts/Smaug1.jpg",
+                        "profiles/profile-posts/Smaug2.jpg",
+                        "profiles/profile-posts/Smaug3.jpg",
       ],
       "catagory": "reptile",
       "adopted": false,
@@ -263,10 +260,9 @@ function Data() {
       "species": "Burger Turtle",
       "status": "Medium Well",
       "bio": "Master of the burger arts, this turt is all about the burgers.  Please, no pickles",
-      "profilePics" : [
-      "img/Burger.jpg",
-      "img/Burger2.jpg",
-      "img/Burger3.jpg"
+      "profilePics" : [ "profiles/profile-posts/MasterOfBurgs1.jpg",
+                        "profiles/profile-posts/MasterOfBurgs2.jpg",
+                        "profiles/profile-posts/MasterOfBurgs3.jpg"
       ],
       "catagory": "reptile",
       "adopted": false,
@@ -274,7 +270,7 @@ function Data() {
     },
 
     {
-      "petName": "Smaug2",
+      "petName": "Smaugbaby",
       "userName": "Frodoo2",
       "location": "New Zealand",
       "age": "?",
@@ -282,10 +278,9 @@ function Data() {
       "species": "Large Dragon",
       "status": "I AM DRAGON. I AM DEATH",
       "bio": "Likes money.  Likes to make money.  Likes to make money to compensate.",
-      "profilePics" : [
-      "img/lizardShark.jpg",
-      "img/hatlizard.jpg",
-      "img/huehue.jpg"
+      "profilePics" : [ "profiles/profile-posts/Smaugbaby1.jpg",
+                        "profiles/profile-posts/Smaugbaby2.jpg",
+                        "profiles/profile-posts/Smaugbaby3.jpg",
       ],
       "catagory": "reptile",
       "adopted": false,
