@@ -180,19 +180,22 @@ div#main, div.sides, div.catagories, div.type{
   color: var(--cranberry-color);
   width: 90%;
   height: 95%;
-  background-color: var(--icing-color);
+  background-color: whitesmoke;
   border: 6px solid var(--cranberry-color);
   border-radius: 20px;
 }
 ::-webkit-scrollbar {
-  background-color: var(--cranberry-color);
+  background-color: var(--icing-color);
+  border: 1px solid black;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #5C4E5D; 
+  background-color: var(--blue-color);
+  border: 1px solid black;
+  border-radius: 10px;
 }
 ::-webkit-scrollbar-button {
-  background-color: #5C4E5D;
-  border: 1px solid var(--cranberry-color); 
+  background-color: var(--blue-color);
+  border: 1px solid black;
 }
 
 .info_labels{
@@ -253,7 +256,7 @@ div#main, div.sides, div.catagories, div.type{
   flex-grow: 1;
   flex-basis: 0;
   min-height: 37vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 
 }
 .post{
