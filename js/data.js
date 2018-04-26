@@ -101,7 +101,12 @@ function Data() {
       "species": "Husky",
       "status": "Woof",
       "bio": "Hates baths",
-      "profilePics" : [
+      "profilePics" : ['profiles/profile-posts/luna1.jpg',
+                      'profiles/profile-posts/luna2.jpg',
+                      'profiles/profile-posts/luna3.jpg',
+                      'profiles/profile-posts/luna4.jpg',
+                      'profiles/profile-posts/luna5.jpg',
+                      'profiles/profile-posts/luna6.jpg',
       
       ],
       "catagory": "dog",
@@ -117,7 +122,9 @@ function Data() {
       "species": "Chihuahua",
       "status": "Quero TacoBell",
       "bio": "Eats tacos and only tacos.  Surprisingly not obese",
-      "profilePics" : [
+      "profilePics" : ['profiles/profile-posts/rocky1.jpg',
+                      'profiles/profile-posts/rocky2.jpg',
+                      'profiles/profile-posts/rocky3.jpg',
       
       ],
       "catagory": "dog",
@@ -134,7 +141,8 @@ function Data() {
       "catagory": "dog",
       "status": "View's nice up here",
       "bio": "4 feet tall",
-      "profilePics" : [
+      "profilePics" : ['profiles/profile-posts/sebastian1.jpg',
+                      'profiles/profile-posts/sebastian2.jpg',
       
       ],
       "catagory": "dog",
@@ -151,8 +159,15 @@ function Data() {
       "catagory": "dog",
       "status": "fluff fluff",
       "bio": "diva doggo",
-      "profilePics" : [
-      
+      "profilePics" : [ 'profiles/profile-posts/coco1.jpg',
+                        'profiles/profile-posts/coco2.jpg',
+                        'profiles/profile-posts/coco3.jpg',
+                        'profiles/profile-posts/coco4.jpg',
+                        'profiles/profile-posts/coco5.jpg',
+                        'profiles/profile-posts/coco6.jpg',
+                        'profiles/profile-posts/coco7.jpg',
+                        'profiles/profile-posts/coco8.jpg',
+                        'profiles/profile-posts/coco9.jpg',      
       ],
       "catagory": "dog",
       "adopted": false,
@@ -167,8 +182,12 @@ function Data() {
       "species": "Golden Retriver",
       "status": "Loooooooves People",
       "bio": "Friendliest Doggo in town, 2 years in a row",
-      "profilePics" : [
-      
+      "profilePics" : [ 'profiles/profile-posts/bailey1.jpg',
+                        'profiles/profile-posts/bailey2.jpg',
+                        'profiles/profile-posts/bailey3.jpg',
+                        'profiles/profile-posts/bailey4.jpg',
+                        'profiles/profile-posts/bailey5.jpg'
+          
       ],
       "catagory": "dog",
       "adopted": false,
