@@ -8,6 +8,7 @@ function Data() {
    *  and points to each species using a string as a key
    * 
    */
+  
   this.cats = [
     {
       "petName": "Miki",
@@ -469,5 +470,19 @@ function Data() {
     "fish" : this.fish,
     "birds" : this.birds,
     "reptiles" : this.reptiles,
+  }
+}
+
+class State {
+  
+  static signIn() {
+    sessionStorage.setItem("signedIn", true);
+    console.log(sessionStorage.getItem("signedIn"));
+  }
+  static isSignedIn() {
+    if( typeof sessionStorage.getItem("signedIn") == 'undefined' ) {
+      return false;
+    }
+    return sessionStorage.getItem("signedIn")
   }
 }

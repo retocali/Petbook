@@ -35,7 +35,6 @@ body{
     justify-self: center;
     border-radius:50%;
     border: 5px solid #8BCBC8  !important;
-    background-color: white;
     border-width: 1px;
 }
 [id="profile_button"]{
@@ -54,21 +53,27 @@ body{
 [id="knowledge"]{
     grid-column:5;
     grid-row:4;
+    background-color:var(--orange-color);
 }
 [id="training"]{
     grid-column:5;
     grid-row:5;
+    background-color: white;
 }
 [id="care"]{
     grid-column:5;
     grid-row:6;
+    background-color: white;
 }
 
 .img{
     max-width: 50%;
     max-height: 50%;
 }
-
+.labels{
+    -webkit-margin-before:0em;
+    -webkit-margin-after:0em;
+}
 
 
 [id="forum_container"]{
@@ -81,13 +86,48 @@ body{
     border: 5px solid var(--cranberry-color);
     display: grid;
     grid-template-rows: 5% 30% 30% 30% 5%;
+
     grid-row-gap: 5px;
+}
+
+[id="left_button"]{
+    grid-column:5;
+    grid-row: 2;
+    height:100%;
+    background-color:#DAE9E4;
+
+}
+[id="right_button"]{
+    grid-column: 5;
+    grid-row:2;
+    height:100%;
+    background-color:#DAE9E4;
+}
+[id="page_panel"]{
+    grid-column: 5;
+    grid-row: 2;
+    height: 100%;
+}
+[id="title_page"]{
+    color: white;
+    font-size: 1.5vw;
+    text-align: center;
+    font-family: 'Helvetica';
+    font-weight:bold;
+    
+}
+[id="curr_page"]{
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+    font-family: 'Helvetica';
+    font-weight:bold;
 }
 
 .entry{
     display:grid;
     grid-template-rows: 0% 100% 0%;
-    grid-template-columns: 10% 70% 10% 10%;
+    grid-template-columns: 10% 70% 0% 10% 10%;
 }
 
 [id="first_entry"]{
@@ -133,6 +173,18 @@ body{
     font-size: 1.8vw;
     align-items: center;
     padding-left: 8px;
+
+    display:grid;
+    grid-template-rows: 60% 40% ; 
+    overflow-y: scroll;
+}
+
+.comments{
+    grid-row:2;
+    text-indent: 10%;
+    font-size:1.5vw;
+    font-weight:lighter;
+    
 }
 .popularity{
     grid-row: 1;

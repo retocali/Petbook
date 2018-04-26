@@ -19,6 +19,9 @@ FORUM Q&A
 
 <!-- Constructible EventTarget polyfill — Only Chrome 64+ supports constructible EventTarget objects natively -->
 <script src="https://unpkg.com/event-target@latest/min.js"></script>
+<script src="js/util.js"></script>
+<script src="js/qa.js"></script>
+
 
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Lemon" rel="stylesheet">
@@ -77,29 +80,44 @@ FORUM Q&A
     </button>
     <button type="button" id="search_button" class="main_buttons">
         <img src="img/lupa.png" class="img">
+        <p class="labels">Search</p>
     </button>
     <button type="button" id="question_button" class="main_buttons">
         <img src="img/question_mark.png" class="img">
+        <p class="labels">Make a question</p>
     </button>
 
     <button type="button" id="knowledge" class="main_buttons">
         <img src="img/open-book.svg" class="img">
+        <p class="labels">General Knowledge</p>
     </button>
     <button type="button" id="training" class="main_buttons">
         <img src="img/dumbbell.svg" class="img">
+        <p class="labels">Training</p>
     </button>
     <button type="button" id="care" class="main_buttons">
         <img src="img/red-cross.svg" class="img">
+        <p class="labels">Care</p>
     </button>
 
     <div id="forum_container">
         <div id="first_entry" class="entry">
+            <button id="left_button">
+                <img src="img/up_arrow_color.png" class="img"> 
+            </button>
             <div id="main_text_1" class="main_text">
-                <p> Can my doggo have pups with my cat?</p>
+                <p id="1"> Can my doggo have pups with my cat?</p>
+                <br>
+                <div id="comments_1" class="comments">
+                    <p id="2" class="popularity_num">·User1: Yeah Ofc</p>
+                    <p id="3" class="popularity_num">·User2: I don't think so</p>
+                    <p id="4" class="popularity_num">·User3: What a degen... gtfo</p>
+
+                </div>
             </div>
             <div class="voting">
                 <div id="popularity_1" class="popularity">
-                        <p class="popularity_num">58K</p>
+                        <p id="pop1" class="popularity_num">58K</p>
                 </div>
                 <button id="up_1" class="up">
                     <img src="img/upArrow.png" class="img">
@@ -118,12 +136,23 @@ FORUM Q&A
             </div>
         </div>
         <div id="second_entry" class="entry">
+            <div id="page_panel">
+                <p id="title_page">Page</p>
+                <p id="curr_page">1/2</p>
+            </div>
             <div id="main_text_2" class="main_text">
-                <p> Can my doggo do integral calculus? Because it barked 0.5x^2 when I said x.</p>
+                <p id="5"> Can my doggo do integral calculus? Because it barked 0.5x^2 when I said x.</p>
+                <br>
+                <div id="comments_2" class="comments">
+                        <br>
+                        <p id="6" class="popularity_num">·User1: Yeah Ofc</p>
+                        <p id="7" class="popularity_num">·User2: Forgot the constant</p>
+                        <p id="8" class="popularity_num">·User3: what's calculus?</p>
+                </div>
             </div>
             <div class="voting">
                 <div id="popularity_2" class="popularity">
-                        <p class="popularity_num">20K</p>
+                        <p id="pop2" class="popularity_num">20K</p>
                 </div>
                 <button id="up_2" class="up">
                     <img src="img/upArrow.png" class="img">
@@ -142,12 +171,22 @@ FORUM Q&A
             </div>
         </div>
         <div id="third_entry" class="entry">
+            <button id="right_button">
+                <img src="img/down_arrow_color.png" class="img">
+            </button>
             <div id="main_text_3" class="main_text">
-                <p> My doggo barked (1/6)pi^2 when I was summing 1+0.25+0.1111+... is he gonna be allright? </p>
+                <p id="9"> My doggo barked (1/6)pi^2 when I was summing 1+0.25+0.1111+... is he gonna be allright? </p>
+                <br>
+                <div id="comments_3" class="comments">
+                        <br>
+                        <p id="10" class="popularity_num">·Harvard: Want a scholarship woofie?</p>
+                        <p id="11" class="popularity_num">·Yale: It's not well rounded enough</p>
+                        <p id="12" class="popularity_num">·MIT: Did it bark the proof tho?</p>
+                </div>
             </div>
             <div class="voting">
                 <div id="popularity_3" class="popularity">
-                        <p class="popularity_num">-1K</p>
+                        <p id="pop3" class="popularity_num">-1K</p>
                     </div>
                     
                 <button id="up_3" class="up">
