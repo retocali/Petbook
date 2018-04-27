@@ -19,8 +19,16 @@ function Data() {
       "species": "Tabbycat",
       "status": "Miki's a butt",
       "bio": "Miki loves her mouse toys and lasers",
-      "profilePics" : [
-        
+      "profilePics" : [ 'profiles/profile-posts/Miki1.jpg',
+                        'profiles/profile-posts/Miki2.jpg',
+                        'profiles/profile-posts/Miki3.jpg',
+                        'profiles/profile-posts/Miki4.jpg',
+                        'profiles/profile-posts/Miki5.jpg',
+                        'profiles/profile-posts/Miki6.jpg',
+                        'profiles/profile-posts/Miki7.jpg',
+                        'profiles/profile-posts/Miki8.jpg',
+                        'profiles/profile-posts/Miki9.jpg',
+                        'profiles/profile-posts/Miki10.jpg',        
       ],
       "catagory": "cat",
       "adopted": false,
@@ -35,7 +43,18 @@ function Data() {
       "species": "Felis Cartoonis",
       "status": "Cat fight",
       "bio": "Always out on the lookout for Jerry",
-      "profilePics" : [
+      "profilePics" : [ 'profiles/profile-posts/Tom1.jpg',
+                        'profiles/profile-posts/Tom2.jpg',
+                        'profiles/profile-posts/Tom3.jpg',
+                        'profiles/profile-posts/Tom4.jpg',
+                        'profiles/profile-posts/Tom5.jpg',
+                        'profiles/profile-posts/Tom6.jpg',
+                        'profiles/profile-posts/Tom7.jpg',
+                        'profiles/profile-posts/Tom8.jpg',
+                        'profiles/profile-posts/Tom9.jpg',
+                        'profiles/profile-posts/Tom10.jpg',
+                        'profiles/profile-posts/Tom11.jpg',
+                        'profiles/profile-posts/Tom12.jpg',
         
       ],
       "catagory": "cat",
@@ -51,7 +70,8 @@ function Data() {
       "species": "Birman",
       "status": "looking for a sunny place to nap",
       "bio": "meow?",
-      "profilePics" : [
+      "profilePics" : [ 'profiles/profile-posts/Fluffy1.jpg',
+                        'profiles/profile-posts/Fluffy2.jpg',
         
       ],
       "catagory": "cat",
@@ -67,7 +87,12 @@ function Data() {
       "species": "King Cat",
       "status": "Hakuna Matata",
       "bio": "I just can't wait to be king",
-      "profilePics" : [
+      "profilePics" : ['profiles/profile-posts/Simba1.jpg',
+                        'profiles/profile-posts/Simba2.jpg',
+                        'profiles/profile-posts/Simba3.jpg',
+                        'profiles/profile-posts/Simba4.jpg',
+                        'profiles/profile-posts/Simba5.jpg',
+                        'profiles/profile-posts/Simba6.jpg', 
         
       ],
       "catagory": "cat",
@@ -76,7 +101,7 @@ function Data() {
     },
 
     {
-      "petName": "Cheshire Cat",
+      "petName": "Cheshire",
       "userName": "wanderer_al1c3",
       "location": "Boston",
       "age": "??",
@@ -84,7 +109,9 @@ function Data() {
       "species": "British Shorthair",
       "status": "*Grins*",
       "bio": "Most everyone's mad here",
-      "profilePics" : [
+      "profilePics" : [ 'profiles/profile-posts/Cheshire1.jpg',
+                        'profiles/profile-posts/Cheshire2.jpg',
+                        'profiles/profile-posts/Cheshire3.jpg',
         
       ],
       "catagory": "cat",
