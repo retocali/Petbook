@@ -11,7 +11,7 @@ FORUM Q&A
 <!-- Use mobile-aware viewport -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="stylesheet" href="temp.css">
+<link rel="stylesheet" href="temp2.css">
 <link rel="stylesheet" href="css/style.css">
 
 <!-- Load any supplemental Javascript libraries here -->
@@ -20,7 +20,7 @@ FORUM Q&A
 <!-- Constructible EventTarget polyfill — Only Chrome 64+ supports constructible EventTarget objects natively -->
 <script src="https://unpkg.com/event-target@latest/min.js"></script>
 <script src="js/util.js"></script>
-<script src="js/qa.js"></script>
+
 
 
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -74,7 +74,6 @@ FORUM Q&A
     </div>
 
 <body id=main>
-
     <button type="button" id="profile_button" class="main_buttons">
         <img src="img/user.svg" class="img">
     </button>
@@ -101,23 +100,19 @@ FORUM Q&A
     </button>
 
     <div id="forum_container">
-        <div id="first_entry" class="entry">
-            <button id="left_button">
-                <img src="img/up_arrow_color.png" class="img"> 
-            </button>
+        <div id="entry_1" class="entry">
             <div id="main_text_1" class="main_text">
-                <p id="1"> Can my doggo have pups with my cat?</p>
+                <p id="question_1"> Can my doggo have pups with my cat?</p>
                 <br>
                 <div id="comments_1" class="comments">
-                    <p id="2" class="popularity_num">·User1: Yeah Ofc</p>
-                    <p id="3" class="popularity_num">·User2: I don't think so</p>
-                    <p id="4" class="popularity_num">·User3: What a degen... gtfo</p>
-
+                    <p id="c_1_1" class="popularity_num">·User1: Yeah Ofc</p>
+                    <p id="c_1_2" class="popularity_num">·User2: I don't think so</p>
+                    <p id="c_1_3" class="popularity_num">·User3: What a degen... gtfo</p>
                 </div>
             </div>
             <div class="voting">
                 <div id="popularity_1" class="popularity">
-                        <p id="pop1" class="popularity_num">58K</p>
+                        <p id="pop_1" class="popularity_num">58K</p>
                 </div>
                 <button id="up_1" class="up">
                     <img src="img/upArrow.png" class="img">
@@ -135,77 +130,9 @@ FORUM Q&A
                 </button>
             </div>
         </div>
-        <div id="second_entry" class="entry">
-            <div id="page_panel">
-                <p id="title_page">Page</p>
-                <p id="curr_page">1/2</p>
-            </div>
-            <div id="main_text_2" class="main_text">
-                <p id="5"> Can my doggo do integral calculus? Because it barked 0.5x^2 when I said x.</p>
-                <br>
-                <div id="comments_2" class="comments">
-                        <br>
-                        <p id="6" class="popularity_num">·User1: Yeah Ofc</p>
-                        <p id="7" class="popularity_num">·User2: Forgot the constant</p>
-                        <p id="8" class="popularity_num">·User3: what's calculus?</p>
-                </div>
-            </div>
-            <div class="voting">
-                <div id="popularity_2" class="popularity">
-                        <p id="pop2" class="popularity_num">20K</p>
-                </div>
-                <button id="up_2" class="up">
-                    <img src="img/upArrow.png" class="img">
-                </button>
-                <button id="down_2" class="down">
-                        <img src="img/downArrow.png" class="img">
-                </button>        
-            </div>
-            <div class="options">
-                <button id="favorite_2" class="favorite">
-                    <img src="img/white_star.png" class="img">
-                </button>
-                <button id="comment_2" class="comment">
-                    <img src="img/pencil.png" class="img">
-                </button>
-            </div>
-        </div>
-        <div id="third_entry" class="entry">
-            <button id="right_button">
-                <img src="img/down_arrow_color.png" class="img">
-            </button>
-            <div id="main_text_3" class="main_text">
-                <p id="9"> My doggo barked (1/6)pi^2 when I was summing 1+0.25+0.1111+... is he gonna be allright? </p>
-                <br>
-                <div id="comments_3" class="comments">
-                        <br>
-                        <p id="10" class="popularity_num">·Harvard: Want a scholarship woofie?</p>
-                        <p id="11" class="popularity_num">·Yale: It's not well rounded enough</p>
-                        <p id="12" class="popularity_num">·MIT: Did it bark the proof tho?</p>
-                </div>
-            </div>
-            <div class="voting">
-                <div id="popularity_3" class="popularity">
-                        <p id="pop3" class="popularity_num">-1K</p>
-                    </div>
-                    
-                <button id="up_3" class="up">
-                    <img src="img/upArrow.png" class="img">
-                </button>
-                <button id="down_3" class="down">
-                    <img src="img/downArrow.png" class="img">
-                </button>
-            </div>
-            <div class="options">
-                <button id="favorite_3" class="favorite">
-                    <img src="img/white_star.png" class="img">
-                </button>
-                <button id="comment_3" class="comment">
-                    <img src="img/pencil.png" class="img">
-                </button>
-            </div>
-        </div>
+
     </div>
 </body>
 
+<script src="js/qa2.js"></script>
 </html>
