@@ -1,18 +1,94 @@
 <!DOCTYPE html>
+<!--
+    PETBOOK- SERVICES WINDOW
+-->
 <html>
-    <head>
-        <link href="https://fonts.googleapis.com/css?family=Lemon" rel="stylesheet"> 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <title>PetBook News</title>
-    <iframe scrolling="no" src="border.html" frameborder="0" style="height:10vh; width:100vw; "></iframe>
-        
-    <body id=body>
-        <div id=main>
-            <a href="social.html" class="title" style="color:black">
-                    UNDER DEVELOPMENT: CLICK HERE TO GO BACK
-            </a>
+
+<head>
+<meta charset="utf-8">
+<title>PetBook Social Reptiles</title>
+
+<!-- Use mobile-aware viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Load style sheets -->
+<link rel="stylesheet" href="css/social.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Constructible EventTarget polyfill — Only Chrome 64+ supports constructible EventTarget objects natively -->
+<script src="js/data.js"></script> 
+<script src="js/util.js"></script> 
+<script src="js/social-cats.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Lemon" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+
+</head>
+
+<iframe scrolling="no" src="border.html" frameborder="0" style="height:10vh; width:100vw; "></iframe>
+
+<body id = "MAIN-CONTAINER">
+
+    <main>
+        <div class = "selection">
+            <div class = "filter_box">
+                <div id = "filter_label">Filters: </div>
+                <div id = "filter_location" class = "filter">L</div>
+                <div id = "filter_species" class = "filter">S</div>
+                <div id = "filter_type" class = "filter">T</div>
+            </div>
+            <div class = "carousel">
+                <img id="up_arrow" class="arrow" src="img/up_arrow_color.png"
+                ></img>
+                <div class="pet_pic" id="pet_pic"></div>
+                <img id="down_arrow" class="arrow" src="img/down_arrow_color.png"
+                ></img>
+
+            </div>
         </div>
-    </body>
+        <div class = "pet_page">
+            <div class = "information_box">
+                <div class = "information">
+                    <div class = "info_labels">
+                        <div class="info_label">Name:</div>
+                        <div class="info_label">User:</div>
+                        <div class="info_label">Location:</div>
+                        <div class="info_label">Age:</div>
+                        <div class="info_label">Gender:</div>
+                        <div class="info_label">Species:</div>
+                        <div class="info_label">Status:</div>
+                        <div class="info_label">Bio:</div>
+                        <div class="info_label">Posts:</div>
+
+
+                    </div>
+                    <div class="pet_infos" >
+                        <div class="pet_info" id="pet_name"></div>
+                        <div class="pet_info" id="user"></div>
+                        <div class="pet_info" id="location"></div>
+                        <div class="pet_info" id="age"></div>
+                        <div class="pet_info" id="gender"></div>
+                        <div class="pet_info" id="species"></div>
+                        <div class="pet_info" id="status"></div>
+                        <div class="pet_info" id="bio"></div>
+
+                        <div class="posts_grid" id="pet_posts">
+                        </div>
+
+                    </div>
+                    <div class="side_buttons">
+                        <img id="favorite" src="img/star.png"></img>
+                        <div id="adopt_btn">Adopt</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+
+</body>
+
 </html>
