@@ -5,9 +5,9 @@
     --sakura-color: #ECC7C0;
     --cranberry-color: #3C2E3D;
     --main-color: var(--cranberry-color);
+    --dark-main-color: #2C1E2D;
     --accent-color: var(--orange-color);
 }
-
 .html {
     margin: 0px !important;
     padding: 0px !important;
@@ -39,8 +39,8 @@ body {
     padding: .5vh;
     text-align: center;
     font-family: 'Lemon', cursive; 
-    font-size: 6vh;
-    height: 10vh;
+    font-size: 60vh;
+    height: 100vh;
 }
 .title {    
     color: white;
@@ -70,13 +70,13 @@ body {
 }
 .mainbutton {
     stroke: cornflowerblue;
-    stroke-width: .5vh;
+    stroke-width: 5px;
     fill: #FFFFFF00;
 }
 
 .mainbutton:hover {
     stroke: var(--sakura-color);
-    stroke-width: 1vh;
+    stroke-width: 10px;
 }
 
 .mainbuttontext {
@@ -86,7 +86,7 @@ body {
 }
 
 .navbartext {
-    font-size: 1.6vh;
+    font-size: 16vh;
     font-family: 'Lemon';
     fill: white;
 }
@@ -98,36 +98,45 @@ body {
 }
 
 #search {
-    background-color: var(--main-color);
+    background-color: var(--dark-main-color);
     color: var(--main-color);
-    padding: 0.5vh;
-    margin-top: 0.7vh;
+    padding: 5vh;
     text-align: left;
+    margin: 0;
+    margin-top: 10vh;
     font-family: Helvetica; 
-    vertical-align: text-top;
-    font-size: 4.5vh;
+    vertical-align: top;
+    font-size: 30vh;
     border: none;
-    border-radius: 2vh;
-    width: 2vw;
+    line-height: 50vh;
+    border-radius: 5vh;
+    width: 15vw;
 }
 ::placeholder {
     color: white;
 }
 
 #search:hover, #search:focus {
-    background-color: var(--accent-color);
+    background-color: var(--blue-color);
     color: black;
-    opacity: .9;
-    width: 10vw;
 }
 #searchbutton {
-    font-size: 4vh;
-    margin-top: 0.7vh;
-    background-color: var(--main-color);
-    vertical-align: text-top;
+    font-size: 40vh;
+    margin: 0;
+    margin-top: 10vh;
+    padding: 0 10vh;
+    background-color: var(--dark-main-color);
+    vertical-align: top;
     color: white;
     border: none;
-    line-height: 6vh;
+    border-radius: 5vh;
+    line-height: 60vh;
+}
+#searchbutton:active {
+    background-color: var(--accent-color);
+}
+button {
+    opacity: 0.8;
 }
 button:hover {
     opacity:1;
