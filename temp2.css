@@ -133,7 +133,7 @@ body{
 
     display:grid;
     grid-template-rows: 60% 40% ; 
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .comments{
