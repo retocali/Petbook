@@ -145,10 +145,11 @@ body {
     line-height: 60vh;
 }
 #searchbutton:hover {
-    background-color: var(--blue-color)
+    color: cornflowerblue;
 }
 #searchbutton:active {
     background-color: cornflowerblue;
+    color: white;
 }
 button {
     opacity: 0.8;
