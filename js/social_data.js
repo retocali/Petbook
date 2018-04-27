@@ -8,28 +8,28 @@ function SocialData() {
   this.catagories = [
     {
       "catagory": "Dogs",
-      "image": 'img/dog.jpg',
+      "image": 'profiles/catagory-pics/dog.jpg',
       "href": 'social_dogs.html',
     },
     {
       "catagory": "Cats",
-      "image": 'img/cat.jpg',
+      "image": 'profiles/catagory-pics/cat.jpg',
       "href": 'social_cats.html'
     },
     {
       "catagory": "Fish",
-      "image": 'img/fish.png',
+      "image": 'profiles/catagory-pics/fish.png',
       "href": 'social_fish.html'
     },
     {
       "catagory": "Reptiles",
-      "image": 'img/turtle.jpg',
+      "image": 'profiles/catagory-pics/turtle.jpg',
       "href": 'social_reptiles.html'
     },
 
     {
       "catagory": "Birds",
-      "image": 'img/bird.jpg',
+      "image": 'profiles/catagory-pics/bird.jpg',
       "href": 'social_birds.html'      
     },
   ];

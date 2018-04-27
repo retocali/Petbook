@@ -19,8 +19,16 @@ function Data() {
       "species": "Tabbycat",
       "status": "Miki's a butt",
       "bio": "Miki loves her mouse toys and lasers",
-      "profilePics" : [
-        
+      "profilePics" : [ 'profiles/profile-posts/Miki1.jpg',
+                        'profiles/profile-posts/Miki2.jpg',
+                        'profiles/profile-posts/Miki3.jpg',
+                        'profiles/profile-posts/Miki4.jpg',
+                        'profiles/profile-posts/Miki5.jpg',
+                        'profiles/profile-posts/Miki6.jpg',
+                        'profiles/profile-posts/Miki7.jpg',
+                        'profiles/profile-posts/Miki8.jpg',
+                        'profiles/profile-posts/Miki9.jpg',
+                        'profiles/profile-posts/Miki10.jpg',        
       ],
       "catagory": "cat",
       "adopted": false,
@@ -35,7 +43,18 @@ function Data() {
       "species": "Felis Cartoonis",
       "status": "Cat fight",
       "bio": "Always out on the lookout for Jerry",
-      "profilePics" : [
+      "profilePics" : [ 'profiles/profile-posts/Tom1.jpg',
+                        'profiles/profile-posts/Tom2.jpg',
+                        'profiles/profile-posts/Tom3.jpg',
+                        'profiles/profile-posts/Tom4.jpg',
+                        'profiles/profile-posts/Tom5.jpg',
+                        'profiles/profile-posts/Tom6.jpg',
+                        'profiles/profile-posts/Tom7.jpg',
+                        'profiles/profile-posts/Tom8.jpg',
+                        'profiles/profile-posts/Tom9.jpg',
+                        'profiles/profile-posts/Tom10.jpg',
+                        'profiles/profile-posts/Tom11.jpg',
+                        'profiles/profile-posts/Tom12.jpg',
         
       ],
       "catagory": "cat",
@@ -51,7 +70,8 @@ function Data() {
       "species": "Birman",
       "status": "looking for a sunny place to nap",
       "bio": "meow?",
-      "profilePics" : [
+      "profilePics" : [ 'profiles/profile-posts/Fluffy1.jpg',
+                        'profiles/profile-posts/Fluffy2.jpg',
         
       ],
       "catagory": "cat",
@@ -67,7 +87,12 @@ function Data() {
       "species": "King Cat",
       "status": "Hakuna Matata",
       "bio": "I just can't wait to be king",
-      "profilePics" : [
+      "profilePics" : ['profiles/profile-posts/Simba1.jpg',
+                        'profiles/profile-posts/Simba2.jpg',
+                        'profiles/profile-posts/Simba3.jpg',
+                        'profiles/profile-posts/Simba4.jpg',
+                        'profiles/profile-posts/Simba5.jpg',
+                        'profiles/profile-posts/Simba6.jpg', 
         
       ],
       "catagory": "cat",
@@ -76,7 +101,7 @@ function Data() {
     },
 
     {
-      "petName": "Cheshire Cat",
+      "petName": "Cheshire",
       "userName": "wanderer_al1c3",
       "location": "Boston",
       "age": "??",
@@ -84,7 +109,9 @@ function Data() {
       "species": "British Shorthair",
       "status": "*Grins*",
       "bio": "Most everyone's mad here",
-      "profilePics" : [
+      "profilePics" : [ 'profiles/profile-posts/Cheshire1.jpg',
+                        'profiles/profile-posts/Cheshire2.jpg',
+                        'profiles/profile-posts/Cheshire3.jpg',
         
       ],
       "catagory": "cat",
@@ -102,7 +129,12 @@ function Data() {
       "species": "Husky",
       "status": "Woof",
       "bio": "Hates baths",
-      "profilePics" : [
+      "profilePics" : ['profiles/profile-posts/luna1.jpg',
+                      'profiles/profile-posts/luna2.jpg',
+                      'profiles/profile-posts/luna3.jpg',
+                      'profiles/profile-posts/luna4.jpg',
+                      'profiles/profile-posts/luna5.jpg',
+                      'profiles/profile-posts/luna6.jpg',
       
       ],
       "catagory": "dog",
@@ -118,7 +150,9 @@ function Data() {
       "species": "Chihuahua",
       "status": "Quero TacoBell",
       "bio": "Eats tacos and only tacos.  Surprisingly not obese",
-      "profilePics" : [
+      "profilePics" : ['profiles/profile-posts/rocky1.jpg',
+                      'profiles/profile-posts/rocky2.jpg',
+                      'profiles/profile-posts/rocky3.jpg',
       
       ],
       "catagory": "dog",
@@ -135,7 +169,8 @@ function Data() {
       "catagory": "dog",
       "status": "View's nice up here",
       "bio": "4 feet tall",
-      "profilePics" : [
+      "profilePics" : ['profiles/profile-posts/sebastian1.jpg',
+                      'profiles/profile-posts/sebastian2.jpg',
       
       ],
       "catagory": "dog",
@@ -152,8 +187,15 @@ function Data() {
       "catagory": "dog",
       "status": "fluff fluff",
       "bio": "diva doggo",
-      "profilePics" : [
-      
+      "profilePics" : [ 'profiles/profile-posts/coco1.jpg',
+                        'profiles/profile-posts/coco2.jpg',
+                        'profiles/profile-posts/coco3.jpg',
+                        'profiles/profile-posts/coco4.jpg',
+                        'profiles/profile-posts/coco5.jpg',
+                        'profiles/profile-posts/coco6.jpg',
+                        'profiles/profile-posts/coco7.jpg',
+                        'profiles/profile-posts/coco8.jpg',
+                        'profiles/profile-posts/coco9.jpg',      
       ],
       "catagory": "dog",
       "adopted": false,
@@ -168,8 +210,12 @@ function Data() {
       "species": "Golden Retriver",
       "status": "Loooooooves People",
       "bio": "Friendliest Doggo in town, 2 years in a row",
-      "profilePics" : [
-      
+      "profilePics" : [ 'profiles/profile-posts/bailey1.jpg',
+                        'profiles/profile-posts/bailey2.jpg',
+                        'profiles/profile-posts/bailey3.jpg',
+                        'profiles/profile-posts/bailey4.jpg',
+                        'profiles/profile-posts/bailey5.jpg'
+          
       ],
       "catagory": "dog",
       "adopted": false,
@@ -187,12 +233,12 @@ function Data() {
       "species": "Argentinian Sand Turtle",
       "status": "Feeling Lively",
       "bio": "Ruler of New York.  Loves his top hat and cane",
-      "profilePics" : [ 'img/turtle.jpg',
-                        'img/turtle_lettuce.jpg',
-                        'img/turtle_fish.jpg',
-                        'img/cool_turtle.jpg',
-                        'img/top_turtle.jpg',
-                        'img/turtle_strawberry.jpg'
+      "profilePics" : [ 'profiles/profile-posts/Sheldon1.jpg',
+                        'profiles/profile-posts/Sheldon2.jpg',
+                        'profiles/profile-posts/Sheldon3.jpg',
+                        'profiles/profile-posts/Sheldon4.jpg',
+                        'profiles/profile-posts/Sheldon5.jpg',
+                        'profiles/profile-posts/Sheldon6.jpg'
       ],
       "catagory": "reptile",
       "adopted": false,
@@ -207,10 +253,8 @@ function Data() {
       "species": "Reptar Species",
       "status": "GRAAAARRR",
       "bio": "Protects and destroys cities.  He does whatever",
-      "profilePics" : [
-      "img/ReptarBack.png",
-      "img/ReptarDance.png",
-      "img/ReptarRoar.jpg"
+      "profilePics" : [ "profiles/profile-posts/Reptar1.png",
+                        "profiles/profile-posts/Reptar2.png",
       ],
       "catagory": "reptile",
       "adopted": false,
@@ -225,10 +269,9 @@ function Data() {
       "species": "Smol lizard",
       "status": "I AM FIRE. I AM DEATH.",
       "bio": "Likes money.  Likes to make money.  Likes to kill to make money",
-      "profilePics" : [
-      "img/SmaugSmile.jpg",
-      "img/SmaugAttack.jpg",
-      "img/SmaugMad.jpg"
+      "profilePics" : [ "profiles/profile-posts/Smaug1.jpg",
+                        "profiles/profile-posts/Smaug2.jpg",
+                        "profiles/profile-posts/Smaug3.jpg",
       ],
       "catagory": "reptile",
       "adopted": false,
@@ -244,10 +287,9 @@ function Data() {
       "species": "Burger Turtle",
       "status": "Medium Well",
       "bio": "Master of the burger arts, this turt is all about the burgers.  Please, no pickles",
-      "profilePics" : [
-      "img/Burger.jpg",
-      "img/Burger2.jpg",
-      "img/Burger3.jpg"
+      "profilePics" : [ "profiles/profile-posts/MasterOfBurgs1.jpg",
+                        "profiles/profile-posts/MasterOfBurgs2.jpg",
+                        "profiles/profile-posts/MasterOfBurgs3.jpg"
       ],
       "catagory": "reptile",
       "adopted": false,
@@ -255,7 +297,7 @@ function Data() {
     },
 
     {
-      "petName": "Smaug2",
+      "petName": "Smaugbaby",
       "userName": "Frodoo2",
       "location": "New Zealand",
       "age": "?",
@@ -263,10 +305,9 @@ function Data() {
       "species": "Large Dragon",
       "status": "I AM DRAGON. I AM DEATH",
       "bio": "Likes money.  Likes to make money.  Likes to make money to compensate.",
-      "profilePics" : [
-      "img/lizardShark.jpg",
-      "img/hatlizard.jpg",
-      "img/huehue.jpg"
+      "profilePics" : [ "profiles/profile-posts/Smaugbaby1.jpg",
+                        "profiles/profile-posts/Smaugbaby2.jpg",
+                        "profiles/profile-posts/Smaugbaby3.jpg",
       ],
       "catagory": "reptile",
       "adopted": false,
