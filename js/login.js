@@ -5,6 +5,7 @@ Util.events(document, {
 	"DOMContentLoaded": function() {
 		if (State.isSignedIn()) {
 			document.getElementById("signupmessage").style.display = "inline"
+			document.getElementById("form").style.display = "none";
 		}
 		document.getElementById("reset").addEventListener(
 			"click", () => {

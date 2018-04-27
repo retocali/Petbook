@@ -57,7 +57,7 @@ body {
 }
 
 .title:hover, .title:active {
-    color: var(--icing-color);
+    color: var(--orange-color)
 }
 
 

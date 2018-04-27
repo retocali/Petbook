@@ -82,8 +82,8 @@ label {
 
 
 #signupmessage {
-  min-height: 20vh;
-  width: 20vw;
+  margin: 0;
+  width: 19vw;
   /* To see the outline of the form */
   position: absolute;
   top: 25vh;
