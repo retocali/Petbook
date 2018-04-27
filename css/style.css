@@ -26,7 +26,8 @@ body {
 }
 
 #top-border {
-    margin: 0 !important;
+    margin: 0;
+    margin-left: 0.5vw;
     display: flex;
     flex-direction: row;
     overflow: hidden;
@@ -79,6 +80,17 @@ body {
     stroke-width: 10px;
 }
 
+.navbutton {
+    stroke: cornflowerblue;
+    stroke-width: 4vh;
+    fill: #FFFFFF00;
+}
+
+.navbutton:hover {
+    stroke: var(--sakura-color);
+    stroke-width: 7vh;
+}
+
 .mainbuttontext {
     font-family: 'Lemon';
     fill: white;
@@ -99,7 +111,7 @@ body {
 
 #search {
     background-color: var(--dark-main-color);
-    color: var(--main-color);
+    color: whitesmoke;
     padding: 5vh;
     text-align: left;
     margin: 0;
@@ -109,7 +121,7 @@ body {
     font-size: 30vh;
     border: none;
     line-height: 50vh;
-    border-radius: 5vh;
+    border-radius: 7vh;
     width: 15vw;
 }
 ::placeholder {
@@ -117,8 +129,8 @@ body {
 }
 
 #search:hover, #search:focus {
-    background-color: var(--blue-color);
-    color: black;
+    background-color: cornflowerblue;
+    color:white;
 }
 #searchbutton {
     font-size: 40vh;
@@ -129,11 +141,14 @@ body {
     vertical-align: top;
     color: white;
     border: none;
-    border-radius: 5vh;
+    border-radius: 7vh;
     line-height: 60vh;
 }
+#searchbutton:hover {
+    background-color: var(--blue-color)
+}
 #searchbutton:active {
-    background-color: var(--accent-color);
+    background-color: cornflowerblue;
 }
 button {
     opacity: 0.8;
