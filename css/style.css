@@ -141,7 +141,10 @@ body {
     border: none;
     line-height: 50vh;
     border-radius: 7vh;
-    width: 15vw;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 4vh solid var(--dark-main-color);
+    
 }
 ::placeholder {
     color: white;
@@ -151,30 +154,28 @@ body {
     background-color: cornflowerblue;
     color:white;
 }
+
 #searchbutton {
     font-size: 40vh;
     margin: 0;
     margin-top: 10vh;
     padding: 0 10vh;
-    background-color: var(--dark-main-color);
+    color: var(--blue-color);
+    background-color: white;
     vertical-align: top;
-    color: white;
-    border: none;
+    border: 4vh solid var(--blue-color);
     border-radius: 7vh;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     line-height: 60vh;
 }
 #searchbutton:hover {
-    color: cornflowerblue;
+    border: 4vh solid var(--sakura-color);
+
 }
 #searchbutton:active {
-    background-color: cornflowerblue;
-    color: white;
-}
-button {
-    opacity: 0.8;
-}
-button:hover {
-    opacity:1;
+    border: 4vh solid var(--sakura-color);
+    color: var(--sakura-color);
 }
 ::-webkit-scrollbar {
     background-color: var(--icing-color);

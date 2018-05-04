@@ -19,34 +19,44 @@
                 <div id="personal" class="card">
                     <img src="img/user.svg" alt="" class="subcard" style="height: 20vh; width: 20vh;">
                     MY PETS:
-                    <div id="mypets" class="subcard">
-                        <svg id="addPet" height="16vh" width="16vh">
+                    <div id="mypets" class="subcard" style="text-align: center;">
+                        <svg id="addPet" height="16vh" width="16vh" title="Add">
                             <circle class="mainbuttonbackground" cx="8vh" cy="8vh" r="7vh" fill="white"/>
                             <image x="1vh" y="1vh" height=14vh width=14vh xlink:href="img/plus.svg"></image>
                             <circle class="mainbutton" cx="8vh" cy="8vh" r="7vh"/>
+                            <title>Add</title>
                         </svg>
                     </div>
                 </div>
                 <div id="info" class="card">
                     &nbsp MY PROFILE:
                     <div id="myprofile" class="subcard">
+                        
+                        
                         <div style="display:flex; flex-direction:row">
-                            <div class="field" id="username">
-                                USERNAME: 
-                            </div>
-                            <div class="field" id="fullName" style="margin: auto">
-                                FULL NAME:
-                            </div>
-                            <div class="field" id="location">
-                                LOCATION: 
-                            </div>
+                            <label for="username">
+                                USERNAME:<br>
+                                <input class="field" id="username" disabled/>    
+                            </label>            
+                            <label for="fullName" style="margin: auto;" disabled/>
+                                FULL&nbspNAME:<br>
+                                <input class="field" id="fullName" disabled/>
+                            </label>    
+                            <label for="location" >
+                                LOCATION:<br>
+                                <input class="field" id="location"disabled/>
+                            </label>        
                         </div>
-                        <div class="field" id="status">
-                                STATUS: 
-                        </div>
-                        <div class="field" id="bio">
-                            BIO: 
-                        </div>
+                        <label for="status">
+                            STATUS:<br>
+                            <input class="field" id="status" style="width: 63.5vw" disabled/>
+                        </label>    
+                        <br>
+                        <label for="bio">
+                            BIO: <br>
+                            <textarea class="field" id="bio" style="width: 65vw" disabled></textarea>
+                        </label>    
+                             
                     </div>
                     &nbsp FOLLOWING:
                     <div id="following" class="subcard">

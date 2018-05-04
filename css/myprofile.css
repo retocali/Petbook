@@ -24,13 +24,13 @@ html {
 
 #mypets {
     height: 36vh;
-    width: 36vh;
+    width: 18vw;
     padding: 0;
     overflow-y: auto;
 }
 
 #bio {
-    height: 15vh;
+    height: 9.5vh;
 }
 #following {
     height: 10vh;
@@ -55,12 +55,16 @@ html {
     background-color: white;
     border: .6vh solid var(--icing-color);
     border-radius: 2vh;
-    justify-content: center;
 }
-.field {
+.field:disabled {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 2vh;
     line-height:5vh;
+    min-width: 10vw;
+    border: .2vh solid whitesmoke;
+    border-radius: 0.5vh;
+    padding: 0 0.5vw;
+    background-color: white;
 }
