@@ -22,9 +22,11 @@ html {
     max-width: 75vw;
 }
 
-#pets {
-    height: 40vh;
-    width: 32vh;
+#mypets {
+    height: 36vh;
+    width: 36vh;
+    padding: 0;
+    overflow-y: auto;
 }
 
 #bio {

@@ -15,12 +15,10 @@ Util.events(document, {
 				document.getElementById("hovermenu").style.display = "none"
 			}
         );
-        document.getElementById("signup").addEventListener(
-			"click", () => {
-                addPet();
-                document.getElementById("hovermenu").style.display = "none"
-			}
-		);		
+        document.getElementById("form").onsubmit = () => {
+            addPet();
+            document.getElementById("hovermenu").style.display = "none"
+        }		
 	},
 
 	// Keyboard events arrive here
@@ -55,12 +53,24 @@ function showMyPets() {
     if (!allPets) {
         return;
     }
-    let card = document.getElementById(showMyPets);
-    let node = document.getElementById(addPet);
+    
+    let addedPets = document.getElementsByClassName("addedPets");
+    console.log(addedPets);
+    for (let i = 0; i < addedPets.length; i++) {
+        let element = addedPets[i];
+        element.remove()
+    }
+    let card = document.getElementById("mypets");
+    let node = document.getElementById("addPet");
     for (let i = 0; i < allPets.length; i++) {
         const element = allPets[i];
-        let newNode = node.cloneNode();
-        newNode.parentElement = card;
+        let newNode = node.cloneNode(true);
+        let image = newNode.children[1];
+        image.href.baseVal = "profiles/sample/sample-" + element.catagory + ".svg";
+        newNode.id = "";
+        newNode.classList.add("addedPets");
+        newNode.appendChild(image);
+        card.insertBefore(newNode, node);
     }
 }
 
@@ -96,5 +106,6 @@ function addPet() {
     }
     console.log(defaultPet);
     State.setPet(defaultPet);
+    showMyPets();
 }
 
