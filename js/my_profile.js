@@ -3,8 +3,8 @@ Util.events(document, {
 	// Final initalization entry point: the Javascript code inside this block
 	// runs at the end of start-up when the DOM is ready
 	"DOMContentLoaded": function() {
-		if (State.isSignedIn()) {
-		}
+        showMyProfile();
+		showMyPets();
 		document.getElementById("addPet").addEventListener(
 			"click", () => {
 				document.getElementById("hovermenu").style.display = "inline"
@@ -17,7 +17,8 @@ Util.events(document, {
         );
         document.getElementById("signup").addEventListener(
 			"click", () => {
-				document.getElementById("hovermenu").style.display = "inline"
+                addPet();
+                document.getElementById("hovermenu").style.display = "none"
 			}
 		);		
 	},
@@ -41,12 +42,59 @@ Util.events(document, {
 
     }
 });
+function showMyProfile() {
+    document.getElementById("username").innerHTML = "USERNAME: " + State.getUsername();
+    document.getElementById("fullName").innerHTML = "FULL NAME: "+ State.getFullName();
+    document.getElementById("location").innerHTML = "LOCATION: " + State.getLocation();
+    document.getElementById("status").innerHTML = "STATUS: " + State.getStatus();
+    document.getElementById("bio").innerHTML = "BIO: " + State.getBio();
 
-function submit() {
-	State.signIn();
-	console.log(State.isSignedIn());
-	if (State.isSignedIn()) {
-		document.getElementById("signupmessage").style.display = "inline";
-	}
+}
+function showMyPets() {
+    let allPets = State.getPets();
+    if (!allPets) {
+        return;
+    }
+    let card = document.getElementById(showMyPets);
+    let node = document.getElementById(addPet);
+    for (let i = 0; i < allPets.length; i++) {
+        const element = allPets[i];
+        let newNode = node.cloneNode();
+        newNode.parentElement = card;
+    }
+}
+
+function addPet() {
+    var defaultPet = {
+        "petName": "Petty White",
+        "userName": State.getUsername(),
+        "location": State.getLocation(),
+        "age": "100",
+        "gender": "female",
+        "species": "pet",
+        "status": "hi!",
+        "bio": "...",
+        "profilePics" : [
+            
+        ],
+        "catagory": "cat",
+        "adopted": false,
+        "adoptable": false, 
+    };
+    let array = document.getElementById("form").children;
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        console.log(element);
+        let field = element.children[1];
+        if (field) {
+            console.log(element.children[1].name)
+            console.log(element.children[1].value)
+            if (field.value != "") {
+                defaultPet[field.name] = field.value;
+            }
+        }
+    }
+    console.log(defaultPet);
+    State.setPet(defaultPet);
 }
 

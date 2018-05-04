@@ -19,7 +19,7 @@
                 <div id="personal" class="card">
                     <img src="img/user.svg" alt="" class="subcard" style="height: 25vh; width: 25vh;">
                     MY PETS:
-                    <div id="pets" class="subcard">
+                    <div id="mypets" class="subcard">
                         <svg id="addPet" height="16vh" width="16vh">
                             <circle class="mainbuttonbackground" cx="8vh" cy="8vh" r="7vh" fill="white"/>
                             <image x="1vh" y="1vh" height=14vh width=14vh xlink:href="img/plus.svg"></image>
@@ -29,20 +29,23 @@
                 </div>
                 <div id="info" class="card">
                     &nbsp MY PROFILE:
-                    <div id="bio" class="subcard">
+                    <div id="myprofile" class="subcard">
                         <div style="display:flex; flex-direction:row">
-                            <div class="field">
-                                    USERNAME: test
+                            <div class="field" id="username">
+                                USERNAME: 
                             </div>
-                            <div class="field" style="margin: auto">
-                                FULL NAME: Bob Bitdiddle
+                            <div class="field" id="fullName" style="margin: auto">
+                                FULL NAME:
                             </div>
-                            <div class="field">
-                                LOCATION: Boston, MA
+                            <div class="field" id="location">
+                                LOCATION: 
                             </div>
                         </div>
-                        <div class="field">
-                            BIO: Random Shit
+                        <div class="field" id="status">
+                                STATUS: 
+                        </div>
+                        <div class="field" id="bio">
+                            BIO: 
                         </div>
                     </div>
                     &nbsp FOLLOWING:
@@ -64,49 +67,53 @@
             </div>
         </div>
         <div id=hovermenu style="display:none">
-           <form id="form" action="">
+           <form id="form" target="hiddenFrame">
                     <div>
-                        <label for="name">Pet Name:</label><br>
-                        <input class="login" type="text" id="name" name="user_name" required>
+                        <label>Pet Name:<br></label>
+                        <input class="login" type="text" id="name" name="petName" required>
                     </div>
-                    <div >
-                        <label for="name">Age:</label>
-                        <input class="login" type="number" min="0" max="500" style="width: 6vh">
-                        &nbsp;&nbsp;&nbsp;
+                    
+                    <div>
+                        <label>Age:</label>
+                        <input class="login" type="number" min="0" max="500" style="width: 6vh" name="age">
+                    </div>
+                    
+                    <div>
                         <label for="password">Type:</label>
-                        <select name="type">
-                                <option value="dog">Dog</option>
-                                <option value="cat">Cat</option>
-                                <option value="fish">Fish</option>
-                                <option value="reptile">Reptile</option>
-                                <option value="bird">Bird</option>
+                        <select name="catagory">
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="fish">Fish</option>
+                            <option value="reptile">Reptile</option>
+                            <option value="bird">Bird</option>
                         </select>
                     </div>
 
                     <div class="radio">
-                            <label for="password">Gender:</label><br>
+                            <label for="password">Gender:<br></label>
                             <input type="radio" name="gender" value="male" checked> Male
                             <input type="radio" name="gender" value="female"> Female
                             <input type="radio" name="gender" value="other"> Other
                     </div>
                     <div>
-                        <label>Species:</label><br>
+                        <label>Species:</label>
                         <input class="login" type="text" name="species" required>
                     </div>
 
                     <div>
-                        <label for="password">Status:</label><br>
+                        <label>Status:</label>
                         <input class="login" type="text" name="status">
                     </div>
                     <div>
-                        <label for="password">Bio:</label><br>
+                        <label>Bio:</label>
                         <textarea type="text" name="bio"></textarea>
                     </div> 
                     
                     <br>
                     <button type="reset" class="loginbutton" id="cancel">Cancel</button>
-                    <button type="button" class="loginbutton" id="signup">Add Pet</button>
+                    <button type="submit" class="loginbutton" id="signup">Add Pet</button>
                 </form>
         </div>
+        <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
     </body>
 </html>

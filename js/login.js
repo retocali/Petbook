@@ -4,8 +4,7 @@ Util.events(document, {
 	// runs at the end of start-up when the DOM is ready
 	"DOMContentLoaded": function() {
 		if (State.isSignedIn()) {
-			document.getElementById("signupmessage").style.display = "inline"
-			document.getElementById("form").style.display = "none";
+			document.getElementById("hovermenu").style.display = "inline";
 		}
 		document.getElementById("reset").addEventListener(
 			"click", () => {
@@ -36,10 +35,13 @@ Util.events(document, {
 });
 
 function submit() {
+	console.log(document.getElementById("fullName"));
+	console.log(document.getElementById("username"));
+	State.setFullName(document.getElementById("fullName").value);
+	State.setUsername(document.getElementById("username").value);
 	State.signIn();
-	console.log(State.isSignedIn());
 	if (State.isSignedIn()) {
-		document.getElementById("signupmessage").style.display = "inline";
+		document.getElementById("hovermenu").style.display = "inline";
 	}
 }
 

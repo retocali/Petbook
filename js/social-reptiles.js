@@ -1,6 +1,6 @@
 var typeCount = 0;
 var petCount = 0;
-
+var maxPets = 0;
 var data;
 
 Util.events(document, {
@@ -8,7 +8,7 @@ Util.events(document, {
 	// runs at the end of start-up when the DOM is ready
 	"DOMContentLoaded": function() {
 		data = new Data();
-
+        maxPets = data.cats.length-1;
         update_html();
 
 		Util.one("#up_arrow").addEventListener('click', function(e) {
@@ -25,7 +25,7 @@ Util.events(document, {
 
 function goUp(){
     petCount++;
-    if(petCount > 4){
+    if(petCount > maxPets){
         petCount = 0;
     }
     if(data.reptiles[petCount].catagory == 'reptile'){
@@ -40,7 +40,7 @@ function goUp(){
 function goDown(){
     petCount--;
     if(petCount < 0){
-        petCount = 4;
+        petCount = maxPets;
     }
     if(data.reptiles[petCount].catagory == 'reptile'){
         update_html();

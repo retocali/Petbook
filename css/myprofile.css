@@ -28,14 +28,13 @@ html {
 }
 
 #bio {
-    
-    height: 20vh;
+    height: 15vh;
 }
 #following {
-    height: 12.5vh;
+    height: 10vh;
 }
 #questions {
-    height: 12.5vh;
+    height: 10vh;
 }
 
 .card {

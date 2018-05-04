@@ -1,5 +1,6 @@
 var typeCount = 0;
 var petCount = 0;
+var maxPets = 0;
 
 var data;
 
@@ -8,7 +9,8 @@ Util.events(document, {
 	// runs at the end of start-up when the DOM is ready
 	"DOMContentLoaded": function() {
 		data = new Data();
-
+        maxPets = data.dogs.length-1;
+        console.log(maxPets)
         update_html();
 
 		Util.one("#up_arrow").addEventListener('click', function(e) {
@@ -19,13 +21,13 @@ Util.events(document, {
 			goDown();
 		}); 
 	},
-    
+    Object
 });
 
 
 function goUp(){
     petCount++;
-    if(petCount > 4){
+    if(petCount > maxPets){
         petCount = 0;
     }
     if(data.dogs[petCount].catagory == 'dog'){
@@ -40,7 +42,7 @@ function goUp(){
 function goDown(){
     petCount--;
     if(petCount < 0){
-        petCount = 4;
+        petCount = maxPets;
     }
     if(data.dogs[petCount].catagory == 'dog'){
         update_html();
@@ -61,10 +63,9 @@ function update_html(){
     document.getElementById("species").innerHTML = data.dogs[petCount].species;
     document.getElementById("status").innerHTML = data.dogs[petCount].status;
     document.getElementById("bio").innerHTML = data.dogs[petCount].bio;
-
+    
     document.getElementById("pet_pic").style="background-image: url(profiles/profile-pics/"+ data.dogs[petCount].petName+".jpg)";
     
-
     var petpost = document.getElementById("pet_posts");
     petpost.innerHTML = "";
 

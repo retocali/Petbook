@@ -1,6 +1,6 @@
 var typeCount = 0;
 var petCount = 0;
-
+var maxPets = 0;
 var data;
 
 Util.events(document, {
@@ -8,6 +8,7 @@ Util.events(document, {
 	// runs at the end of start-up when the DOM is ready
 	"DOMContentLoaded": function() {
 		data = new Data();
+        maxPets = data.cats.length-1;
 
         update_html();
 
@@ -25,7 +26,7 @@ Util.events(document, {
 
 function goUp(){
     petCount++;
-    if(petCount > 4){
+    if(petCount > maxPets){
         petCount = 0;
     }
     if(data.cats[petCount].catagory == 'cat'){
@@ -40,7 +41,7 @@ function goUp(){
 function goDown(){
     petCount--;
     if(petCount < 0){
-        petCount = 4;
+        petCount = maxPets;
     }
     if(data.cats[petCount].catagory == 'cat'){
         update_html();

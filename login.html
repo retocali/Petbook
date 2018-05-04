@@ -16,38 +16,42 @@
     <body id=body>
         <div id=main>
             <br><br>
-            <form id="form">
+            <form id="form" target="hiddenFrame">
                 <div>
                     <label for="name">Full Name:</label><br>
-                    <input class="login" type="text" id="name" name="user_name" required>
+                    <input class="login" type="text" id="fullName" name="full_name" required>
                 </div>
                 <div>
                     <label for="name">Username:</label><br>
-                    <input class="login" type="text" id="name" name="user_name" required>
+                    <input class="login" type="text" id="username" name="user_name" required>
                 </div>
                 <div>
                     <label for="password">Password:</label><br>
-                    <input class="login" type="password" id="password" name="user_name" required>
+                    <input class="login" type="password" id="password" name="password" required>
                 </div>
                 <div>
                     <label for="password">Verify Password:</label><br>
-                    <input class="login" type="password" id="password" name="user_name" required>
+                    <input class="login" type="password" id="password" name="password" required>
                 </div>
                 <div>
                     <label for="mail">E-mail:</label><br>
-                    <input class="login" type="email" id="mail" name="user_mail" required>
+                    <input class="login" type="email" id="email" name="email" required>
                 </div>
                 <br>
                 <button type="reset" class="loginbutton" id="reset">Reset</button>
                 <button class="loginbutton" id="signup">Sign Up</button>
             </form>
         </div>
-        <div id=signupmessage style="display:none">
-            Account Made!
-            
-            <a href="index.html" class="title" style="background-color: var(--cranberry-color) ;font-size:4vh; margin: 0 -0.75vh; white-space: no-wrap;">
-            Return to Home Page
-            </a>
+        <div id=hovermenu style="display:none">
+                
+            <div id=signupmessage>
+                Account Made!
+                
+                <a href="index.html" class="title" style="background-color: var(--cranberry-color) ;font-size:4vh; margin: 0 -0.75vh; white-space: no-wrap;">
+                Return to Home Page
+                </a>
+            </div>
         </div>
     </body>
+    <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
 </html>

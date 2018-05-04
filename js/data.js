@@ -485,58 +485,134 @@ function Data() {
       "adoptable" : false,
     },
 
-  ];
+  ];  
+  State.addMyPets(this);
   this.allData = {
     "cats" : this.cats,
     "dogs" : this.dogs,
     "fish" : this.fish,
     "birds" : this.birds,
     "reptiles" : this.reptiles,
+
   }
 }
 
 class State {
-  
+  // Signing In
   static signIn() {
     sessionStorage.setItem("signedIn", true);
     console.log(sessionStorage.getItem("signedIn"));
   }
   static isSignedIn() {
     let result = sessionStorage.getItem("signedIn");
-    if( typeof result == 'undefined' ) {
+    if(!result) {
       return false;
     }
     return result;
   }
+  
+  // Username
+  static setUsername(user) {
+    sessionStorage.setItem("username", user);
+  }
   static getUsername() {
     let result = sessionStorage.getItem("username");
-    if( typeof result == 'undefined' ) {
+    if(!result) {
       return "username123";
     }
     return result;
   }
-  static getFullName() {
-    let result1 = sessionStorage.getItem("firstName");
-    let result2 = sessionStorage.getItem("lastName");
-    if( typeof result1 == 'undefined' ) {
-      result1 = "John";
-    } if( typeof result2 == 'undefined' ) {
-      result2 = "Doe";
-    }
-    return result1 + " " + result2;
+
+  // Full name
+  static setFullName(name) {
+    sessionStorage.setItem("fullName", name);
   }
-  static getUsername() {
-    let result = sessionStorage.getItem("location");
-    if( typeof result == 'undefined' ) {
-      return "Unknown";
+  static getFullName() {
+    let result = sessionStorage.getItem("fullName");
+    if(!result) {
+      result = "John Doe";
     }
     return result;
   }
+
+  // Location
+  static setLocation(loc) {
+    sessionStorage.setItem("location", loc);
+  }
+  static getLocation() {
+    let result = sessionStorage.getItem("location");
+    if (!result) {
+      return "Boston, MA";
+    }
+    return result;
+  }
+
+  // Bio
+  static setBio(bio) {
+    sessionStorage.setItem("bio", bio);
+  }
   static getBio() {
     let result = sessionStorage.getItem("bio");
-    if( typeof result == 'undefined' ) {
+    if(!result) {
+      return "I love pets!";
+    }
+    return result;
+  }
+
+  // Status
+  static setStatus(status) {
+    sessionStorage.setItem("status", status);
+  }
+  static getStatus() {
+    let result = sessionStorage.getItem("status");
+    if(!result) {
       return "Hello!";
     }
     return result;
   }
+
+  // Pets
+  static setPet(petInfo) {
+    let result = sessionStorage.getItem("myPets");
+    if(!result) {
+      sessionStorage.setItem("myPets", JSON.stringify([petInfo]));
+    } else {
+      result = JSON.parse(result);
+      result.push(petInfo);
+      sessionStorage.setItem("myPets", JSON.stringify(result));
+    } 
+  }
+  static getPets() {
+    let result = sessionStorage.getItem("myPets");
+    if(!result) {
+      return []
+    } 
+    return JSON.parse(result);
+  }
+  static addMyPets(data) {
+    let result = State.getPets()
+    console.log(result);
+    for (let i = 0; i < result.length; i++) {
+        let element = result[i];
+        console.log(element)
+        switch (element["catagory"]) {
+          case "cat":
+            data.cats.push(element);
+            break;
+          case "dog":
+            console.log("Here");
+            data.dogs.push(element);
+            break;
+          case "bird":
+            data.birds.push(element);
+            break;
+          case "fish":
+            data.fish.push(element);
+            break;
+          case "reptile":
+            data.reptiles.push(element);
+            break;
+        }
+      }
+    }
 }
