@@ -23,8 +23,13 @@ label {
   color: cornflowerblue;
   
 }
-
-.login, .logintextarea {
+select{
+  font-size: 2vh;
+}
+.radio {
+  font-weight: lighter;
+}
+.login, textarea {
   /* To make sure that all text fields have the same font settings
      By default, textareas have a monospace font */
   font: 2vh sans-serif;
@@ -37,17 +42,16 @@ label {
   border: 1px solid #999;
 }
 
-.login:focus, .logintextarea:focus {
+.login:focus, textarea:focus {
   /* To give a little highlight on active elements */
   border-color: #000;
 }
 
-.logintextarea {
+textarea {
   /* To properly align multiline text fields with their labels */
-  vertical-align: top;
-
+  vertical-align: text-top;
   /* To give enough room to type some text */
-  height: 5vh;
+  height: 10vh;
 }
 
 #password {
@@ -70,13 +74,13 @@ label {
 }
 
 /* Extra styles for the cancel button */
-#reset {
+#reset, #cancel {
   padding: 14px 20px;
   background-color: grey;
 }
 
 /* Float cancel and signup buttons and add an equal width */
-#reset, #signup {
+#reset, #cancel, #signup {
   width: 49%;
 }
 

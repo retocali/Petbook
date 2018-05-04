@@ -24,7 +24,26 @@ body {
     background-color: var(--icing-color);
     height: 80vh;
 }
-
+#hovermenu {
+    top: 0;
+    left: 0;
+    background-color: #00000088;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+#dialog {
+    top: 10vh;
+    left: 30vw;
+    background-color: whitesmoke;
+    position: absolute;
+    border: .6vh solid var(--cranberry-color);
+    border-radius: 2vh;
+    padding: .6vh;
+    padding-top: 1vh;
+    width: 40vw;
+    height: 60vh;
+}
 #top-border {
     margin: 0;
     margin-left: 0.5vw;

@@ -4,15 +4,109 @@
         <link href="https://fonts.googleapis.com/css?family=Lemon" rel="stylesheet"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/myprofile.css">
+        <link rel="stylesheet" href="css/form.css">
+        <script src="js/util.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/my_profile.js"></script>
     </head>
     <title>PetBook My Profile</title>
     <iframe scrolling="no" src="border.html" frameborder="0" style="height:10vh; width:100vw; "></iframe>
         
     <body id=body>
         <div id=main>
-            <a href="index.html" class="title" style="color:black">
-                    UNDER DEVELOPMENT: CLICK HERE TO GO BACK
-            </a>
+            <div id="profilegrid">
+                <div id="personal" class="card">
+                    <img src="img/user.svg" alt="" class="subcard" style="height: 25vh; width: 25vh;">
+                    MY PETS:
+                    <div id="pets" class="subcard">
+                        <svg id="addPet" height="16vh" width="16vh">
+                            <circle class="mainbuttonbackground" cx="8vh" cy="8vh" r="7vh" fill="white"/>
+                            <image x="1vh" y="1vh" height=14vh width=14vh xlink:href="img/plus.svg"></image>
+                            <circle class="mainbutton" cx="8vh" cy="8vh" r="7vh"/>
+                        </svg>
+                    </div>
+                </div>
+                <div id="info" class="card">
+                    &nbsp MY PROFILE:
+                    <div id="bio" class="subcard">
+                        <div style="display:flex; flex-direction:row">
+                            <div class="field">
+                                    USERNAME: test
+                            </div>
+                            <div class="field" style="margin: auto">
+                                FULL NAME: Bob Bitdiddle
+                            </div>
+                            <div class="field">
+                                LOCATION: Boston, MA
+                            </div>
+                        </div>
+                        <div class="field">
+                            BIO: Random Shit
+                        </div>
+                    </div>
+                    &nbsp FOLLOWING:
+                    <div id="following" class="subcard">
+                        <div class="field">
+                            
+                        </div>
+                        
+                    </div>
+                    &nbsp QA ACTIVITY:
+                    <div id="questions" class="subcard">
+                        <div class="field">
+                            
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id=hovermenu style="display:none">
+           <form id="form" action="">
+                    <div>
+                        <label for="name">Pet Name:</label><br>
+                        <input class="login" type="text" id="name" name="user_name" required>
+                    </div>
+                    <div >
+                        <label for="name">Age:</label>
+                        <input class="login" type="number" min="0" max="500" style="width: 6vh">
+                        &nbsp;&nbsp;&nbsp;
+                        <label for="password">Type:</label>
+                        <select name="type">
+                                <option value="dog">Dog</option>
+                                <option value="cat">Cat</option>
+                                <option value="fish">Fish</option>
+                                <option value="reptile">Reptile</option>
+                                <option value="bird">Bird</option>
+                        </select>
+                    </div>
+
+                    <div class="radio">
+                            <label for="password">Gender:</label><br>
+                            <input type="radio" name="gender" value="male" checked> Male
+                            <input type="radio" name="gender" value="female"> Female
+                            <input type="radio" name="gender" value="other"> Other
+                    </div>
+                    <div>
+                        <label>Species:</label><br>
+                        <input class="login" type="text" name="species" required>
+                    </div>
+
+                    <div>
+                        <label for="password">Status:</label><br>
+                        <input class="login" type="text" name="status">
+                    </div>
+                    <div>
+                        <label for="password">Bio:</label><br>
+                        <textarea type="text" name="bio"></textarea>
+                    </div> 
+                    
+                    <br>
+                    <button type="reset" class="loginbutton" id="cancel">Cancel</button>
+                    <button type="button" class="loginbutton" id="signup">Add Pet</button>
+                </form>
         </div>
     </body>
 </html>

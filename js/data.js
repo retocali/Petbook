@@ -502,9 +502,41 @@ class State {
     console.log(sessionStorage.getItem("signedIn"));
   }
   static isSignedIn() {
-    if( typeof sessionStorage.getItem("signedIn") == 'undefined' ) {
+    let result = sessionStorage.getItem("signedIn");
+    if( typeof result == 'undefined' ) {
       return false;
     }
-    return sessionStorage.getItem("signedIn")
+    return result;
+  }
+  static getUsername() {
+    let result = sessionStorage.getItem("username");
+    if( typeof result == 'undefined' ) {
+      return "username123";
+    }
+    return result;
+  }
+  static getFullName() {
+    let result1 = sessionStorage.getItem("firstName");
+    let result2 = sessionStorage.getItem("lastName");
+    if( typeof result1 == 'undefined' ) {
+      result1 = "John";
+    } if( typeof result2 == 'undefined' ) {
+      result2 = "Doe";
+    }
+    return result1 + " " + result2;
+  }
+  static getUsername() {
+    let result = sessionStorage.getItem("location");
+    if( typeof result == 'undefined' ) {
+      return "Unknown";
+    }
+    return result;
+  }
+  static getBio() {
+    let result = sessionStorage.getItem("bio");
+    if( typeof result == 'undefined' ) {
+      return "Hello!";
+    }
+    return result;
   }
 }
