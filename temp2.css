@@ -192,6 +192,12 @@ body{
     -webkit-margin-before:0em;
     -webkit-margin-after:0em;
 }
+.indv_comments{
+    -webkit-margin-before:0em;
+    -webkit-margin-after:0em;
+    padding-bottom: 4px;
+
+}
 
 
 
