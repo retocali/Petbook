@@ -671,10 +671,10 @@ class State {
     static favoritePet(petID) {
       let result = sessionStorage.getItem("favorites");
       if (!results) {
-        sessionStorage.setItem("favorite", [petID]);
+        sessionStorage.setItem("favorites", [petID]);
       }
       result.push(petID)
-      sessionStorage.setItem("favorite", result);
+      sessionStorage.setItem("favorites", result);
     }
     static getFavoritePets() {
       let result = sessionStorage.getItem("favorites");
