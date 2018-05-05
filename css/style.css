@@ -94,7 +94,7 @@ body {
     fill: #FFFFFF00;
 }
 
-.mainbutton:hover {
+.mainbutton:hover, .selected {
     stroke: var(--sakura-color);
     stroke-width: 10px;
 }

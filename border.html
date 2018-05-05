@@ -4,7 +4,6 @@
         <link href="https://fonts.googleapis.com/css?family=Lemon" rel="stylesheet"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/style.css">
-
         <base target="_parent">
     </head>
     <div id=top-border> 
@@ -25,7 +24,7 @@
                 <circle class="mainbuttonbackground" cx="2vw" cy="45vh" r="30vh" fill="white"/>
                 <image x="0.7vw" y="20vh" width="50vh" height="50vh" xlink:href="img/dog.svg" />
                 <a href="social.html">
-                    <circle class="navbutton" cx="2vw" cy="45vh" r="30vh"/>
+                    <circle class="navbutton" id="navbar-social" cx="2vw" cy="45vh" r="30vh"/>
                 </a>
                 
 
@@ -33,14 +32,14 @@
                 <circle class="mainbuttonbackground" cx="7vw" cy="45vh" r="30vh" fill="white"/>
                 <image x="6vw" y="27vh" width="35vh" height="35vh" xlink:href="img/chat.svg" />
                 <a href="qa.html">
-                    <circle class="navbutton" cx="7vw" cy="45vh" r="30vh"/>
+                    <circle class="navbutton" id="navbar-qa" cx="7vw" cy="45vh" r="30vh"/>
                 </a> 
                 
                 <text class="navbartext" x="10.75vw" y="90vh"> News </text>
                 <circle class="mainbuttonbackground" cx="12vw" cy="45vh" r="30vh" fill="white"/>
                 <image x="11.2vw" y="27vh" width="35vh" height="35vh" xlink:href="img/newspaper.svg" />
                 <a href="news.html">
-                    <circle class="navbutton" cx="12vw" cy="45vh" r="30vh"/>
+                    <circle class="navbutton" id="navbar-news" cx="12vw" cy="45vh" r="30vh"/>
                 </a>
                 
 
@@ -48,16 +47,26 @@
                 <circle class="mainbuttonbackground" cx="17vw" cy="45vh" r="30vh" fill="white"/>
                 <image x="15.85vw" y="25vh" width="45vh" height="45vh" xlink:href="img/brush.svg" />
                 <a href="services.html">
-                    <circle class="navbutton" cx="17vw" cy="45vh" r="30vh"/>
+                    <circle class="navbutton" id="navbar-services" cx="17vw" cy="45vh" r="30vh"/>
                 </a>
 
                 <text class="navbartext" x="20.75vw" y="90vh"> Home </text>
                 <circle class="mainbuttonbackground" cx="22vw" cy="45vh" r="30vh" fill="white"/>
                 <image x="21vw" y="23vh" width="40vh" height="40vh" xlink:href="img/pet-shop.svg" />
                 <a href="index.html">
-                    <circle class="navbutton" cx="22vw" cy="45vh" r="30vh"/>
+                    <circle class="navbutton" id="navbar-home" cx="22vw" cy="45vh" r="30vh"/>
                 </a>
             </svg>
         </div>
     </div>
+    <script>
+        // let pages = {
+        //     "index.html": "navbar-home",
+        // }
+        // let parent_url = "index.html";
+        // console.log(parent_url);
+        // if (pages[parent_url]) {
+        //     document.getElementById([parent_url]).classList.add("selected");
+        // }
+    </script>        
 </html>
