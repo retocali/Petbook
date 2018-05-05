@@ -38,7 +38,7 @@ function generateResults(data) {
     let resultsHTML = "";
     for (let i = 0; i < data.length; i++) {
         let element = data[i];
-        resultsHTML += "<a href=social_pets.html?catagory=" + element.catagory +
+        resultsHTML += "<a href=social_pets.html?category=" + element.catagory +
                         "&petCount=" + i + " id='resultLink'>" + element.petName + "</a><br>";
     }
     return resultsHTML;

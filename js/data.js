@@ -474,7 +474,7 @@ function Data() {
       "location": "New York",
       "age": "32",
       "gender": "Female",
-      "": "Puffer fish",
+      "type": "Puffer fish",
       "status": "Slaying Vampires",
       "bio": "Kills vampires and turns into balloons.  Read her novel (To Puff and Slay)",
       "profilePics" : [

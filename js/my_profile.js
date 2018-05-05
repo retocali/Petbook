@@ -78,7 +78,7 @@ function showMyPets() {
         const element = allPets[i];
         let newNode = newAdd.cloneNode(true);
         let image = newNode.children[1];
-
+        console.log(element);
         image.href.baseVal = "profiles/sample/sample-" + element.category + ".svg";
        
         image.setAttribute("height", "10vh");
@@ -107,7 +107,7 @@ function addPet() {
         "location": State.getLocation(),
         "age": "100",
         "gender": "female",
-        "species": "pet",
+        "type": "pet",
         "status": "hi!",
         "bio": "...",
         "profilePics" : [
