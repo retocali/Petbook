@@ -215,6 +215,7 @@ body {
     padding-top: 2vh;
     width: 35vw;
     height: 50vh;
+    overflow-y: auto;
 }
 .resultLink {
     color: black;
