@@ -113,10 +113,10 @@ function updateURL(){
 function toggleFavorite(){
     var pet_id = data.allData[category][petCount].pet_id;
     if(favorite_pets.has(pet_id)){
-        favorite_pets.delete(pet_id);
+        State.unfavoritePet(pet_id);
     }
     else{
-        favorite_pets.add(pet_id);
+        State.favoritePet(pet_id);
     }
     update_html();
     console.log(favorite_pets);
