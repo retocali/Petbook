@@ -8,10 +8,6 @@ function Data() {
    *  and points to each species using a string as a key
    * 
    */
-
-   this.favorite_pets = [ {"id":5}, {"id":10} ,{"id":15}
-   ];
-  
   this.cats = [
     {
       "petName": "Miki",
@@ -671,6 +667,21 @@ class State {
             break;
         }
       }
+    }
+    static favoritePet(petID) {
+      let result = sessionStorage.getItem("favorites");
+      if (!results) {
+        sessionStorage.setItem("favorite", [petID]);
+      }
+      result.push(petID)
+      sessionStorage.setItem("favorite", result);
+    }
+    static getFavoritePets() {
+      let result = sessionStorage.getItem("favorites");
+      if (!results) {
+        return []
+      }
+      return results;
     }
   }
 
