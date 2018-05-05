@@ -685,8 +685,8 @@ class State {
         return;
       }
       if (result.indexOf(petID) != -1) {
-        for (let i = 0; i < results.length; i++) {
-          const element = results[i];
+        for (let i = 0; i < result.length; i++) {
+          const element = result[i];
           if (element == petID) {
             result.splice(i, 1);
           }
@@ -699,7 +699,7 @@ class State {
       if (!result) {
         return []
       }
-      return results;
+      return result;
     }
   }
 
