@@ -4,15 +4,12 @@ var maxPets = 0;
 var data;
 var category="";
 var base_url = "social_pets.html";
-var favorite_pets = new Set();
 
 Util.events(document, {
 	// Final initalization entry point: the Javascript code inside this block
 	// runs at the end of start-up when the DOM is ready
 	"DOMContentLoaded": function() {
 		data = new Data();
-        // favorite_pets = data.favorite_pets;
-        // console.log(favorite_pets);
 
         category = getQueryString("category", document.location.href);
         maxPets = data.allData[category].length-1;
@@ -92,15 +89,13 @@ function update_html(){
     petpost.innerHTML = posts;
 
     var pet_id = pet.pet_id;
-    if(favorite_pets.has(pet_id)){
-        //if pet is marked as favorite
+    var favorite_pets = State.getFavoritePets();
+    if(favorite_pets.indexOf(pet_id) != -1){ //if index is not -1 then the pet id is marked as favorite
         document.getElementById("favorite").src = "img/gold_star.png";
     }
     else{
         document.getElementById("favorite").src = "img/star.png"
     }
-
-    console.log(favorite_pets);
 
 }
 
@@ -112,13 +107,13 @@ function updateURL(){
 
 function toggleFavorite(){
     var pet_id = data.allData[category][petCount].pet_id;
-    if(favorite_pets.has(pet_id)){
+    var favorite_pets = State.getFavoritePets();
+    if(favorite_pets.indexOf(pet_id) != -1){ //if index is not -1 then the pet id is marked as favorite
         State.unfavoritePet(pet_id);
     }
     else{
         State.favoritePet(pet_id);
     }
     update_html();
-    console.log(favorite_pets);
 
 }
