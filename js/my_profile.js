@@ -78,7 +78,7 @@ function showMyPets() {
         let newNode = newAdd.cloneNode(true);
         let image = newNode.children[1];
 
-        image.href.baseVal = "profiles/sample/sample-" + element.catagory + ".svg";
+        image.href.baseVal = "profiles/sample/sample-" + element.category + ".svg";
        
         image.setAttribute("height", "10vh");
         image.setAttribute("width", "10vh");
@@ -109,7 +109,7 @@ function addPet() {
         "profilePics" : [
             
         ],
-        "catagory": "cat",
+        "category": "cat",
         "adopted": false,
         "adoptable": false, 
     };

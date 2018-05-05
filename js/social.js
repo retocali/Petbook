@@ -54,7 +54,7 @@ function update_circle(id, count){
 	var item = data.catagories[count];
 	var circle1html = "<a href=\""+item.href+"\">";
 	circle1html += "<div class=\"type\" style=\"background-image: url("+item.image;
-	circle1html += ")\">"+"<div class=\"text_label\">"+item.catagory+"</div>";
+	circle1html += ")\">"+"<div class=\"text_label\">"+item.category+"</div>";
 	circle1html += "</div></a>";
 	circle1.innerHTML = circle1html; 
 

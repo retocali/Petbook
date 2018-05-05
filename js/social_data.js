@@ -2,35 +2,35 @@ function SocialData() {
   /**
    * Usage:
    *  
-   *  Each catagory has a name, and picture
+   *  Each category has a name, and picture
    * 
    */
   this.catagories = [
     {
-      "catagory": "Dogs",
-      "image": 'profiles/catagory-pics/dog.jpg',
-      "href": 'social_pets.html?catagory=dog',
+      "category": "Dog",
+      "image": 'profiles/category-pics/dog.jpg',
+      "href": 'social_pets.html?category=dog',
     },
     {
-      "catagory": "Cats",
-      "image": 'profiles/catagory-pics/cat.jpg',
-      "href": 'social_pets.html?catagory=cat'
+      "category": "Cat",
+      "image": 'profiles/category-pics/cat.jpg',
+      "href": 'social_pets.html?category=cat'
     },
     {
-      "catagory": "Fish",
-      "image": 'profiles/catagory-pics/fish.png',
-      "href": 'social_pets.html?catagory=fish'
+      "category": "Fish",
+      "image": 'profiles/category-pics/fish.png',
+      "href": 'social_pets.html?category=fish'
     },
     {
-      "catagory": "Reptiles",
-      "image": 'profiles/catagory-pics/turtle.jpg',
-      "href": 'social_pets.html?catagory=reptile'
+      "category": "Reptile",
+      "image": 'profiles/category-pics/turtle.jpg',
+      "href": 'social_pets.html?category=reptile'
     },
 
     {
-      "catagory": "Birds",
-      "image": 'profiles/catagory-pics/bird.jpg',
-      "href": 'social_pets.html?catagory=bird'      
+      "category": "Bird",
+      "image": 'profiles/category-pics/bird.jpg',
+      "href": 'social_pets.html?category=bird'      
     },
   ];
 
