@@ -493,7 +493,36 @@ function Data() {
     "fish" : this.fish,
     "bird" : this.birds,
     "reptile" : this.reptiles,
-
+  }
+  this.categories = [
+    "cat", "dog", "fish", "bird", "reptile"
+  ]
+  this.getAllData = function() {
+    let n = [];
+    for (let i = 0; i < data.categories.length; i++) {
+      const c = data.categories[i];
+      for (let i = 0; i < data.allData[c].length; i++) {
+          const element = data.allData[c][i];
+          n.push(element)
+      }
+    } 
+    
+    return n;  
+  }
+  this.convertProfileToString = function(profile) {
+    let s = "";
+    if (profile.adoptable) { s += "adopt "}
+    if (profile.adopted) { s += "adopted "}
+    s += profile.age + " ";
+    s += profile.bio + " ";
+    s += profile.category + " ";
+    s += profile.gender + " ";
+    s += profile.location + " ";
+    s += profile.petName + " ";
+    s += profile.status + " ";
+    s += profile.type + " ";
+    s += profile.userName + " ";
+    return s.toLowerCase();
   }
 }
 
