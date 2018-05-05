@@ -488,11 +488,11 @@ function Data() {
   ];  
   State.addMyPets(this);
   this.allData = {
-    "cats" : this.cats,
-    "dogs" : this.dogs,
+    "cat" : this.cats,
+    "dog" : this.dogs,
     "fish" : this.fish,
-    "birds" : this.birds,
-    "reptiles" : this.reptiles,
+    "bird" : this.birds,
+    "reptile" : this.reptiles,
 
   }
 }
@@ -615,4 +615,13 @@ class State {
         }
       }
     }
-}
+  }
+
+// Borrowed from https://gomakethings.com/how-to-get-the-value-of-a-querystring-with-native-javascript/
+  var getQueryString = function ( field, url ) {
+    var href = url ? url : window.location.href;
+    var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
+    var string = reg.exec(href);
+    return string ? string[1] : null;
+  };
+

@@ -11,8 +11,15 @@
         <a href="index.html" class="title" style="font-size: 60vh;">
             PetBook
         </a>    
-        <form style="margin: 0 auto" action="results.html">
-            <input id="search" placeholder="Search"><button id="searchbutton" type="submit"><i class="fa fa-search"></i></button> 
+        <form style="margin: 0 auto" action="results.html" method="GET">
+            <input list="defaults" id="search" placeholder="Search" name="search"><button id="searchbutton" type="submit"><i class="fa fa-search"></i></button> 
+            <datalist id="defaults">
+                <option value="dog">
+                <option value="cat">
+                <option value="bird">
+                <option value="fish">
+                <option value="reptile">
+            </datalist>
         </form>
         <div>
             <svg height="90vh" width="20vw" style="align-self:initial">

@@ -151,7 +151,7 @@ body {
 }
 
 #search:hover, #search:focus {
-    background-color: cornflowerblue;
+    background-color: var(--sakura-color);
     color:white;
 }
 
@@ -190,3 +190,19 @@ body {
     background-color: var(--cranberry-color);
     border: 1px solid black;
   }
+
+#searchResults {
+    margin: 1vh auto;
+    background-color: whitesmoke;
+    border: .6vh solid var(--cranberry-color);
+    border-radius: 2vh;
+    padding: .6vh;
+    padding-top: 2vh;
+    width: 40vw;
+    height: 60vh;
+
+    color: var(--cranberry-color);
+    text-align: center;
+    font-family: 'Lemon', cursive; 
+    font-size: 3vh;
+}
