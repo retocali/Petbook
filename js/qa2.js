@@ -298,10 +298,10 @@ Util.events(document, {
             p2=document.getElementById("new_question").style.display
 
             if (p1!="grid" && p2!="grid"){
+                document.documentElement.style.setProperty("--curr_comment",current_post+1);
                 document.getElementById("comment_input").style.display="grid";
                 document.getElementById("new_question").style.display="none";
                 document.documentElement.style.setProperty("--opacity",0.5);
-                document.getElementById("forum_container").scrollTop=0;
             }
         }
 
