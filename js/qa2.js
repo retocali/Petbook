@@ -42,6 +42,7 @@ Util.events(document, {
         var care=[care_1,care_2,care_3];
 
         function get_master_node(index){
+            index=index+4
             var master_node=document.getElementById("forum_container").childNodes[index];
             var copy_node=master_node.cloneNode(true);
             previous_node=copy_node;
@@ -87,11 +88,14 @@ Util.events(document, {
             var children=node.getElementsByTagName("*");
             for (var index in children){
                 var elt =children[index];
+                
                 if (elt.id!=null){
                     var temp=elt.id.split("_");
                     
                     if (temp[0]=="question"){
+
                         elt.innerText=data["text"];
+                        
                     }
                     if (temp[0]=="c"){
                         var temp_c=data["c1"];
@@ -106,6 +110,13 @@ Util.events(document, {
                     }
                     if (temp[0]=="down"){
                         elt.addEventListener("click",select);
+                    }
+
+                    if (temp[0]=="comment"){
+                        elt.addEventListener("click",highlight);
+                    }
+                    if (temp[0]=="main"){
+                        elt.addEventListener("click",dehighlight);
                     }
                 }
             }
@@ -126,7 +137,7 @@ Util.events(document, {
                     var node=new_node(get_master_node(index+1),index+1)
                     var data=general_know[index-1];
                     apply_data(node,data);
-                    var first_node=new_node(get_master_node(1),1);
+                    //var first_node=new_node(get_master_node(1),1);
                     document.getElementById("forum_container").appendChild(node);
                 }
             }
@@ -134,6 +145,7 @@ Util.events(document, {
         }
         initial_populate();
         var first_node=get_master_node(1);
+        console.log(first_node);
         function populate_category(cat_id){
             last_row=2;
             //cat_id=0=>gen,id=1 is training, id=2 is care
@@ -152,7 +164,7 @@ Util.events(document, {
             var container=document.getElementById("forum_container").childNodes;
             var parent=document.getElementById("forum_container");
             while(parent.hasChildNodes){
-                if (parent.childNodes.length==0){
+                if (parent.childNodes.length==4){
                     break;
                 }
                 parent.removeChild(parent.lastChild)
@@ -161,18 +173,17 @@ Util.events(document, {
             for (var index=1;index<=data_array.length;index++){
                 if (index==1){
                     var node=first_node;
-                    console.log(node);
                 }
                 else{
                     var node=new_node(get_master_node(index-2),index);
                 }
-                
                 var data=data_array[index-1];
                 apply_data(node,data);
                 document.getElementById("forum_container").appendChild(node);
             }
             Util.one(".up").addEventListener("click",select);
             Util.one(".down").addEventListener("click",select);
+            Util.one(".comment").addEventListener("click",highlight);
         }
 
         function select(event){
@@ -230,19 +241,43 @@ Util.events(document, {
             populate_category(0)
             
         }
+        high=false;
+        function dehighlight(){
+            p1=document.getElementById("comment_input").style.display
+            p2=document.getElementById("new_question").style.display
+            console.log("mein teil")
+            console.log
+            if ((p1=="grid" || p2=="grid") && high){
+                console.log("mein teil")
+                document.getElementById("comment_input").style.display="none";
+                document.getElementById("new_question").style.display="none";
+                document.documentElement.style.setProperty("--opacity",1);
+                high=false;
+            }
+        }
+        function highlight(){
+            console.log("click nigga")
+            p1=document.getElementById("comment_input").style.display
+            p2=document.getElementById("new_question").style.display
 
-        
+            if (p1!="grid" && p2!="grid" && !high){
+                console.log("te quiero");
+                document.getElementById("comment_input").style.display="grid";
+                document.getElementById("new_question").style.display="none";
+                document.documentElement.style.setProperty("--opacity",0.5);
+                high=true;
+            }
+        }
 
         Util.one(".up").addEventListener("click",select);
         Util.one(".down").addEventListener("click",select);
 
-
-        // Util.one("[id='left_button']").addEventListener("click",next);
-        // Util.one("[id='right_button']").addEventListener("click",next);
-
         Util.one("[id='knowledge']").addEventListener("click",general);
         Util.one("[id='training']").addEventListener("click",alpha);
         Util.one("[id='care']").addEventListener("click",beta);
+
+        Util.one(".main_text").addEventListener("click",dehighlight);
+        Util.one(".comment").addEventListener("click",highlight);
 
 	},
 
