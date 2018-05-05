@@ -35,11 +35,16 @@ function showResults(query) {
 }
 
 function generateResults(data) {
-    let resultsHTML = "";
+    let resultsHTML = "<a class='resultTop' style='display:flex;'> \
+    <div id='resultbox' style='border-right: 0'> PETNAME: </div>" +
+   "<div id='resultbox' style='border-left: 0; border-right: 0'> USER: </div>" +
+   "<div id='resultbox' style='border-left: 0;'> TYPE: </div></a>";
     for (let i = 0; i < data.length; i++) {
         let element = data[i];
-        resultsHTML += "<a href=social_pets.html?category=" + element.catagory +
-                        "&petCount=" + i + " id='resultLink'>" + element.petName + "</a><br>";
+        resultsHTML += "<a href=social_pets.html?category=" + element.catagory + "&petCount=" + i + " class='resultLink' style='display:flex;'> \
+                        <div id='resultbox' style='border-right: 0'>" + element.petName + "</div>" +
+                       "<div id='resultbox' style='border-left: 0; border-right: 0'>" + element.userName + "</div>" +
+                       "<div id='resultbox' style='border-left: 0;'>" + element.type + "</div></a>";
     }
     return resultsHTML;
 }
