@@ -16,79 +16,93 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!--<script src="game.js"></script>-->
+<!-- Constructible EventTarget polyfill — Only Chrome 64+ supports constructible EventTarget objects natively -->
+<script src="js/shelter_data.js"></script> 
+<script src="js/util.js"></script> 
+<script src="js/adoption.js"></script>
 
 <link href="https://fonts.googleapis.com/css?family=Lemon" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
 
-<script src="js/data.js"></script> 
-<script src="js/util.js"></script> 
-<script src="js/adoption.js"></script>
-
-
-
-
 </head>
-<iframe scrolling="no" src="border.html" frameborder="0" style="height:10vh; width:100vw; "></iframe>
-
+<iframe scrolling="no" src="border.html" frameborder="0" style="height:10vh; width:100vw; "></iframe>       
 <body id = "MAIN-CONTAINER">
 
     <main>
-        <div class = "carousel">
-            <img id="up_arrow" class="arrow" src="img/up_arrow_color.png"></img>
-             <div class="pet_pic" id="pet_pic" style="background-image: url(profiles/profile-pics/sheldon.png)">
-            </div>
-             <img id="down_arrow" class="arrow" src="img/down_arrow_color.png"></img>
-
-        </div>
-
-        <div class = "pet_page">
-            <div class = "adoption-filter-box">
+        <!--<div class = "selection">
+            <div class = "filter_box">
                 <div id = "filter_label">Filters: </div>
                 <div id = "filter_location" class = "filter">L</div>
                 <div id = "filter_species" class = "filter">S</div>
                 <div id = "filter_type" class = "filter">T</div>
+            </div>-->
+            <div class = "carousel">
+                <img id="up_arrow" class="arrow" src="img/up_arrow_color.png"></img>
+                <div class="pet_pic" id="pet_pic"></div>
+                <img id="down_arrow" class="arrow" src="img/down_arrow_color.png"></img>
+
             </div>
-            <div class = "adoption-information-box">
-                <div class = "adoptionInfo">
-                    <div class = "info_labels">
-                        <div class="info_label">Name:</div>
-                        <div class="info_label">User:</div>
-                        <div class="info_label">Location:</div>
-                        <div class="info_label">Age:</div>
-                        <div class="info_label">Gender:</div>
-                        <div class="info_label">Species:</div>
-                        <div class="info_label">Status:</div>
-                        <div class="info_label">Bio:</div>
+        </div>
+        <div class = "pet_page">
+            <div class = "information_box">
+                <div class = "information">
+                    
+                    <div class="text-and-btns">
+                        <div class="Shelter-Name">
+                            <div class="shelter-label" id="shelter-label"></div>
+                        </div>
+                        <div class="Location-Name">
+                            <div class="location-label" id="location-label"></div>
+                        </div>
 
-
-                    </div>
-                    <div class="pet_infos">
-                        <div class="pet_info" id="pet_name"></div>
-                        <div class="pet_info" id="user"></div>
-                        <div class="pet_info" id="location"></div>
-                        <div class="pet_info" id="age"></div>
-                        <div class="pet_info" id="gender"></div>
-                        <div class="pet_info" id="species"></div>
-                        <div class="pet_info" id="status"></div>
-                        <div class="pet_info" id="bio"></div>
-
-                    </div>
-                    <div class="side_buttons">
-                        <div id="adopt" class="adopt">
-                            <img id="adoptButton" class="check" src="img/whiteCheck.png"></img>
+                        <div class="side-notes">
+                            <div class="animals">Sample of Animals up for Adoption:</div>
+                            <button id="adopt_btn"><div id="adopt_container">Set Up Adoption</div></button>
                         </div>
                         
-                        <div id="adopt_btn">Social</div>
                     </div>
+                    <div class="posts_grid" id="pet_posts">
+                        </div>
+
                 </div>
+                
             </div>
 
         </div>
 
     </main>
+    
+                    <div id=hovermenu style="display:none">
+                
+                        <div id=signupmessage>
+                            <div id="warning"></div>
+                            <div id="yesorno">
+                                <button class="yesnobutton"><div class="yesnocontainer" id="yesbtn">Yes</div></button>
+                                <button class="yesnobutton"><div class="yesnocontainer" id="nobtn">No</div></button>
+                            </div>
+                        </div>
+                    </div>
+
+</body>
+
+</html>
 
 
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
