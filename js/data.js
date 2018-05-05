@@ -8,6 +8,9 @@ function Data() {
    *  and points to each species using a string as a key
    * 
    */
+
+   this.favorite_pets = [ {"id":5}, {"id":10} ,{"id":15}
+   ];
   
   this.cats = [
     {
@@ -33,6 +36,7 @@ function Data() {
       "category": "cat",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 1,
     },
     {
       "petName": "Tom",
@@ -60,6 +64,7 @@ function Data() {
       "category": "cat",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 2,
     },
     {
       "petName": "Fluffy",
@@ -77,6 +82,7 @@ function Data() {
       "category": "cat",
       "adopted": false,
       "adoptable" : true,
+      "pet_id":3,
     },
     {
       "petName": "Simba",
@@ -98,6 +104,7 @@ function Data() {
       "category": "cat",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 4,
     },
 
     {
@@ -117,6 +124,7 @@ function Data() {
       "category": "cat",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 5,
     },
   ];
   this.dogs = [
@@ -140,6 +148,7 @@ function Data() {
       "category": "dog",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 6,
     },
     {
       "petName": "Rocky",
@@ -158,6 +167,7 @@ function Data() {
       "category": "dog",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 7,
     },
     {
       "petName": "Sebastian",
@@ -176,6 +186,7 @@ function Data() {
       "category": "dog",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 8,
     },
     {
       "petName": "Coco",
@@ -200,6 +211,7 @@ function Data() {
       "category": "dog",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 9,
     },
     {
       "petName": "Bailey",
@@ -220,6 +232,7 @@ function Data() {
       "category": "dog",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 10,
     },
   ];
 
@@ -243,6 +256,7 @@ function Data() {
       "category": "reptile",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 11,
     },
     {
       "petName": "Reptar",
@@ -259,6 +273,7 @@ function Data() {
       "category": "reptile",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 12,
     },
     {
       "petName": "Smaug",
@@ -276,6 +291,7 @@ function Data() {
       "category": "reptile",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 13,
     },
 
     {
@@ -294,6 +310,7 @@ function Data() {
       "category": "reptile",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 14,
     },
 
     {
@@ -312,6 +329,7 @@ function Data() {
       "category": "reptile",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 15,
     },
   ];
 
@@ -331,6 +349,7 @@ function Data() {
       "category": "bird",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 16,
     },
 
     {
@@ -348,6 +367,7 @@ function Data() {
       "category": "bird",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 17,
     },
 
     {
@@ -365,6 +385,7 @@ function Data() {
       "category": "bird",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 18,
     },
     {
       "petName": "CoolBirb",
@@ -381,6 +402,7 @@ function Data() {
       "category": "bird",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 19,
     },
     {
       "petName": "TonyBudgie",
@@ -397,6 +419,7 @@ function Data() {
       "category": "bird",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 20,
     },
   ];
 
@@ -416,6 +439,7 @@ function Data() {
       "category": "fish",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 21,
     },
 
     {
@@ -433,6 +457,7 @@ function Data() {
       "category": "fish",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 22,
     },
     {
       "petName": "Filet",
@@ -449,6 +474,7 @@ function Data() {
       "category": "fish",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 23,
     },
 
     {
@@ -466,6 +492,7 @@ function Data() {
       "category": "fish",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 24,
     },
 
     {
@@ -483,6 +510,7 @@ function Data() {
       "category": "fish",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 25,
     },
 
   ];  
