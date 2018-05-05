@@ -4,6 +4,7 @@ Util.events(document, {
 	// runs at the end of start-up when the DOM is ready
 	"DOMContentLoaded": function() {
         showMyProfile();
+        showMyFavorite();
 		showMyPets();
 		document.getElementById("addPet").addEventListener(
 			"click", () => {
@@ -40,12 +41,11 @@ Util.events(document, {
 
     }
 });
+function showMyFavorite() {
+    document.getElementById("following").innerHTML = "";
+}
+
 function showMyProfile() {
-    // document.getElementById("username").innerHTML = "USERNAME: " + State.getUsername();
-    // document.getElementById("fullName").innerHTML = "FULL NAME: "+ State.getFullName();
-    // document.getElementById("location").innerHTML = "LOCATION: " + State.getLocation();
-    // document.getElementById("status").innerHTML = "STATUS: " + State.getStatus();
-    // document.getElementById("bio").innerHTML = "BIO: " + State.getBio();
     document.getElementById("username").value = State.getUsername();
     document.getElementById("fullName").value = State.getFullName();
     document.getElementById("location").value = State.getLocation();
@@ -59,12 +59,6 @@ function showMyPets() {
         return;
     }
     
-    // let addedPets = document.getElementsByClassName("addedPets");
-    // console.log(addedPets);
-    // for (let i = 0; i < addedPets.length; i++) {
-    //     let element = addedPets[i];
-    //     element.remove()
-    // }
     
     let card = document.getElementById("mypets");
     let node = document.getElementById("addPet");
