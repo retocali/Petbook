@@ -70,15 +70,16 @@ function showMyPets() {
     let node = document.getElementById("addPet");
     let newAdd = node.cloneNode(true);
     while (card.firstChild) {
-        card.removeChild(card.firstChild)
+        card.removeChild(card.firstChild);
     }
+    card.appendChild(newAdd);
     
     for (let i = 0; i < allPets.length; i++) {
         const element = allPets[i];
         let newNode = newAdd.cloneNode(true);
         let image = newNode.children[1];
-
-        image.href.baseVal = "profiles/sample/sample-" + element.catagory + ".svg";
+        console.log(element);
+        image.href.baseVal = "profiles/sample/sample-" + element.category + ".svg";
        
         image.setAttribute("height", "10vh");
         image.setAttribute("width", "10vh");
@@ -92,8 +93,11 @@ function showMyPets() {
         newNode.classList.add("addedPets");
         card.appendChild(newNode);
     }
-    card.appendChild(newAdd);
-
+    document.getElementById("addPet").addEventListener(
+        "click", () => {
+            document.getElementById("hovermenu").style.display = "inline"
+        }
+    );
 }
 
 function addPet() {
@@ -103,13 +107,13 @@ function addPet() {
         "location": State.getLocation(),
         "age": "100",
         "gender": "female",
-        "species": "pet",
+        "type": "pet",
         "status": "hi!",
         "bio": "...",
         "profilePics" : [
             
         ],
-        "catagory": "cat",
+        "category": "cat",
         "adopted": false,
         "adoptable": false, 
     };

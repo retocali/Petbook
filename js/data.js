@@ -8,7 +8,6 @@ function Data() {
    *  and points to each species using a string as a key
    * 
    */
-  
   this.cats = [
     {
       "petName": "Miki",
@@ -16,7 +15,7 @@ function Data() {
       "location": "Washington D.C.",
       "age": "3",
       "gender": "Female",
-      "species": "Tabbycat",
+      "type": "Tabbycat",
       "status": "Miki's a butt",
       "bio": "Miki loves her mouse toys and lasers",
       "profilePics" : [ 'profiles/profile-posts/Miki1.jpg',
@@ -30,9 +29,10 @@ function Data() {
                         'profiles/profile-posts/Miki9.jpg',
                         'profiles/profile-posts/Miki10.jpg',        
       ],
-      "catagory": "cat",
+      "category": "cat",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 1,
     },
     {
       "petName": "Tom",
@@ -40,7 +40,7 @@ function Data() {
       "location": "California",
       "age": "15",
       "gender": "Male",
-      "species": "Felis Cartoonis",
+      "type": "Felis Cartoonis",
       "status": "Cat fight",
       "bio": "Always out on the lookout for Jerry",
       "profilePics" : [ 'profiles/profile-posts/Tom1.jpg',
@@ -57,9 +57,10 @@ function Data() {
                         'profiles/profile-posts/Tom12.jpg',
         
       ],
-      "catagory": "cat",
+      "category": "cat",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 2,
     },
     {
       "petName": "Fluffy",
@@ -67,16 +68,17 @@ function Data() {
       "location": "Virginia",
       "age": "20",
       "gender": "Female",
-      "species": "Birman",
+      "type": "Birman",
       "status": "looking for a sunny place to nap",
       "bio": "meow?",
       "profilePics" : [ 'profiles/profile-posts/Fluffy1.jpg',
                         'profiles/profile-posts/Fluffy2.jpg',
         
       ],
-      "catagory": "cat",
+      "category": "cat",
       "adopted": false,
       "adoptable" : true,
+      "pet_id":3,
     },
     {
       "petName": "Simba",
@@ -84,7 +86,7 @@ function Data() {
       "location": "New York",
       "age": "4",
       "gender": "Male",
-      "species": "King Cat",
+      "type": "King Cat",
       "status": "Hakuna Matata",
       "bio": "I just can't wait to be king",
       "profilePics" : ['profiles/profile-posts/Simba1.jpg',
@@ -95,9 +97,10 @@ function Data() {
                         'profiles/profile-posts/Simba6.jpg', 
         
       ],
-      "catagory": "cat",
+      "category": "cat",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 4,
     },
 
     {
@@ -106,7 +109,7 @@ function Data() {
       "location": "Boston",
       "age": "??",
       "gender": "Male",
-      "species": "British Shorthair",
+      "type": "British Shorthair",
       "status": "*Grins*",
       "bio": "Most everyone's mad here",
       "profilePics" : [ 'profiles/profile-posts/Cheshire1.jpg',
@@ -114,9 +117,10 @@ function Data() {
                         'profiles/profile-posts/Cheshire3.jpg',
         
       ],
-      "catagory": "cat",
+      "category": "cat",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 5,
     },
   ];
   this.dogs = [
@@ -126,7 +130,7 @@ function Data() {
       "location": "California",
       "age": "11",
       "gender": "Female",
-      "species": "Husky",
+      "type": "Husky",
       "status": "Woof",
       "bio": "Hates baths",
       "profilePics" : ['profiles/profile-posts/luna1.jpg',
@@ -137,9 +141,10 @@ function Data() {
                       'profiles/profile-posts/luna6.jpg',
       
       ],
-      "catagory": "dog",
+      "category": "dog",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 6,
     },
     {
       "petName": "Rocky",
@@ -147,7 +152,7 @@ function Data() {
       "location": "Utah",
       "age": "6",
       "gender": "Male",
-      "species": "Chihuahua",
+      "type": "Chihuahua",
       "status": "Quero TacoBell",
       "bio": "Eats tacos and only tacos.  Surprisingly not obese",
       "profilePics" : ['profiles/profile-posts/rocky1.jpg',
@@ -155,9 +160,10 @@ function Data() {
                       'profiles/profile-posts/rocky3.jpg',
       
       ],
-      "catagory": "dog",
+      "category": "dog",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 7,
     },
     {
       "petName": "Sebastian",
@@ -165,17 +171,18 @@ function Data() {
       "location": "Minnesota",
       "age": "18",
       "gender": "Male",
-      "species": "Great Dane",
-      "catagory": "dog",
+      "type": "Great Dane",
+      "category": "dog",
       "status": "View's nice up here",
       "bio": "4 feet tall",
       "profilePics" : ['profiles/profile-posts/sebastian1.jpg',
                       'profiles/profile-posts/sebastian2.jpg',
       
       ],
-      "catagory": "dog",
+      "category": "dog",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 8,
     },
     {
       "petName": "Coco",
@@ -183,8 +190,8 @@ function Data() {
       "location": "Canada",
       "age": "9",
       "gender": "Female",
-      "species": "Poodle",
-      "catagory": "dog",
+      "type": "Poodle",
+      "category": "dog",
       "status": "fluff fluff",
       "bio": "diva doggo",
       "profilePics" : [ 'profiles/profile-posts/coco1.jpg',
@@ -197,9 +204,10 @@ function Data() {
                         'profiles/profile-posts/coco8.jpg',
                         'profiles/profile-posts/coco9.jpg',      
       ],
-      "catagory": "dog",
+      "category": "dog",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 9,
     },
     {
       "petName": "Bailey",
@@ -207,7 +215,7 @@ function Data() {
       "location": "Massachusetts",
       "age": "3",
       "gender": "Female",
-      "species": "Golden Retriver",
+      "type": "Golden Retriver",
       "status": "Loooooooves People",
       "bio": "Friendliest Doggo in town, 2 years in a row",
       "profilePics" : [ 'profiles/profile-posts/bailey1.jpg',
@@ -217,9 +225,10 @@ function Data() {
                         'profiles/profile-posts/bailey5.jpg'
           
       ],
-      "catagory": "dog",
+      "category": "dog",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 10,
     },
   ];
 
@@ -230,7 +239,7 @@ function Data() {
       "location": "Sheldon Court, NY",
       "age": "87",
       "gender": "Male",
-      "species": "Argentinian Sand Turtle",
+      "type": "Argentinian Sand Turtle",
       "status": "Feeling Lively",
       "bio": "Ruler of New York.  Loves his top hat and cane",
       "profilePics" : [ 'profiles/profile-posts/Sheldon1.jpg',
@@ -240,9 +249,10 @@ function Data() {
                         'profiles/profile-posts/Sheldon5.jpg',
                         'profiles/profile-posts/Sheldon6.jpg'
       ],
-      "catagory": "reptile",
+      "category": "reptile",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 11,
     },
     {
       "petName": "Reptar",
@@ -250,15 +260,16 @@ function Data() {
       "location": "Louisiana",
       "age": "28",
       "gender": "Male",
-      "species": "Reptar Species",
+      "type": "Reptar Species",
       "status": "GRAAAARRR",
       "bio": "Protects and destroys cities.  He does whatever",
       "profilePics" : [ "profiles/profile-posts/Reptar1.png",
                         "profiles/profile-posts/Reptar2.png",
       ],
-      "catagory": "reptile",
+      "category": "reptile",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 12,
     },
     {
       "petName": "Smaug",
@@ -266,16 +277,17 @@ function Data() {
       "location": "New Zealand",
       "age": "?",
       "gender": "Male",
-      "species": "Smol lizard",
+      "type": "Smol lizard",
       "status": "I AM FIRE. I AM DEATH.",
       "bio": "Likes money.  Likes to make money.  Likes to kill to make money",
       "profilePics" : [ "profiles/profile-posts/Smaug1.jpg",
                         "profiles/profile-posts/Smaug2.jpg",
                         "profiles/profile-posts/Smaug3.jpg",
       ],
-      "catagory": "reptile",
+      "category": "reptile",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 13,
     },
 
     {
@@ -284,16 +296,17 @@ function Data() {
       "location": "Sandwich, MA",
       "age": "5",
       "gender": "Female",
-      "species": "Burger Turtle",
+      "type": "Burger Turtle",
       "status": "Medium Well",
       "bio": "Master of the burger arts, this turt is all about the burgers.  Please, no pickles",
       "profilePics" : [ "profiles/profile-posts/MasterOfBurgs1.jpg",
                         "profiles/profile-posts/MasterOfBurgs2.jpg",
                         "profiles/profile-posts/MasterOfBurgs3.jpg"
       ],
-      "catagory": "reptile",
+      "category": "reptile",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 14,
     },
 
     {
@@ -302,16 +315,17 @@ function Data() {
       "location": "New Zealand",
       "age": "?",
       "gender": "Male",
-      "species": "Large Dragon",
+      "type": "Large Dragon",
       "status": "I AM DRAGON. I AM DEATH",
       "bio": "Likes money.  Likes to make money.  Likes to make money to compensate.",
       "profilePics" : [ "profiles/profile-posts/Smaugbaby1.jpg",
                         "profiles/profile-posts/Smaugbaby2.jpg",
                         "profiles/profile-posts/Smaugbaby3.jpg",
       ],
-      "catagory": "reptile",
+      "category": "reptile",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 15,
     },
   ];
 
@@ -322,15 +336,16 @@ function Data() {
       "location": "Pandora",
       "age": "2",
       "gender": "Female",
-      "species": "Budgerigar",
+      "type": "Budgerigar",
       "status": "It's time for Tea!",
       "bio": "Survives on a healthy diet of tea and pop rocks",
       "profilePics" : [
       
       ],
-      "catagory": "bird",
+      "category": "bird",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 16,
     },
 
     {
@@ -339,15 +354,16 @@ function Data() {
       "location": "Colorado",
       "age": "40",
       "gender": "Male",
-      "species": "Hawk",
+      "type": "Hawk",
       "status": "duuuuuuuuuuude",
       "bio": "Tends to fixate on things and slowly melt.  Looking for someone to chill with",
       "profilePics" : [
       
       ],
-      "catagory": "bird",
+      "category": "bird",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 17,
     },
 
     {
@@ -356,15 +372,16 @@ function Data() {
       "location": "Australia",
       "age": "24",
       "gender": "Male",
-      "species": "Shrike",
+      "type": "Shrike",
       "status": "weeeeeeeeeeeeeeeeeeeeeeeeee",
       "bio": "Incredibly throwable.  Flies through the air at Mach 2",
       "profilePics" : [
       
       ],
-      "catagory": "bird",
+      "category": "bird",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 18,
     },
     {
       "petName": "CoolBirb",
@@ -372,15 +389,16 @@ function Data() {
       "location": "California",
       "age": "16",
       "gender": "Female",
-      "species": "Parrotlet",
+      "type": "Parrotlet",
       "status": "Haters gonna hate",
       "bio": "Coolest bird on the market.  Skating is her passion",
       "profilePics" : [
       
       ],
-      "catagory": "bird",
+      "category": "bird",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 19,
     },
     {
       "petName": "TonyBudgie",
@@ -388,15 +406,16 @@ function Data() {
       "location": "Nevada",
       "age": "49",
       "gender": "Female",
-      "species": "Budgie",
+      "type": "Budgie",
       "status": "KickFlip!",
       "bio": "CoolBirb's mentor.  Retired from her skating career, she still got the moves",
       "profilePics" : [
       
       ],
-      "catagory": "bird",
+      "category": "bird",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 20,
     },
   ];
 
@@ -407,15 +426,16 @@ function Data() {
       "location": "Massachusetts",
       "age": "Eternal",
       "gender": "Female",
-      "species": "Atlantic Trout",
+      "type": "Atlantic Trout",
       "status": "Delicious",
       "bio": "Swims deep in the arctic, tends to be caught by fisherman.  Constantly gets resurrected from death",
       "profilePics" : [
       
       ],
-      "catagory": "fish",
+      "category": "fish",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 21,
     },
 
     {
@@ -424,15 +444,16 @@ function Data() {
       "location": "Arizona",
       "age": "9",
       "gender": "Male",
-      "species": "Bubble Eyed Goldfish",
+      "type": "Bubble Eyed Goldfish",
       "status": "Safe, for now",
       "bio": "This fish can't swim.  Uses floatation devices to float out to the surface and escape.",
       "profilePics" : [
       
       ],
-      "catagory": "fish",
+      "category": "fish",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 22,
     },
     {
       "petName": "Filet",
@@ -440,15 +461,16 @@ function Data() {
       "location": "Arkansas",
       "age": "0",
       "gender": "Male",
-      "species": "Sandwich Fish",
+      "type": "Sandwich Fish",
       "status": "This was fate",
       "bio": "Doesn't eat much.  Needs little care.  Please give walks at least once a week",
       "profilePics" : [
       
       ],
-      "catagory": "fish",
+      "category": "fish",
       "adopted": false,
       "adoptable" : true,
+      "pet_id": 23,
     },
 
     {
@@ -457,15 +479,16 @@ function Data() {
       "location": "Minnesota",
       "age": "4",
       "gender": "Female",
-      "species": "CowFish",
+      "type": "CowFish",
       "status": "Boxed up",
       "bio": "Hates being in boxes.  Prefers pina coladas and long airplane flights",
       "profilePics" : [
       
       ],
-      "catagory": "fish",
+      "category": "fish",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 24,
     },
 
     {
@@ -474,15 +497,16 @@ function Data() {
       "location": "New York",
       "age": "32",
       "gender": "Female",
-      "species": "Puffer fish",
+      "type": "Puffer fish",
       "status": "Slaying Vampires",
       "bio": "Kills vampires and turns into balloons.  Read her novel (To Puff and Slay)",
       "profilePics" : [
       
       ],
-      "catagory": "fish",
+      "category": "fish",
       "adopted": false,
       "adoptable" : false,
+      "pet_id": 25,
     },
 
   ];  
@@ -493,7 +517,36 @@ function Data() {
     "fish" : this.fish,
     "bird" : this.birds,
     "reptile" : this.reptiles,
-
+  }
+  this.categories = [
+    "cat", "dog", "fish", "bird", "reptile"
+  ]
+  this.getAllData = function() {
+    let n = [];
+    for (let i = 0; i < data.categories.length; i++) {
+      const c = data.categories[i];
+      for (let i = 0; i < data.allData[c].length; i++) {
+          const element = data.allData[c][i];
+          n.push(element)
+      }
+    } 
+    
+    return n;  
+  }
+  this.convertProfileToString = function(profile) {
+    let s = "";
+    if (profile.adoptable) { s += "adopt "}
+    if (profile.adopted) { s += "adopted "}
+    s += profile.age + " ";
+    s += profile.bio + " ";
+    s += profile.category + " ";
+    s += profile.gender + " ";
+    s += profile.location + " ";
+    s += profile.petName + " ";
+    s += profile.status + " ";
+    s += profile.type + " ";
+    s += profile.userName + " ";
+    return s.toLowerCase();
   }
 }
 
@@ -595,7 +648,7 @@ class State {
     for (let i = 0; i < result.length; i++) {
         let element = result[i];
         console.log(element)
-        switch (element["catagory"]) {
+        switch (element["category"]) {
           case "cat":
             data.cats.push(element);
             break;
@@ -614,6 +667,39 @@ class State {
             break;
         }
       }
+    }
+    static favoritePet(petID) {
+      let result = sessionStorage.getItem("favorites");
+      if (!results) {
+        sessionStorage.setItem("favorites", [petID]);
+      }
+      if (result.indexOf(petID) == -1) {
+        result.push(petID)
+        sessionStorage.setItem("favorites", result);
+      }
+    }
+
+    static unfavoritePet(petID) {
+      let result = sessionStorage.getItem("favorites");
+      if (!results) {
+        return;
+      }
+      if (result.indexOf(petID) != -1) {
+        for (let i = 0; i < results.length; i++) {
+          const element = results[i];
+          if (element == petID) {
+            result.splice(i, 1);
+          }
+        }
+        sessionStorage.setItem("favorites", result);  
+      }
+    }
+    static getFavoritePets() {
+      let result = sessionStorage.getItem("favorites");
+      if (!results) {
+        return []
+      }
+      return results;
     }
   }
 

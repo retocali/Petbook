@@ -19,7 +19,7 @@
                 <div id="personal" class="card">
                     <img src="img/user.svg" alt="" class="subcard" style="height: 20vh; width: 20vh;">
                     MY PETS:
-                    <div id="mypets" class="subcard" style="text-align: center;">
+                    <div id="mypets" class="subcard">
                         <svg id="addPet" height="16vh" width="16vh" title="Add">
                             <circle class="mainbuttonbackground" cx="8vh" cy="8vh" r="7vh" fill="white"/>
                             <image x="1vh" y="1vh" height=14vh width=14vh xlink:href="img/plus.svg"></image>
@@ -84,13 +84,13 @@
                     </div>
                     
                     <div>
-                        <label>Age:</label>
+                        <label>Age (years):</label>
                         <input class="login" type="number" min="0" max="500" style="width: 6vh" name="age" required>
                     </div>
                     
                     <div>
-                        <label for="password">Type:</label>
-                        <select name="catagory">
+                        <label for="password">Category:</label>
+                        <select name="category">
                             <option value="dog">Dog</option>
                             <option value="cat">Cat</option>
                             <option value="fish">Fish</option>
@@ -100,14 +100,14 @@
                     </div>
 
                     <div class="radio">
-                            <label for="password">Gender:<br></label>
-                            <input type="radio" name="gender" value="male" checked> Male
+                            <label for="password"><b>Gender:</b><br><br></label>
+                            <input type="radio" name="gender" value="male"> Male
                             <input type="radio" name="gender" value="female"> Female
-                            <input type="radio" name="gender" value="other"> Other
+                            <input type="radio" name="gender" value="other" checked> Other
                     </div>
                     <div>
-                        <label>Species:</label>
-                        <input class="login" type="text" name="species" required>
+                        <label>Type (breed, species, etc):</label>
+                        <input class="login" type="text" name="type" required>
                     </div>
 
                     <div>
