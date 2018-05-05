@@ -63,7 +63,9 @@ function update_html(){
     document.getElementById("status").innerHTML = data.cats[petCount].status;
     document.getElementById("bio").innerHTML = data.cats[petCount].bio;
 
-    document.getElementById("pet_pic").style="background-image: url(profiles/profile-pics/"+ data.cats[petCount].petName+".jpg)";
+    document.getElementById("pet_pic").style="background-image: \
+                                                url(profiles/profile-pics/"+ data.cats[petCount].petName+".jpg),\
+                                                url(profiles/sample/sample-cat.svg)";
     
 
     var petpost = document.getElementById("pet_posts");

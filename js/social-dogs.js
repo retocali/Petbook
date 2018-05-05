@@ -64,7 +64,9 @@ function update_html(){
     document.getElementById("status").innerHTML = data.dogs[petCount].status;
     document.getElementById("bio").innerHTML = data.dogs[petCount].bio;
     
-    document.getElementById("pet_pic").style="background-image: url(profiles/profile-pics/"+ data.dogs[petCount].petName+".jpg)";
+    document.getElementById("pet_pic").style="background-image: \
+                                                url(profiles/profile-pics/"+ data.dogs[petCount].petName+".jpg), \
+                                                url(profiles/sample/sample-dog.svg)";
     
     var petpost = document.getElementById("pet_posts");
     petpost.innerHTML = "";

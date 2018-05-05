@@ -8,7 +8,7 @@ Util.events(document, {
 	// runs at the end of start-up when the DOM is ready
 	"DOMContentLoaded": function() {
 		data = new Data();
-        maxPets = data.cats.length-1;
+        maxPets = data.reptiles.length-1;
         update_html();
 
 		Util.one("#up_arrow").addEventListener('click', function(e) {
@@ -42,6 +42,7 @@ function goDown(){
     if(petCount < 0){
         petCount = maxPets;
     }
+    console.log(data.reptiles[petCount])
     if(data.reptiles[petCount].catagory == 'reptile'){
         update_html();
     }
@@ -62,7 +63,9 @@ function update_html(){
     document.getElementById("status").innerHTML = data.reptiles[petCount].status;
     document.getElementById("bio").innerHTML = data.reptiles[petCount].bio;
 
-    document.getElementById("pet_pic").style="background-image: url(profiles/profile-pics/"+ data.reptiles[petCount].petName+".jpg)";
+    document.getElementById("pet_pic").style="background-image: \
+                                                url(profiles/profile-pics/"+ data.reptiles[petCount].petName+".jpg),\
+                                                url(profiles/sample/sample-reptile.svg)";
     
 
     var petpost = document.getElementById("pet_posts");
