@@ -86,16 +86,44 @@ Util.events(document, {
             //data is a dictionary
             var c_counter=1;
             var children=node.getElementsByTagName("*");
+            
+            var total_comments=0;
+            var curr_index=null;
+            var comment_parent=null;
+            var comment_child=null;
+            for (var index in children){
+                var elt =children[index];
+                if (elt.id!=null){
+                    var temp=elt.id.split("_");
+                    if (temp[0]=="comments"){
+                        curr_index=temp[1]
+                        comment_parent=elt;
+                    }
+                    if (temp[0]=="c"){
+                        total_comments+=1;
+                        comment_child=elt.cloneNode(true);
+                    }
+                }
+            }
+            if (total_comments!=data["c1"].length){
+                while(comment_parent.hasChildNodes){
+                    if (comment_parent.childNodes.length==0){
+                        break;
+                    }
+                    comment_parent.removeChild(comment_parent.lastChild)
+                }
+                for (var index in data["c1"]){
+                    comment_parent.appendChild(comment_child);
+                    comment_child=comment_child.cloneNode(true);
+                }
+            }
             for (var index in children){
                 var elt =children[index];
                 
                 if (elt.id!=null){
                     var temp=elt.id.split("_");
-                    
                     if (temp[0]=="question"){
-
                         elt.innerText=data["text"];
-                        
                     }
                     if (temp[0]=="c"){
                         var temp_c=data["c1"];
@@ -124,7 +152,7 @@ Util.events(document, {
         function initial_populate(){
             //Use populate category as a subroutine but remmber that you have one inside already for reference
             // consider switching it out in order to have more symmetric code.
-            document.getElementById("forum_container").style.setProperty("--num_rows",general_know.length)
+            document.getElementById("forum_container").style.setProperty("--num_rows",general_know.length+1)
             for (var index=1;index<=general_know.length;index++){
                 if (index==1){
                     var node=new_node(get_master_node(index),index);
@@ -143,21 +171,24 @@ Util.events(document, {
             }
 
         }
+        current_category=0
         initial_populate();
         var first_node=get_master_node(1);
-        console.log(first_node);
         function populate_category(cat_id){
             last_row=2;
             //cat_id=0=>gen,id=1 is training, id=2 is care
             var data_array=[]
             if (cat_id==0){
                 data_array=prev_general_know;
+                current_category=0;
             }
             if (cat_id==1){
                 data_array=training;
+                current_category=1;
             }
             if (cat_id==2){
                 data_array=care;
+                current_category=2;
             }
             
             //Remove old nodes
@@ -241,33 +272,99 @@ Util.events(document, {
             populate_category(0)
             
         }
-        high=false;
         function dehighlight(){
             p1=document.getElementById("comment_input").style.display
             p2=document.getElementById("new_question").style.display
-            console.log("mein teil")
-            console.log
-            if ((p1=="grid" || p2=="grid") && high){
-                console.log("mein teil")
+            if (p1=="grid" || p2=="grid"){
                 document.getElementById("comment_input").style.display="none";
                 document.getElementById("new_question").style.display="none";
                 document.documentElement.style.setProperty("--opacity",1);
-                high=false;
             }
         }
-        function highlight(){
-            console.log("click nigga")
+        var current_post=null;
+        function highlight(event){
+            current_post=event.path;
+            for (var x in current_post){
+                var string=current_post[x].id;
+                if (string!=null && string.length>0){
+                    var string=string.split("_");
+                    if (string.length>0 && string[0]=="comment"){
+                        current_post=parseInt(string[1]);
+                        break;
+                    }
+                }
+            }
             p1=document.getElementById("comment_input").style.display
             p2=document.getElementById("new_question").style.display
 
-            if (p1!="grid" && p2!="grid" && !high){
-                console.log("te quiero");
+            if (p1!="grid" && p2!="grid"){
                 document.getElementById("comment_input").style.display="grid";
                 document.getElementById("new_question").style.display="none";
                 document.documentElement.style.setProperty("--opacity",0.5);
-                high=true;
+                document.getElementById("forum_container").scrollTop=0;
             }
         }
+
+        function ask_question(){
+            p1=document.getElementById("comment_input").style.display
+            p2=document.getElementById("new_question").style.display
+
+            if (p1!="grid" && p2!="grid"){
+                document.getElementById("comment_input").style.display="none";
+                document.getElementById("new_question").style.display="grid";
+                document.documentElement.style.setProperty("--opacity",0.5);
+                document.getElementById("forum_container").scrollTop=0;
+            }
+        }
+        function post(event){
+            //Handle data
+            var comment_query=document.getElementsByClassName("your_question")[0].value
+            var question_query=document.getElementsByClassName("your_question")[1].value
+
+            var master_data=[prev_general_know,training,care];
+            if (comment_query!=""){
+                //Comments
+                var cat_data=master_data[current_category];
+                var data_entry=cat_data[current_post-1];
+                data_entry["c1"].push(comment_query);
+
+                if (current_category==0){
+                    general();
+                }
+                if (current_category==1){
+                    alpha();
+                }
+                if (current_category==2){
+                    beta();
+                }
+                
+            }
+            if (question_query!=""){
+                current_category=document.getElementById("selection").options.selectedIndex
+                var cat_data=master_data[current_category];
+                var new_comment=[]
+                var new_entry={"pop":"0", "text": question_query, "liked":"0", "c1":new_comment};
+                cat_data.push(new_entry);
+                if (current_category==0){
+                    general();
+                }
+                if (current_category==1){
+                    alpha();
+                }
+                if (current_category==2){
+                    beta();
+                }
+            }
+            
+
+            //Change the looks
+            dehighlight();
+            var most=document.getElementById("forum_container").scrollHeight;
+            document.getElementById("forum_container").scrollTop=most;
+            document.getElementsByClassName("your_question")[0].value="";
+            document.getElementsByClassName("your_question")[1].value="";
+        }
+        
 
         Util.one(".up").addEventListener("click",select);
         Util.one(".down").addEventListener("click",select);
@@ -278,7 +375,13 @@ Util.events(document, {
 
         Util.one(".main_text").addEventListener("click",dehighlight);
         Util.one(".comment").addEventListener("click",highlight);
+        Util.one("[id='question_button']").addEventListener("click",ask_question);
+        Util.one(".post").addEventListener("click",post);
+        Util.one(".cancel").addEventListener("click",dehighlight);
 
+        Util.one("[id='f1']").addEventListener("click",post);
+        Util.one("[id='f2']").addEventListener("click",dehighlight);
+        
 	},
 
 	// Keyboard events arrive here
