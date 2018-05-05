@@ -672,6 +672,7 @@ class State {
       let result = sessionStorage.getItem("favorites");
       if (!result) {
         sessionStorage.setItem("favorites", [petID]);
+        return;
       }
       if (result.indexOf(petID) == -1) {
         result.push(petID)
