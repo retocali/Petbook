@@ -673,8 +673,26 @@ class State {
       if (!results) {
         sessionStorage.setItem("favorites", [petID]);
       }
-      result.push(petID)
-      sessionStorage.setItem("favorites", result);
+      if (result.indexOf(petID) == -1) {
+        result.push(petID)
+        sessionStorage.setItem("favorites", result);
+      }
+    }
+
+    static unfavoritePet(petID) {
+      let result = sessionStorage.getItem("favorites");
+      if (!results) {
+        return;
+      }
+      if (result.indexOf(petID) != -1) {
+        for (let i = 0; i < results.length; i++) {
+          const element = results[i];
+          if (element == petID) {
+            result.splice(i, 1);
+          }
+        }
+        sessionStorage.setItem("favorites", result);  
+      }
     }
     static getFavoritePets() {
       let result = sessionStorage.getItem("favorites");
