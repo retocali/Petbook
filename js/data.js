@@ -670,7 +670,7 @@ class State {
     }
     static favoritePet(petID) {
       let result = sessionStorage.getItem("favorites");
-      if (!results) {
+      if (!result) {
         sessionStorage.setItem("favorites", [petID]);
       }
       if (result.indexOf(petID) == -1) {
@@ -681,12 +681,12 @@ class State {
 
     static unfavoritePet(petID) {
       let result = sessionStorage.getItem("favorites");
-      if (!results) {
+      if (!result) {
         return;
       }
       if (result.indexOf(petID) != -1) {
-        for (let i = 0; i < results.length; i++) {
-          const element = results[i];
+        for (let i = 0; i < result.length; i++) {
+          const element = result[i];
           if (element == petID) {
             result.splice(i, 1);
           }
@@ -696,10 +696,10 @@ class State {
     }
     static getFavoritePets() {
       let result = sessionStorage.getItem("favorites");
-      if (!results) {
+      if (!result) {
         return []
       }
-      return results;
+      return result;
     }
   }
 
