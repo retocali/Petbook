@@ -70,8 +70,9 @@ function showMyPets() {
     let node = document.getElementById("addPet");
     let newAdd = node.cloneNode(true);
     while (card.firstChild) {
-        card.removeChild(card.firstChild)
+        card.removeChild(card.firstChild);
     }
+    card.appendChild(newAdd);
     
     for (let i = 0; i < allPets.length; i++) {
         const element = allPets[i];
@@ -92,8 +93,11 @@ function showMyPets() {
         newNode.classList.add("addedPets");
         card.appendChild(newNode);
     }
-    card.appendChild(newAdd);
-
+    document.getElementById("addPet").addEventListener(
+        "click", () => {
+            document.getElementById("hovermenu").style.display = "inline"
+        }
+    );
 }
 
 function addPet() {
