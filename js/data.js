@@ -550,12 +550,23 @@ function Data() {
   }
   this.getPetCount = function(pet, category) {
     for (let i = 0; i < this.allData[category].length; i++) {
-      const element = this.allData[category][i];
-      if (element == pet) {
+      let element = this.allData[category][i];
+      if (element.pet_id == pet.pet_id) {
         return i;
       }
     }
+    console.log("Could not find pet");
+    console.log(pet, this.allData[category]);
     return -1;
+  }
+  this.getPet = function(petID) {
+    for (let i = 0; i < this.getAllData().length; i++) {
+      let element = this.getAllData()[i];
+      if (element.pet_id == petID) {
+        return element;
+      }
+    }
+    return null;
   }
 }
 

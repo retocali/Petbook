@@ -76,7 +76,9 @@ body {
 }
 
 .title:hover, .title:active {
-    color: var(--orange-color)
+    color: var(--orange-color);
+
+    transition: all 400ms ease-in;
 }
 
 
