@@ -212,19 +212,6 @@ div#main, div.sides, div.catagories, div.type{
   height: 9vh;
   transition: all 100ms ease-out;
 }
-
-#adopt_btn{
-  height: 6vh;
-  width: 12vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--icing-color);
-  background-color: var(--cranberry-color);
-  margin: 1vw;
-  border-radius: 10px;
-}
-
 .side_buttons{
   display: flex;
   flex-direction: column;
@@ -266,16 +253,28 @@ div#main, div.sides, div.catagories, div.type{
 }
 
 
-
-.adopt{
-  height: 100px;
-  margin: 5px;
+#adopt_btn{
+  height: 6vh;
+  width: 12vh;
   display: flex;
   justify-content: center;
-  background-color: green;
   align-items: center;
-  border-radius: 100px;
+  color: var(--icing-color);
+  background-color: var(--cranberry-color);
+  margin: 1vw;
+  border-radius: 10px;
 }
+#adopt_container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--icing-color);
+  background-color: var(--cranberry-color);
+  font-family: 'Lemon';
+}
+
 
 .check{
   height: 100%;
@@ -318,4 +317,71 @@ div#main, div.sides, div.catagories, div.type{
   color: var(--cranberry-color);
   display: inline-flex;
   margin-top: .3vw;
+}
+
+
+
+#hovermenu {
+    top: 0;
+    left: 0;
+    background-color: #00000088;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#signupmessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50%;
+    width: 50%;
+    background-color: var(--icing-color);
+    border: solid 8px var(--cranberry-color);
+    border-radius: 20px;
+}
+
+#warning{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 45%;
+  width: 80%;
+  font-family: 'Lemon';
+  color: var(--cranberry-color);
+  font-size: 5vh
+}
+
+#yesorno{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 20px;
+  height: 35%;
+  width: 80%;
+}
+
+.yesnobutton{
+  height:70%;
+  width:40%;
+  background-color: var(--cranberry-color);
+  border-radius: 10px;
+  border: none;
+}
+
+.yesnocontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height:100%;
+  width:100%;
+  font-family: 'Lemon';
+  color: white;
+  font-size: 5vh;
 }

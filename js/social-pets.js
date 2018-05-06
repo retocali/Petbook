@@ -30,7 +30,35 @@ Util.events(document, {
 
         Util.one("#favorite").addEventListener('click', function(e){
             toggleFavorite();
-        })
+        });
+
+        
+        Util.one("#adopt_btn").addEventListener('click', function(e) {
+            if(data.shelters[count].sentEmail == "false"){
+                document.getElementById("warning").innerHTML = "Send an email to visit and adopt an animal at this shelter?"
+            }
+            else{
+                document.getElementById("warning").innerHTML = "Cancel visit to the shelter?"
+            }
+            document.getElementById("hovermenu").setAttribute("style", "display:flex")
+        });
+
+        Util.one("#yesbtn").addEventListener('click', function(e) {
+            if(data.shelters[count].sentEmail == "false"){
+                data.shelters[count].sentEmail = "true"
+                document.getElementById("adopt_container").innerHTML = "Cancel Adoption"
+                document.getElementById("hovermenu").setAttribute("style", "display:flex")
+            }
+            else{
+                data.shelters[count].sentEmail = "false"
+                document.getElementById("adopt_container").innerHTML = "Set Up Adoption"
+            }
+            document.getElementById("hovermenu").setAttribute("style", "display:none")
+        });
+
+        Util.one("#nobtn").addEventListener('click', function(e) {
+            document.getElementById("hovermenu").setAttribute("style", "display:none")
+        });
 	},
     
 });
@@ -88,6 +116,7 @@ function update_html(){
     }
     petpost.innerHTML = posts;
 
+    //handling favorites
     var pet_id = pet.pet_id;
     var favorite_pets = State.getFavoritePets();
     if(favorite_pets.indexOf(pet_id) != -1){ //if index is not -1 then the pet id is marked as favorite
@@ -95,6 +124,11 @@ function update_html(){
     }
     else{
         document.getElementById("favorite").src = "img/star.svg"
+    }
+
+    //if pet is not adoptable, make adopt button disappear
+    if(!pet.adoptable){
+        document.getElementById('adopt_btn').style.display = "none";
     }
 
 }
@@ -115,4 +149,8 @@ function toggleFavorite(){
         State.favoritePet(pet_id);
     }
     update_html();
+}
+
+function toggleAdopt(){
+    
 }
