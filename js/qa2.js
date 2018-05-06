@@ -146,6 +146,9 @@ Util.events(document, {
                     if (temp[0]=="main"){
                         elt.addEventListener("click",dehighlight);
                     }
+                    if (temp[0]=="favorite"){
+                        elt.addEventListener("click",star_select);
+                    }
                 }
             }
         }
@@ -354,17 +357,38 @@ Util.events(document, {
                 if (current_category==2){
                     beta();
                 }
+                var most=document.getElementById("forum_container").scrollHeight;
+                document.getElementById("forum_container").scrollTop=most;
             }
             
 
             //Change the looks
             dehighlight();
-            var most=document.getElementById("forum_container").scrollHeight;
-            document.getElementById("forum_container").scrollTop=most;
             document.getElementsByClassName("your_question")[0].value="";
             document.getElementsByClassName("your_question")[1].value="";
         }
-        
+        function star_select(event){
+            current_post=event.path;
+            var elt=null;
+            for (var x in current_post){
+                var string=current_post[x].id;
+                if (string!=null && string.length>0){
+                    var string=string.split("_");
+                    if (string.length>0 && string[0]=="favorite"){
+                        elt=current_post[x];
+                    }
+                }
+            }
+            
+            var color=elt.style.backgroundColor;
+            console.log(color)
+            if (color!="rgb(236, 199, 192)"){
+                elt.style.backgroundColor="#ECC7C0";
+            }
+            else{
+                elt.style.backgroundColor="#3C2E3D";
+            }
+        }
 
         Util.one(".up").addEventListener("click",select);
         Util.one(".down").addEventListener("click",select);
@@ -381,6 +405,8 @@ Util.events(document, {
 
         Util.one("[id='f1']").addEventListener("click",post);
         Util.one("[id='f2']").addEventListener("click",dehighlight);
+
+        Util.one(".favorite").addEventListener("click",star_select);
         
 	},
 

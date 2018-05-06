@@ -115,5 +115,4 @@ function toggleFavorite(){
         State.favoritePet(pet_id);
     }
     update_html();
-
 }
