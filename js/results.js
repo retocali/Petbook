@@ -4,7 +4,6 @@ Util.events(document, {
 	"DOMContentLoaded": function() {
 		data = new Data();
         let query = getQueryString("search");
-        console.log(query);
         document.getElementById("searchResults").innerHTML = 
                     "Results for <text style='color: #8BCBC8'>"+ query + "</text><div id='results'></div>";
         showResults(query);
@@ -17,6 +16,10 @@ Util.events(document, {
 
 function showResults(query) {
     let results = document.getElementById("results");
+    if (query == "") {
+        results.innerHTML = "undefined";
+        return;
+    }
     switch (query) {
         case "dog":
             results.innerHTML = generateResults(data.dogs);

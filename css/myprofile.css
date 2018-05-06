@@ -38,6 +38,9 @@ html {
 #questions {
     height: 10vh;
 }
+#followedDefault {
+    display: none;
+}
 
 .card {
     margin: 4vh;

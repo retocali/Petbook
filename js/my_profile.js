@@ -3,6 +3,7 @@ Util.events(document, {
 	// Final initalization entry point: the Javascript code inside this block
 	// runs at the end of start-up when the DOM is ready
 	"DOMContentLoaded": function() {
+        data = new Data();
         showMyProfile();
         showMyFavorite();
 		showMyPets();
@@ -42,7 +43,24 @@ Util.events(document, {
     }
 });
 function showMyFavorite() {
-    document.getElementById("following").innerHTML = "";
+    let newNode = document.getElementById("followedDefault");
+    let pets = data.getAllData();
+    
+    let favoritePets = State.getFavoritePets();
+    for (let i = 0; i < favoritePets.length; i++) {
+        const fav = favoritePets[i];
+        
+        let newPet = newNode.cloneNode(true);
+        newPet.id = "";
+        let image = newPet.children[0].children[0];
+        
+        image.href.baseVal = "profiles/profile-pics/" + pets[fav].petName + ".jpg";
+
+        document.getElementById("following").appendChild(newPet);  
+        console.log(fav)  
+    }
+    document.getElementById("following").appendChild(newNode);
+    document.getElementById("following").removeChild(newNode);
 }
 
 function showMyProfile() {
