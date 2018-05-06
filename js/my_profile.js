@@ -43,24 +43,24 @@ Util.events(document, {
     }
 });
 function showMyFavorite() {
-    let newNode = document.getElementById("followedDefault");
     let pets = data.getAllData();
-    
     let favoritePets = State.getFavoritePets();
+    let parent = document.getElementById("following");
+    let followContainer = document.getElementById("followingPetContainer");
+    
     for (let i = 0; i < favoritePets.length; i++) {
         const fav = favoritePets[i];
-        
-        let newPet = newNode.cloneNode(true);
-        newPet.id = "";
-        let image = newPet.children[0].children[0];
-        
-        image.href.baseVal = "profiles/profile-pics/" + pets[fav].petName + ".jpg";
-
-        document.getElementById("following").appendChild(newPet);  
-        console.log(fav)  
+        let newContainer = followContainer.cloneNode(true);
+        let newDiv = newContainer.children[0];
+        console.log(pets[fav]);
+        newContainer.setAttribute("href", "social_pets.html?category=" + pets[fav].category + 
+                                          "&petCount=" + data.getPetCount(pets[fav], pets[fav].category));
+        newDiv.style.backgroundImage = "url(profiles/profile-pics/" + pets[fav].petName + ".jpg), \
+                                        url(profiles/sample/sample-"+pets[fav].category+".svg)";
+        parent.appendChild(newContainer);
     }
-    document.getElementById("following").appendChild(newNode);
-    document.getElementById("following").removeChild(newNode);
+    
+    followContainer.style.display = "none";
 }
 
 function showMyProfile() {
@@ -107,7 +107,7 @@ function showMyPets() {
     }
     document.getElementById("addPet").addEventListener(
         "click", () => {
-            document.getElementById("hovermenu").style.display = "inline"
+            document.getElementById("hovermenu").style.display = "inline";  
         }
     );
 }
@@ -128,6 +128,7 @@ function addPet() {
         "category": "cat",
         "adopted": false,
         "adoptable": false, 
+        "petID": data.getAllData().length,
     };
     let array = document.getElementById("form").children;
     for (let i = 0; i < array.length; i++) {
@@ -143,6 +144,7 @@ function addPet() {
         }
     }
     console.log(defaultPet);
+    
     State.setPet(defaultPet);
     showMyPets();
 }

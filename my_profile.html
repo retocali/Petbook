@@ -23,7 +23,7 @@
                         <svg id="addPet" height="16vh" width="16vh" title="Add">
                             <circle class="mainbuttonbackground" cx="8vh" cy="8vh" r="7vh" fill="white"/>
                             <image x="1vh" y="1vh" height=14vh width=14vh xlink:href="img/plus.svg"></image>
-                            <circle class="mainbutton" cx="8vh" cy="8vh" r="7vh"/>
+                            <circle class="mybutton" cx="8vh" cy="8vh" r="7vh"/>
                             <title>Add</title>
                         </svg>
                     </div>
@@ -60,18 +60,11 @@
                     </div>
                     &nbsp FOLLOWING:
                     <div id="following" class="subcard">
-                        <div class="field">
-                            <svg id="followedDefault" height="12vh" width="12vh">
-                                <pattern id="pet_image" patternUnits="userSpaceOnUse" width="10vh" height="10vh">
-                                    <image xlink:href=""
-                                        x="0" y="0" width="10vh" height="10vh">
-                                    </image>
-                                </pattern>
-                                <circle style="fill: url(#pet_image)" class="mainbuttonbackground" cx="6vh" cy="6vh" r="5vh" fill="white"/>
-                                <circle class="mainbutton" cx="5.5vh" cy="5.5vh" r="5vh"/>
+                        <a id="followingPetContainer" style='min-height:11vh; min-width: 11vh;'>
+                            <div class='followingPet'>
                                 
-                            </svg>
-                        </div>
+                            </div>
+                        </a>
                         
                     </div>
                     &nbsp QA ACTIVITY:

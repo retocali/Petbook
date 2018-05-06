@@ -548,6 +548,15 @@ function Data() {
     s += profile.userName + " ";
     return s.toLowerCase();
   }
+  this.getPetCount = function(pet, category) {
+    for (let i = 0; i < this.allData[category].length; i++) {
+      const element = this.allData[category][i];
+      if (element == pet) {
+        return i;
+      }
+    }
+    return -1;
+  }
 }
 
 class State {
