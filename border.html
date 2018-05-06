@@ -5,7 +5,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/style.css">
         <base target="_parent">
+        <script src="js/data.js"></script>
     </head>
+
+    
     <div id=top-border> 
         <a class="title" href="index.html" style="font-size: 60vh;">
             PetBook
@@ -45,11 +48,11 @@
                 </a>
                 
 
-                <text class="navbartext" x="15.75vw" y="90vh"> Home </text>
+                <text class="navbartext" x="15.5vw" y="90vh"> Profile </text>
                 <circle class="mainbuttonbackground" cx="17vw" cy="45vh" r="30vh" fill="white"/>
-                <image x="16vw" y="26vh" width="40vh" height="40vh" xlink:href="img/pet-shop.svg" />
-                <a href="index.html">
-                    <circle class="navbutton" id="navbar-home" cx="17vw" cy="45vh" r="30vh"/>
+                <image x="15.95vw" y="25vh" width="40vh" height="40vh" xlink:href="img/user.svg" />
+                <a href="#">
+                    <circle class="navbutton" id="navbar-profile" cx="17vw" cy="45vh" r="30vh"/>
                 </a>
 <!-- 
                 <text class="navbartext" x="20.75vw" y="90vh"> Home </text>
@@ -60,15 +63,12 @@
                 </a> -->
             </svg>
         </div>
-    </div>
+    </div> 
     <script>
-        // let pages = {
-        //     "index.html": "navbar-home",
-        // }
-        // let parent_url = "index.html";
-        // console.log(parent_url);
-        // if (pages[parent_url]) {
-        //     document.getElementById([parent_url]).classList.add("selected");
-        // }
-    </script>        
+        if (State.isSignedIn()) {
+            document.getElementById("navbar-profile").parentElement.setAttribute("href", "my_profile.html");
+        } else {
+            document.getElementById("navbar-profile").parentElement.setAttribute("href", "login.html");
+        }
+    </script>       
 </html>

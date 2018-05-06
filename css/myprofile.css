@@ -17,7 +17,6 @@ html {
 }
 
 #info {
-    margin: 4vh;
     min-width: 70vw;
     max-width: 75vw;
 }
@@ -33,7 +32,11 @@ html {
     height: 9.5vh;
 }
 #following {
-    height: 10vh;
+    height: 12.5vh;
+    white-space: nowrap;
+    
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 #questions {
     height: 10vh;
@@ -43,8 +46,8 @@ html {
 }
 
 .card {
-    margin: 4vh;
-    height: 70vh;
+    margin: 2vh;
+    height: 73vh;
     background-color: whitesmoke;
     border: .6vh solid var(--cranberry-color);
     border-radius: 2vh;
@@ -94,6 +97,7 @@ html {
     height: 9vh;
     border: 0.5vh solid cornflowerblue;
     margin: 1vh;
+    margin-top: 0;
     border-radius: 50%;
     background-color: var(--blue-color);
     display: inline-flex;
@@ -102,6 +106,7 @@ html {
   }
   .followingPet:hover {  
     margin: 0.5vh;
+    margin-top: -0.5vh;
     border: 1vh solid var(--sakura-color);
     transition: all 200ms ease-out;
   }

@@ -50,13 +50,14 @@ function showMyFavorite() {
     
     for (let i = 0; i < favoritePets.length; i++) {
         const fav = favoritePets[i];
+        const pet = data.getPet(fav);
         let newContainer = followContainer.cloneNode(true);
         let newDiv = newContainer.children[0];
         console.log(pets[fav]);
-        newContainer.setAttribute("href", "social_pets.html?category=" + pets[fav].category + 
-                                          "&petCount=" + data.getPetCount(pets[fav], pets[fav].category));
-        newDiv.style.backgroundImage = "url(profiles/profile-pics/" + pets[fav].petName + ".jpg), \
-                                        url(profiles/sample/sample-"+pets[fav].category+".svg)";
+        newContainer.setAttribute("href", "social_pets.html?category=" + pet.category + 
+                                          "&petCount=" + data.getPetCount(pet, pet.category));
+        newDiv.style.backgroundImage = "url(profiles/profile-pics/" + pet.petName + ".jpg), \
+                                        url(profiles/sample/sample-"+pet.category+".svg)";
         parent.appendChild(newContainer);
     }
     
@@ -97,7 +98,8 @@ function showMyPets() {
         image.setAttribute("width", "10vh");
         image.setAttribute("x", "3vh");
         image.setAttribute("y", "3vh");
-       
+        newNode.children[2].setAttribute("href", "social_pets.html?category=" + element.category + 
+                                                 "&petCount=" + data.getPetCount(element, element.category));
         newNode.children[3].innerHTML = element.petName;
        
         newNode.id = "";
@@ -128,7 +130,7 @@ function addPet() {
         "category": "cat",
         "adopted": false,
         "adoptable": false, 
-        "petID": data.getAllData().length,
+        "pet_id": data.getAllData().length,
     };
     let array = document.getElementById("form").children;
     for (let i = 0; i < array.length; i++) {
@@ -143,8 +145,6 @@ function addPet() {
             }
         }
     }
-    console.log(defaultPet);
-    
     State.setPet(defaultPet);
     showMyPets();
 }
