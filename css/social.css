@@ -79,11 +79,10 @@ div#main, div.sides, div.catagories, div.type{
 
 .text_label{
   font-weight: 1000;
-  font-size: 4vw;
+  font-size: 3.5vw;
   color: var(--sakura-color);
   text-shadow: -2px 0 var(--cranberry-color), 0 2px var(--cranberry-color), 2px 0 var(--cranberry-color), 0 -2px var(--cranberry-color);
-  opacity: 0;
-  transition: opacity .1s linear;
+  opacity: 1;
 }
 
 .type:hover {
@@ -135,7 +134,8 @@ div#main, div.sides, div.catagories, div.type{
   align-items: center;
   font-family: 'Lemon';
   color: var(--cranberry-color);
-  display: inline-flex;
+  /*display: inline-flex;*/
+  display: none; 
   margin: .3vw;
 }
 
