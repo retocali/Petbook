@@ -246,10 +246,7 @@ div#main, div.sides, div.catagories, div.type{
   width: 22vh; 
   background-size: cover;
   background-position: center center;
-  /* border-radius: 3px; */
   border: 1px solid var(--cranberry-color);
-  /* margin-right: 1vw; */
-  /* margin-bottom: 1vw; */
 }
 
 
