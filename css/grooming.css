@@ -145,20 +145,17 @@ div#main, div.sides, div.catagories, div.type{
 }
 
 .posts_grid{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  flex-basis: 0;
-  height: 100%;
-  width: 95%;
+  display: grid;
+  grid-row-gap: 50px;
+  /*height: 100%;
+  width: 95%;*/
   margin-bottom: 10px;
   overflow-x: auto;
   background-color: white;
 
 }
 .post{
-  display: flex;
+  display: grid;
   flex-direction: row;
   justify-content: left;
   align-items: center;

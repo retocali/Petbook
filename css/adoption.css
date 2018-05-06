@@ -393,8 +393,8 @@ div#main, div.sides, div.catagories, div.type{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 50%;
-    width: 50%;
+    height: 30%;
+    width: 30%;
     background-color: var(--icing-color);
     border: solid 8px var(--cranberry-color);
     border-radius: 20px;
@@ -409,7 +409,7 @@ div#main, div.sides, div.catagories, div.type{
   width: 80%;
   font-family: 'Lemon';
   color: var(--cranberry-color);
-  font-size: 5vh
+  font-size: 3vh
 }
 
 #yesorno{
@@ -419,7 +419,7 @@ div#main, div.sides, div.catagories, div.type{
   flex-direction: row;
   margin-top: 20px;
   height: 35%;
-  width: 80%;
+  width: 60%;
 }
 
 .yesnobutton{
@@ -439,5 +439,5 @@ div#main, div.sides, div.catagories, div.type{
   width:100%;
   font-family: 'Lemon';
   color: white;
-  font-size: 5vh;
+  font-size: 4vh;
 }
