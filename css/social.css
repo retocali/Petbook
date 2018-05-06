@@ -318,12 +318,3 @@ div#main, div.sides, div.catagories, div.type{
   display: inline-flex;
   margin-top: .3vw;
 }
-
-
-
-#favorite:hover{
-  content: url("img/blue_star.png");
-}
-#favorite:active{
-  content: url("img/sakura_star.png");
-}
