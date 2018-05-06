@@ -17,7 +17,7 @@
 
 <!-- Constructible EventTarget polyfill — Only Chrome 64+ supports constructible EventTarget objects natively -->
 <script src="js/util.js"></script>
-<script src="js/social_data.js"></script>
+<script src="js/data.js"></script>
 <script src="js/social_intermediate.js"></script>
 
 <link href="https://fonts.googleapis.com/css?family=Lemon" rel="stylesheet"> 
@@ -34,10 +34,18 @@
             <div id='pet_type_list_container'>
                 <div id="type_label">PET TYPE</div>
                 <div id="pet_type_list">
-                    <div class="type_listing">a</div>
-                    <div class="type_listing">b</div>
-                    <div class="type_listing">c</div>
-                    <div class="type_listing">d</div>
+                    <label class="checkbox_container">A
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox_container">B
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox_container">C
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
                 </div>
             </div>
             <div id='pet_view_container'></div>
