@@ -203,6 +203,8 @@ div#main, div.sides, div.catagories, div.type{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  border: 3px solid var(--cranberry-color);
 }
 
 #adopt_btn{
@@ -310,4 +312,10 @@ div#main, div.sides, div.catagories, div.type{
   color: var(--cranberry-color);
   display: inline-flex;
   margin-top: .3vw;
+}
+
+
+
+#favorite:hover{
+  content: url("img/hover_star.png");
 }

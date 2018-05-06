@@ -91,10 +91,10 @@ function update_html(){
     var pet_id = pet.pet_id;
     var favorite_pets = State.getFavoritePets();
     if(favorite_pets.indexOf(pet_id) != -1){ //if index is not -1 then the pet id is marked as favorite
-        document.getElementById("favorite").src = "img/gold_star.png";
+        document.getElementById("favorite").src = "img/favorite_star.png";
     }
     else{
-        document.getElementById("favorite").src = "img/star.png"
+        document.getElementById("favorite").src = "img/normal_star.png"
     }
 
 }
