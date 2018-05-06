@@ -203,8 +203,8 @@ div#main, div.sides, div.catagories, div.type{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
-  border: 3px solid var(--cranberry-color);
+  /*background-color: white;*/
+  /*border: 3px solid var(--cranberry-color);*/
 }
 
 #adopt_btn{
@@ -317,5 +317,8 @@ div#main, div.sides, div.catagories, div.type{
 
 
 #favorite:hover{
-  content: url("img/hover_star.png");
+  content: url("img/blue_star.png");
+}
+#favorite:active{
+  content: url("img/sakura_star.png");
 }
