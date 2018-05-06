@@ -103,4 +103,5 @@ html {
   .followingPet:hover {  
     margin: 0.5vh;
     border: 1vh solid var(--sakura-color);
+    transition: all 200ms ease-out;
   }
