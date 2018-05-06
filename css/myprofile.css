@@ -71,3 +71,36 @@ html {
     padding: 0 0.5vw;
     background-color: white;
 }
+
+.mybutton {
+    stroke: cornflowerblue;
+    stroke-width: 5px;
+    fill: #FFFFFF00;
+}
+
+.mybutton:hover{
+    stroke: var(--sakura-color);
+    stroke-width: 10px;
+    transition: all 200ms ease-out;
+}
+
+#followingPetContainer {
+    font-size: 0;
+    color: white;
+}
+
+.followingPet {
+    width: 9vh;
+    height: 9vh;
+    border: 0.5vh solid cornflowerblue;
+    margin: 1vh;
+    border-radius: 50%;
+    background-color: var(--blue-color);
+    display: inline-flex;
+    background-size: cover;
+    background-position: center center;
+  }
+  .followingPet:hover {  
+    margin: 0.5vh;
+    border: 1vh solid var(--sakura-color);
+  }
