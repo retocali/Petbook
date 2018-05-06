@@ -39,9 +39,9 @@ Util.events(document, {
             var adopted = (adopt_pets.indexOf(pet_id) != -1); //if it's not -1 then its in the list
 
             if(adopted){
-                document.getElementById("warning").innerHTML = "Cancle Adoption?"
+                document.getElementById("warning").innerHTML = "Cancle adoption process?"
             }else{
-                document.getElementById("warning").innerHTML = "Adopt Pet?"
+                document.getElementById("warning").innerHTML = "Contact pet owner about adopting this pet?"
             }
 
             //show menu

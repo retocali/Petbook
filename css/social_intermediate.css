@@ -1,0 +1,161 @@
+:root {
+    --blue-color: #8BCBC8;
+    --icing-color: #DAE9E4;
+    --orange-color: #FDAE84;
+    --sakura-color: #ECC7C0;
+    --cranberry-color: #3C2E3D;
+}
+
+#MAIN-CONTAINER{
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: var(--cranberry-color);
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  justify-content: left;
+}
+
+
+a {
+    text-decoration: none !important;
+}
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  height: 80%;
+  width: 100%;
+  background-color: var(--icing-color);
+  justify-content: center;
+  align-self: center;
+}
+
+#type_container{
+  display: flex;
+  flex-direction: row;
+}
+#pet_type_list_container {
+    margin: 1vh auto;
+    background-color: whitesmoke;
+    border: .6vh solid var(--cranberry-color);
+    border-radius: 2vh;
+    padding: .6vh;
+    padding-top: 2vh;
+    width: 20vw;
+    height: 74vh;
+
+    color: var(--cranberry-color);
+    
+    font-family: 'Lemon', cursive; 
+    font-size: 3vh;
+}
+
+#pet_type_list {
+    margin: 1vh auto;
+    background-color: white;
+    border: .6vh solid var(--icing-color);
+    border-radius: 2vh;
+    padding: 1vh;
+    padding-top: 2vh;
+    width: 18vw;
+    height: 64vh;
+    overflow-y: auto;
+}
+
+#type_label {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+label{
+  color: var(--cranberry-color);
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1vh;    
+}
+/*checkbox code reference
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_checkbox*/
+.checkbox_container{
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}/* Hide the browser's default checkbox */
+.checkbox_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox_container:hover input ~ .checkmark {
+    background-color: var(--sakura-color);
+}
+
+
+/* When the checkbox is checked, add a blue background */
+.checkbox_container input:checked ~ .checkmark {
+    background-color: var(--blue-color);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox_container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox_container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#pet_view_container {
+    margin: 1vh auto;
+    background-color: whitesmoke;
+    border: .6vh solid var(--cranberry-color);
+    border-radius: 2vh;
+    padding: 1vh;
+    padding-top: 2vh;
+    width: 73vw;
+    height: 74vh;
+
+    color: var(--cranberry-color);
+    
+    font-family: 'Lemon', cursive; 
+    font-size: 3vh;
+}
