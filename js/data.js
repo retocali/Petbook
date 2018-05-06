@@ -714,6 +714,45 @@ class State {
       }
       return JSON.parse(result);
     }
+
+
+    static adoptPet(petID) {
+      let result = sessionStorage.getItem("adopted_pets");
+      if (!result) {
+        sessionStorage.setItem("adopted_pets", JSON.stringify([petID]));
+        return;
+      }
+      result = JSON.parse(result);
+      if (result.indexOf(petID) == -1) {
+        result.push(petID)
+        sessionStorage.setItem("adopted_pets", JSON.stringify(result));
+      }
+    }
+
+    static unadoptPet(petID) {
+      let result = sessionStorage.getItem("adopted_pets");
+      if (!result) {
+        return;
+      }
+      result = JSON.parse(result);
+      if (result.indexOf(petID) != -1) {
+        for (let i = 0; i < result.length; i++) {
+          const element = result[i];
+          if (element == petID) {
+            result.splice(i, 1);
+          }
+        }
+        sessionStorage.setItem("adopted_pets", JSON.stringify(result));  
+      }
+      console.log(result);
+    }
+    static getAdoptPets() {
+      let result = sessionStorage.getItem("adopted_pets");
+      if (!result) {
+        return []
+      }
+      return JSON.parse(result);
+    }
   }
 
 // Borrowed from https://gomakethings.com/how-to-get-the-value-of-a-querystring-with-native-javascript/
