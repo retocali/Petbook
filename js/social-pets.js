@@ -34,30 +34,46 @@ Util.events(document, {
 
         
         Util.one("#adopt_btn").addEventListener('click', function(e) {
-            if(data.shelters[count].sentEmail == "false"){
-                document.getElementById("warning").innerHTML = "Send an email to visit and adopt an animal at this shelter?"
+            var adopt_pets = State.getAdoptPets();
+            var pet_id = data.allData[category][petCount].pet_id;
+            var adopted = (adopt_pets.indexOf(pet_id) != -1); //if it's not -1 then its in the list
+
+            if(adopted){
+                document.getElementById("warning").innerHTML = "Cancle Adoption?"
+            }else{
+                document.getElementById("warning").innerHTML = "Adopt Pet?"
             }
-            else{
-                document.getElementById("warning").innerHTML = "Cancel visit to the shelter?"
-            }
-            document.getElementById("hovermenu").setAttribute("style", "display:flex")
+
+            //show menu
+            document.getElementById("hovermenu").setAttribute("style", "display:flex"); 
         });
 
         Util.one("#yesbtn").addEventListener('click', function(e) {
-            if(data.shelters[count].sentEmail == "false"){
-                data.shelters[count].sentEmail = "true"
-                document.getElementById("adopt_container").innerHTML = "Cancel Adoption"
-                document.getElementById("hovermenu").setAttribute("style", "display:flex")
+            var adopt_pets = State.getAdoptPets();
+            var pet_id = data.allData[category][petCount].pet_id;
+            var adopted = (adopt_pets.indexOf(pet_id) != -1); //if it's not -1 then its in the list
+
+            if(adopted){
+                State.unadoptPet(pet_id);
+                document.getElementById("adopt_btn").style.backgroundColor ="var(--cranberry-color)";
+                document.getElementById("adopt_container").style.backgroundColor ="var(--cranberry-color)";
+                document.getElementById("adopt_container").style.color ="var(--icing-color)";
             }
             else{
-                data.shelters[count].sentEmail = "false"
-                document.getElementById("adopt_container").innerHTML = "Set Up Adoption"
+                State.adoptPet(pet_id);
+                document.getElementById("adopt_btn").style.backgroundColor ="var(--orange-color)";
+                document.getElementById("adopt_container").style.backgroundColor ="var(--orange-color)";
+                document.getElementById("adopt_container").style.color ="var(--cranberry-color)";
+
             }
+
+            //hide menu
             document.getElementById("hovermenu").setAttribute("style", "display:none")
         });
 
         Util.one("#nobtn").addEventListener('click', function(e) {
-            document.getElementById("hovermenu").setAttribute("style", "display:none")
+            //hide menu
+            document.getElementById("hovermenu").setAttribute("style", "display:none");
         });
 	},
     
@@ -69,10 +85,7 @@ function goUp(){
     if(petCount > maxPets){
         petCount = 0;
     }
-    updateURL();
-    // update_html();
-
-    
+    updateURL();    
 }
 
 
@@ -82,8 +95,6 @@ function goDown(){
         petCount = maxPets;
     }
     updateURL();
-    // update_html();
-
 }
 
 
@@ -131,6 +142,20 @@ function update_html(){
         document.getElementById('adopt_btn').style.display = "none";
     }
 
+    var adopt_pets = State.getAdoptPets();
+    var pet_id = data.allData[category][petCount].pet_id;
+    var adopted = (adopt_pets.indexOf(pet_id) != -1); //if it's not -1 then its in the list
+    if(adopted){
+        document.getElementById("adopt_btn").style.backgroundColor ="var(--orange-color)";
+        document.getElementById("adopt_container").style.backgroundColor ="var(--orange-color)";
+        document.getElementById("adopt_container").style.color ="var(--cranberry-color)";
+    }
+    else{
+        document.getElementById("adopt_btn").style.backgroundColor ="var(--cranberry-color)";
+        document.getElementById("adopt_container").style.backgroundColor ="var(--cranberry-color)";
+        document.getElementById("adopt_container").style.color ="var(--icing-color)";
+    }
+
 }
 
 function updateURL(){
@@ -149,8 +174,4 @@ function toggleFavorite(){
         State.favoritePet(pet_id);
     }
     update_html();
-}
-
-function toggleAdopt(){
-    
 }
