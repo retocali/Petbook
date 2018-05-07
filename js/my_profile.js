@@ -55,7 +55,7 @@ function showMyFavorite() {
         let newDiv = newContainer.children[0];
         console.log(pets[fav]);
         newContainer.setAttribute("href", "social_pets.html?category=" + pet.category + 
-                                          "&petCount=" + data.getPetCount(pet, pet.category));
+                                          "&pet_id=" + pet.pet_id);
         newDiv.style.backgroundImage = "url(profiles/profile-pics/" + pet.petName + ".jpg), \
                                         url(profiles/sample/sample-"+pet.category+".svg)";
         parent.appendChild(newContainer);
@@ -99,7 +99,7 @@ function showMyPets() {
         image.setAttribute("x", "3vh");
         image.setAttribute("y", "3vh");
         newNode.children[2].setAttribute("href", "social_pets.html?category=" + element.category + 
-                                                 "&petCount=" + data.getPetCount(element, element.category));
+                                                 "&pet_id=" + element.pet_id);
         newNode.children[3].innerHTML = element.petName;
        
         newNode.id = "";
