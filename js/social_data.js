@@ -9,7 +9,7 @@ function SocialData() {
     {
       "category": "Dog",
       "image": 'profiles/category-pics/dog.jpg',
-      "href": 'social_intermediate.html?category=cat',
+      "href": 'social_intermediate.html?category=dog',
     },
     {
       "category": "Cat",

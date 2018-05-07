@@ -28,6 +28,19 @@ function checkboxChange(checkbox){
 	updateHTML();
 }
 
+function getTypeList(){
+	var pets = data.allData[category];
+	var types = [];
+	for(var i=0; i< pets.length; i++){
+		var type = pets[i].type;
+		if(!types.includes(type)){
+			types.push(type);
+		}
+	}
+	return types.sort();
+}
+
+
 function loadTypesHTML(){
 	var types =getTypeList();
 	var listing = document.getElementById('pet_type_list');
@@ -52,22 +65,7 @@ function loadTypesHTML(){
 	listing.innerHTML = newHTML;
 }
 
-
-function getTypeList(){
-	var pets = data.allData[category];
-	var types = [];
-	for(var i=0; i< pets.length; i++){
-		var type = pets[i].type;
-		if(!types.includes(type)){
-			types.push(type);
-		}
-	}
-	return types.sort();
-}
-
-
-function updateHTML(){
-	loadTypesHTML();
+function petPicsHTML(){
 	var alltypes = getTypeList();
 	var skiptypes = State.getUncheckedTypes();
 	var maxPets = data.allData[category].length-1;
@@ -89,11 +87,13 @@ function updateHTML(){
 					console.log("Cheshire foudn!!!");
 				}
 				if(pet.type == type){
-					newHTML += "<div class=\"pet_pic\" style=\"";
-					newHTML += 	"background-image: \
+					newHTML += "<div>";
+					newHTML += "<div class=\"pet_pic\" ";
+					newHTML += "id=\""+pet.pet_id+"\" ";
+					newHTML += 	"style=\"background-image: \
                                                 url(profiles/profile-pics/"+ pet.petName+".jpg),\
                                                 url(profiles/sample/sample-"+category+".svg)\"";
-					newHTML += "></div>"
+					newHTML += "></div></div>"
 				}
 			}
 			newHTML += "</div></div></div>";
@@ -104,4 +104,30 @@ function updateHTML(){
 		newHTML += "<div id=\"no_pet_view\">No pet type selected.<div>";
 	}
 	view.innerHTML = newHTML;
+}
+
+function petPicsLinksHTML(){
+	var views = document.getElementsByClassName("view_container");
+	for(var v=0; v<views.length; v++){
+		var pet_divs = views[v].childNodes[1].childNodes;
+		console.log(pet_divs);
+		for(var i=0; i<pet_divs.length; i++){
+			var pet_id = pet_divs[i].firstChild.id;
+			var petHTML = pet_divs[i].innerHTML;
+			var newHTML = "<a href=\"social_pets.html?category="+category+"&pet_id="+pet_id+"\"";
+			newHTML +=">"+petHTML+"</a>";
+			pet_divs[i].innerHTML = newHTML;
+
+		}
+
+	}
+
+
+}
+
+function updateHTML(){
+	loadTypesHTML();
+	petPicsHTML();
+	petPicsLinksHTML();
+	
 }
