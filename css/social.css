@@ -49,6 +49,8 @@ div#main, div.sides, div.catagories, div.type{
 }
 .arrow:hover{
   opacity: 1;
+  cursor: pointer;
+}
 
 }
 #left_arrow{
@@ -56,12 +58,6 @@ div#main, div.sides, div.catagories, div.type{
 }
 #right_arrow{
   margin-left: 1vw;
-}
-#up_arrow{
-  margin-bottom: 1vw;
-}
-#down_arrow{
-  margin-top: 1vw;
 }
 
 .type{
@@ -103,7 +99,6 @@ div#main, div.sides, div.catagories, div.type{
 }
 .carousel{
   display: flex;
-  margin-top: 10vh;
   justify-content: center;
   align-items: center;
   font-family: 'Lemon';
@@ -127,38 +122,6 @@ div#main, div.sides, div.catagories, div.type{
   display: flex;
   flex-direction: column;
   width: 75vw;
-}
-
-.filter_box{
-  justify-content: center;
-  align-items: center;
-  font-family: 'Lemon';
-  color: var(--cranberry-color);
-  /*display: inline-flex;*/
-  display: none; 
-  margin: .3vw;
-}
-
-#filter_label{
-  display: flex;
-  font-family: 'Lemon';
-  font-size: 3vh;
-  color: var(--cranberry-color);
-  margin-right: .5vw;
-}
-.filter{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Lemon';
-  color: var(--cranberry-color);
-  width: 35px;
-  height: 35px;
-  margin: .2vw;
-  border-radius: 50%;
-  display: inline-flex;
-  background-color: var(--cranberry-color);
-  color: var(--blue-color);
 }
 
 .information_box{
@@ -203,14 +166,13 @@ div#main, div.sides, div.catagories, div.type{
   display: flex;
   justify-content: center;
   align-items: center;
-  /*background-color: white;*/
-  /*border: 3px solid var(--cranberry-color);*/
 }
 
 #favorite:hover{
   margin-top: 0; 
   height: 9vh;
   transition: all 100ms ease-out;
+  cursor: pointer;
 }
 .side_buttons{
   display: flex;
@@ -261,6 +223,10 @@ div#main, div.sides, div.catagories, div.type{
   margin: 1vw;
   border-radius: 10px;
 }
+#adopt_btn:hover{
+  cursor: pointer;
+}
+
 #adopt_container{
   height: 100%;
   width: 100%;
@@ -270,6 +236,10 @@ div#main, div.sides, div.catagories, div.type{
   color: var(--icing-color);
   background-color: var(--cranberry-color);
   font-family: 'Lemon';
+}
+
+#adopt_container:hover{
+  cursor: pointer;
 }
 
 
@@ -387,4 +357,24 @@ div#main, div.sides, div.catagories, div.type{
   width: 80vw;
   max-width: 80vw;
   min-width: 80vw;
+}
+
+
+#back_btn{
+  height: 6vh;
+  width: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--icing-color);
+  background-color: var(--cranberry-color);
+  margin: 1vw;
+  border-radius: 10px;
+  font-family: 'Lemon';
+  color: var(--icing-color);
+}
+#back_btn:hover{
+  color: var(--sakura-color);
+  cursor: pointer;
+
 }

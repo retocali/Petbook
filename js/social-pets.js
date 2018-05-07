@@ -18,6 +18,10 @@ Util.events(document, {
         console.log(getPetIDOrder());
         update_html();
 
+        Util.one("#back_btn").addEventListener('click', function(e) {
+            document.location.href = "social_intermediate.html?category="+category;
+        });
+
 		Util.one("#up_arrow").addEventListener('click', function(e) {
 			goUp();
 		});
