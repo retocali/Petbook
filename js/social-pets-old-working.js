@@ -1,4 +1,6 @@
-var pet_id = 0;
+var typeCount = 0;
+var petCount = 0;
+var maxPets = 0;
 var data;
 var category="";
 var base_url = "social_pets.html";
@@ -10,9 +12,10 @@ Util.events(document, {
 		data = new Data();
 
         category = getQueryString("category", document.location.href);
-        var url_pet_id = getQueryString("pet_id", document.location.href);
-        if(url_pet_id!= null){
-            pet_id = parseInt(url_pet_id);
+        maxPets = data.allData[category].length-1;
+        var url_petcount = getQueryString("petCount", document.location.href);
+        if(url_petcount!= null){
+            petCount = parseInt(url_petcount);
         }
 
         update_html();
@@ -32,6 +35,7 @@ Util.events(document, {
         
         Util.one("#adopt_btn").addEventListener('click', function(e) {
             var adopt_pets = State.getAdoptPets();
+            var pet_id = data.allData[category][petCount].pet_id;
             var adopted = (adopt_pets.indexOf(pet_id) != -1); //if it's not -1 then its in the list
 
             if(adopted){
@@ -46,6 +50,7 @@ Util.events(document, {
 
         Util.one("#yesbtn").addEventListener('click', function(e) {
             var adopt_pets = State.getAdoptPets();
+            var pet_id = data.allData[category][petCount].pet_id;
             var adopted = (adopt_pets.indexOf(pet_id) != -1); //if it's not -1 then its in the list
 
             if(adopted){
@@ -93,17 +98,8 @@ function goDown(){
 }
 
 
-function getPet(){
-    var allpets = data.getAllData();
-    for(var i=0; i<allpets.length; i++){
-        if(allpets[i].pet_id == pet_id){
-            return allpets[i];
-        }
-    }
-}
-
 function update_html(){
-    var pet = getPet();
+    var pet = data.allData[category][petCount];
     document.getElementById("pet_name").innerHTML = pet.petName;
     document.getElementById("user").innerHTML = pet.userName;
     document.getElementById("location").innerHTML = pet.location;
@@ -147,6 +143,7 @@ function update_html(){
     }
 
     var adopt_pets = State.getAdoptPets();
+    var pet_id = data.allData[category][petCount].pet_id;
     var adopted = (adopt_pets.indexOf(pet_id) != -1); //if it's not -1 then its in the list
     if(adopted){
         document.getElementById("adopt_btn").style.backgroundColor ="var(--orange-color)";
@@ -161,9 +158,8 @@ function update_html(){
 
 }
 
-
 function updateURL(){
-    var new_url = base_url+"?category="+category+"&pet_id="+pet_id;
+    var new_url = base_url+"?category="+category+"&petCount="+petCount;
     var current_url = document.location.href;
     document.location.href = new_url;
 }
@@ -179,18 +175,4 @@ function toggleFavorite(){
         State.favoritePet(pet_id);
     }
     update_html();
-}
-
-
-
-function getTypeList(){
-    var pets = data.allData[category];
-    var types = [];
-    for(var i=0; i< pets.length; i++){
-        var type = pets[i].type;
-        if(!types.includes(type)){
-            types.push(type);
-        }
-    }
-    return types.sort();
 }
