@@ -15,6 +15,7 @@ Util.events(document, {
             pet_id = parseInt(url_pet_id);
         }
 
+        console.log(getPetIDOrder());
         update_html();
 
 		Util.one("#up_arrow").addEventListener('click', function(e) {
@@ -75,26 +76,57 @@ Util.events(document, {
 });
 
 
+function getPetIDOrder(){
+    var ids = [];
+    var alltypes = getTypeCatagoryList();
+    console.log(alltypes)
+    var allpets = data.getAllData();
+    var unwantedtypes = State.getUncheckedTypes();
+    
+    //doing things in this order to keep the same ordering as in the intermediate page
+    for(var t=0; t<alltypes.length; t++){
+        var type = alltypes[t];
+        if(unwantedtypes.indexOf(type) == -1){
+            //if type is not one of the ones in the skip list, then do the following
+            for(var p=0; p<allpets.length; p++){
+                var pet = allpets[p];
+                if(pet.type == type){
+                    ids.push(pet.pet_id);
+                }
+            }            
+        }
+    }
+    return ids;
+}
+
 function goUp(){
-    petCount++;
-    if(petCount > maxPets){
-        petCount = 0;
+    var order = getPetIDOrder();
+    var current_index = order.indexOf(pet_id);
+    if(current_index > 0){
+        pet_id = order[current_index-1];
+    }
+    else{
+        pet_id = order[order.length-1];
     }
     updateURL();    
 }
 
 
 function goDown(){
-    petCount--;
-    if(petCount < 0){
-        petCount = maxPets;
+    var order = getPetIDOrder();
+    var current_index = order.indexOf(pet_id);
+    if(current_index < order.length-1){
+        pet_id = order[current_index+1];
     }
-    updateURL();
+    else{
+        pet_id = order[0];
+    }
+    updateURL();  
 }
 
 
 function getPet(){
-    var allpets = data.getAllData();
+    var allpets = data.allData[category];
     for(var i=0; i<allpets.length; i++){
         if(allpets[i].pet_id == pet_id){
             return allpets[i];
@@ -183,7 +215,7 @@ function toggleFavorite(){
 
 
 
-function getTypeList(){
+function getTypeCatagoryList(){
     var pets = data.allData[category];
     var types = [];
     for(var i=0; i< pets.length; i++){
