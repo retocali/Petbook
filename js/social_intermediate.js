@@ -7,8 +7,8 @@ Util.events(document, {
 	"DOMContentLoaded": function() {
 		data = new Data();
 		category = getQueryString("category", document.location.href);
-		reloadHTML();
-		console.log(State.getUncheckedTypes());
+		updateHTML();
+		
 	},
     
 });
@@ -25,9 +25,10 @@ function checkboxChange(checkbox){
 		//if not in list then add to list
 		State.addUncheckedType(text);
 	}
+	updateHTML();
 }
 
-function reloadHTML(){
+function loadTypesHTML(){
 	var types =getTypeList();
 	var listing = document.getElementById('pet_type_list');
 	listing.innerHTML = '';
@@ -62,4 +63,45 @@ function getTypeList(){
 		}
 	}
 	return types.sort();
+}
+
+
+function updateHTML(){
+	loadTypesHTML();
+	var alltypes = getTypeList();
+	var skiptypes = State.getUncheckedTypes();
+	var maxPets = data.allData[category].length-1;
+	var view = document.getElementById('pet_view_container');
+	view.innerHTML = '';
+	var newHTML = '';
+	console.log(skiptypes);
+	for(var t=0; t<alltypes.length; t++){
+		var type = alltypes[t];
+		if(skiptypes.indexOf(type) == -1){
+			//if type is not one of the ones in the skip list, then do the following
+			newHTML += "<div class=\"view_container\">";
+			newHTML += "<div class=\"type_label\">"+type+"</div>";
+			newHTML += "<div class=\"circle_container\">";
+
+			for(var i=0; i<= maxPets; i++){
+				var pet = data.allData[category][i];
+				if(pet.petName == "Cheshire"){
+					console.log("Cheshire foudn!!!");
+				}
+				if(pet.type == type){
+					newHTML += "<div class=\"pet_pic\" style=\"";
+					newHTML += 	"background-image: \
+                                                url(profiles/profile-pics/"+ pet.petName+".jpg),\
+                                                url(profiles/sample/sample-"+category+".svg)\"";
+					newHTML += "></div>"
+				}
+			}
+			newHTML += "</div></div></div>";
+		}
+	}
+	if(newHTML == ''){
+		//if no results are found
+		newHTML += "<div id=\"no_pet_view\">No pet type selected.<div>";
+	}
+	view.innerHTML = newHTML;
 }
