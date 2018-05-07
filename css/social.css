@@ -226,23 +226,8 @@ div#main, div.sides, div.catagories, div.type{
 }
 #adopt_btn:hover{
   cursor: pointer;
+  color: var(--sakura-color) !important;
 }
-
-#adopt_container{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--icing-color);
-  background-color: var(--cranberry-color);
-  font-family: 'Lemon';
-}
-
-#adopt_container:hover{
-  cursor: pointer;
-}
-
 
 .check{
   height: 100%;

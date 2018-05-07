@@ -56,14 +56,12 @@ Util.events(document, {
             if(adopted){
                 State.unadoptPet(pet_id);
                 document.getElementById("adopt_btn").style.backgroundColor ="var(--cranberry-color)";
-                document.getElementById("adopt_container").style.backgroundColor ="var(--cranberry-color)";
-                document.getElementById("adopt_container").style.color ="var(--icing-color)";
+                document.getElementById("adopt_btn").style.color ="var(--icing-color)";
             }
             else{
                 State.adoptPet(pet_id);
                 document.getElementById("adopt_btn").style.backgroundColor ="var(--orange-color)";
-                document.getElementById("adopt_container").style.backgroundColor ="var(--orange-color)";
-                document.getElementById("adopt_container").style.color ="var(--cranberry-color)";
+                document.getElementById("adopt_btn").style.color ="var(--cranberry-color)";
 
             }
 
@@ -186,13 +184,11 @@ function update_html(){
     var adopted = (adopt_pets.indexOf(pet_id) != -1); //if it's not -1 then its in the list
     if(adopted){
         document.getElementById("adopt_btn").style.backgroundColor ="var(--orange-color)";
-        document.getElementById("adopt_container").style.backgroundColor ="var(--orange-color)";
-        document.getElementById("adopt_container").style.color ="var(--cranberry-color)";
+        document.getElementById("adopt_btn").style.color ="var(--cranberry-color)";
     }
     else{
         document.getElementById("adopt_btn").style.backgroundColor ="var(--cranberry-color)";
-        document.getElementById("adopt_container").style.backgroundColor ="var(--cranberry-color)";
-        document.getElementById("adopt_container").style.color ="var(--icing-color)";
+        document.getElementById("adopt_btn").style.color ="var(--icing-color)";
     }
 
 }
