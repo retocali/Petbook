@@ -1,38 +1,33 @@
 var button;
+var num_buttons = 4;
 
 Util.events(document, {
 	// Final initalization entry point: the Javascript code inside this block
 	// runs at the end of start-up when the DOM is ready
 	"DOMContentLoaded": function() {
-
-        Util.one("#btn1").addEventListener('click', function(e) {
-            button = document.getElementById("btn1")
-            buttonPress()
-		});
-
-        Util.one("#btn2").addEventListener('click', function(e) {
-            button = document.getElementById("btn2")
-            buttonPress()
-		});
-
-        Util.one("#btn3").addEventListener('click', function(e) {
-            button = document.getElementById("btn3")
-            buttonPress()
-		});
-
-        Util.one("#btn4").addEventListener('click', function(e) {
-            button = document.getElementById("btn4")
-            buttonPress()
-		});
-
-
+        
+        for (let i = 1; i <= num_buttons; i++) {
+            Util.one("#btn"+i).addEventListener('click', function(e) {
+                button = "btn"+i;
+                buttonPress()
+            });              
+            let result = sessionStorage.getItem("emailed-btn"+i);
+            console.log(result);
+            if (result) {
+                Util.one("#btn"+i).innerHTML = "Cancel Contact";
+            }
+        }
 
         Util.one("#yesbtn").addEventListener('click', function(e) {
-			if(button.innerHTML == "Email User"){
-                button.innerHTML = "Cancel Contact"
+            let buttonObj = document.getElementById(button);
+            
+            if(buttonObj.innerHTML == "Email User"){
+                buttonObj.innerHTML = "Cancel Contact";
+                sessionStorage.setItem("emailed-"+button, true);
             }
             else{
-                button.innerHTML = "Email User"
+                buttonObj.innerHTML = "Email User";
+                sessionStorage.setItem("emailed-"+button, false);
             }
             document.getElementById("hovermenu").setAttribute("style", "display:none")
 		});
@@ -46,6 +41,7 @@ Util.events(document, {
 
 
 function buttonPress(){
+    let buttonObj = document.getElementById(button);
     if(button.innerHTML == "Email User"){
         document.getElementById("warning").innerHTML = "Send an email asking for a grooming service from this user?"
     }

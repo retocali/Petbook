@@ -49,4 +49,16 @@ function shelterData() {
       "sentEmail": "false"
     }
   ]
+  this.shelters = checkStorage(this.shelters);
+}
+
+function checkStorage(shelters) {
+  for (let i = 0; i < shelters.length; i++) {
+    let shelter = shelters[i];
+    let result = sessionStorage.getItem(shelter.name+"-emailed", true);
+    if (result) {
+      shelter.sentEmail = true;
+    }
+  }
+  return shelters;
 }
