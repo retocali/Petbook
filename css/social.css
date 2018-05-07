@@ -382,3 +382,9 @@ div#main, div.sides, div.catagories, div.type{
   color: white;
   font-size: 5vh;
 }
+
+.catagories{
+  width: 80vw;
+  max-width: 80vw;
+  min-width: 80vw;
+}
