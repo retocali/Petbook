@@ -205,8 +205,6 @@ function updateURL(){
 }
 
 function toggleFavorite(){
-    var pet_id = data.allData[category][petCount].pet_id;
-    console.log(data.allData[category][petCount]);
     var favorite_pets = State.getFavoritePets();
     if(favorite_pets.indexOf(pet_id) != -1){ //if index is not -1 then the pet id is marked as favorite
         State.unfavoritePet(pet_id);
