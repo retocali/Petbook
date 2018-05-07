@@ -43,12 +43,14 @@ Util.events(document, {
 
         Util.one("#yesbtn").addEventListener('click', function(e) {
 			if(data.shelters[count].sentEmail == "false"){
-                data.shelters[count].sentEmail = "true"
+                data.shelters[count].sentEmail = "true";
+                sessionStorage.setItem(data.shelters[count].name+"-emailed", true);
                 document.getElementById("adopt_container").innerHTML = "Cancel Adoption"
                 document.getElementById("hovermenu").setAttribute("style", "display:flex")
             }
             else{
                 data.shelters[count].sentEmail = "false"
+                sessionStorage.setItem(data.shelters[count].name+"-emailed", false);
                 document.getElementById("adopt_container").innerHTML = "Set Up Adoption"
             }
             document.getElementById("hovermenu").setAttribute("style", "display:none")

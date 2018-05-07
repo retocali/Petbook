@@ -355,6 +355,7 @@ div#main, div.sides, div.catagories, div.type{
   color: var(--icing-color);
   background-color: var(--cranberry-color);
   margin: 1vw;
+  margin-top: auto;
   border-radius: 10px;
   font-family: 'Lemon';
   color: var(--icing-color);
