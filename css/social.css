@@ -105,6 +105,7 @@ div#main, div.sides, div.catagories, div.type{
   color: var(--cranberry-color);
   flex-direction: column;
   width: 25vw;
+  margin-top: 10vh;
 }
 
 .pet_pic{
@@ -372,6 +373,7 @@ div#main, div.sides, div.catagories, div.type{
   border-radius: 10px;
   font-family: 'Lemon';
   color: var(--icing-color);
+  position: relative;
 }
 #back_btn:hover{
   color: var(--sakura-color);
