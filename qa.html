@@ -90,30 +90,33 @@ FORUM Q&A
                     <p id="c_1_1" class="indv_comments">User1: Yeah Ofc</p>
                     <p id="c_1_2" class="indv_comments">User2: I don't think so</p>
                     <p id="c_1_3" class="indv_comments">User3: What a degen... gtfo</p>
-                    <div id="postCommentBox" style="margin: 0; text-indent: 0%">
-                    <button id="add_1" class="postComment" type="button">POST</button><input id="commentText1" class="add_comments" name="comment" placeholder="Add a comment?">
+                    <div class="postCommentBox" style="margin: 0; text-indent: 0%">
+                    <button id="add_1" class="postComment" type="button">POST</button><input id="text_comment_1" class="add_comments" name="comment" placeholder="Add a comment?" maxlength="50">
                     </div>
                 </div>
             </div>
             <div class="voting">
-                <div id="popularity_1" class="popularity">
-                        <p id="pop_1" class="popularity_num">58K</p>
-                </div>
                 <button id="up_1" class="up">
                     <img src="img/upArrow.png" class="img">
                 </button>
+                <div id="popularity_1" class="popularity">
+                        <p id="pop_1" class="popularity_num">58K</p>
+                </div>
                 <button id="down_1" class="down">
                     <img src="img/downArrow.png" class="img">
                 </button>
+                <div class="options">
+                        <button id="favorite_1" class="favorite" style="background-color:rgb(139, 203, 200)">
+                            <div style="height: 9vh;">
+                                <img class="favoritestar" src="img/star.svg"></img>
+                            </div>
+                        </button>
+                        <button id="comment_1" class="comment">
+                            <img src="img/comment.svg" class="img">
+                        </button>
+                </div>
             </div>
-            <div class="options">
-                <button id="favorite_1" class="favorite">
-                    <img src="img/white_star.png" class="img">
-                </button>
-                <button id="comment_1" class="comment">
-                    <img src="img/comment.svg" class="img">
-                </button>
-            </div>
+            
         </div>
 
     </div>

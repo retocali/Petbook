@@ -1,7 +1,20 @@
+// Categories are general, training, care
+var category="knowledge";
+var base_url = "qa.html";
+
 Util.events(document, {
 	// Final initalization entry point: the Javascript code inside this block
 	// runs at the end of start-up when the DOM is ready
 	"DOMContentLoaded": function() {
+
+        let c = getQueryString("category", document.location.href);
+        if (c != null) {
+            category = c;
+        }
+        console.log(category);
+        document.getElementById(category).style.backgroundColor = "#DAE9E4";
+
+
         var last_row=2;
         var previous_node=null;
 
@@ -36,8 +49,8 @@ Util.events(document, {
         care_2={"pop":"16K", "text": "My cat woke up without a paw, help?", "liked":"1", "c1":comments_3_2};
         care_3={"pop":"17K", "text": "My turtle woke up without a paw, help?", "liked":"1", "c1":comments_3_3};
         
-        var prev_general_know=[prev_gen_1,prev_gen_2,prev_gen_3,gen_1,gen_2,gen_3];
-        var general_know=[prev_gen_2,prev_gen_3,gen_1,gen_2,gen_3];
+        
+        var general_know=[prev_gen_1, prev_gen_2,prev_gen_3,gen_1,gen_2,gen_3];
         var training=[train_1,train_2,train_3];
         var care=[care_1,care_2,care_3];
 
@@ -86,7 +99,9 @@ Util.events(document, {
             //data is a dictionary
             var c_counter=1;
             var children=node.getElementsByTagName("*");
-            
+            console.log(node);
+            var i = parseInt(node.id.replace("entry_",""));
+            console.log(i);
             var total_comments=0;
             var curr_index=null;
             var comment_parent=null;
@@ -142,7 +157,7 @@ Util.events(document, {
                     }
 
                     if (temp[0]=="comment"){
-                        elt.addEventListener("click",highlight);
+                        elt.addEventListener("click", ()=>{toggleComments(i)});
                     }
                     if (temp[0]=="main"){
                         elt.addEventListener("click",dehighlight);
@@ -156,23 +171,31 @@ Util.events(document, {
         function initial_populate(){
             //Use populate category as a subroutine but remmber that you have one inside already for reference
             // consider switching it out in order to have more symmetric code.
-            document.getElementById("forum_container").style.setProperty("--num_rows",general_know.length+1)
-            for (var index=1;index<=general_know.length;index++){
+            let category_list = general_know;
+            if (category == "training") {
+                category_list = training;
+            } else if (category == "care") {
+                category_list = care;
+            }
+            let forum_container = document.getElementById("forum_container");
+            forum_container.style.setProperty("--num_rows",category_list.length+1)
+            for (var index=1;index<=category_list.length;index++){
                 if (index==1){
                     var node=new_node(get_master_node(index),index);
-                    var data=general_know[index-1];
+                    var data=category_list[index-1];
                     apply_data(node,data);
-                    document.getElementById("forum_container").appendChild(node);
+                    forum_container.appendChild(node);
 
                 }
                 else{
                     var node=new_node(get_master_node(index+1),index+1)
-                    var data=general_know[index-1];
+                    var data=category_list[index-1];
                     apply_data(node,data);
                     //var first_node=new_node(get_master_node(1),1);
-                    document.getElementById("forum_container").appendChild(node);
+                    forum_container.appendChild(node);
                 }
             }
+            forum_container.children[2].style.display = "none";
 
         }
         current_category=0
@@ -248,34 +271,6 @@ Util.events(document, {
                 other_button.style.backgroundColor="#ECC7C0";
             }
         }
-        function alpha(){
-            initial_cat=1;
-            //document.getElementById("curr_page").innerText="1/1";
-            console.log("train");
-            document.getElementById("training").style.backgroundColor="#FDAE84";
-            document.getElementById("knowledge").style.backgroundColor="white";
-            document.getElementById("care").style.backgroundColor="white";
-            populate_category(1)
-        }
-        function beta(){
-            initial_cat=2;
-            //document.getElementById("curr_page").innerText="1/1";
-            console.log("care");
-            document.getElementById("care").style.backgroundColor="#FDAE84";
-            document.getElementById("training").style.backgroundColor="white";
-            document.getElementById("knowledge").style.backgroundColor="white";
-            populate_category(2)
-        }
-        function general(){
-            //Change the coloring of the button
-            initial_cat=0;
-            console.log("general");
-            document.getElementById("knowledge").style.backgroundColor="#FDAE84";
-            document.getElementById("training").style.backgroundColor="white";
-            document.getElementById("care").style.backgroundColor="white";
-            populate_category(0)
-            
-        }
         function dehighlight(){
             p1=document.getElementById("comment_input").style.display
             p2=document.getElementById("new_question").style.display
@@ -322,7 +317,6 @@ Util.events(document, {
         }
         function post(event){
             //Handle data
-            console.log("here");
             var comment_query=document.getElementsByClassName("your_question")[0].value
             var question_query=document.getElementsByClassName("your_question")[1].value
 
@@ -382,27 +376,40 @@ Util.events(document, {
                 }
             }
             
-            var color=elt.style.backgroundColor;
+            var color = elt.style.backgroundColor;
             console.log(color)
-            if (color!="rgb(236, 199, 192)"){
-                elt.style.backgroundColor="#ECC7C0";
+            if (color != "rgb(139, 203, 200)"){
+                elt.style.backgroundColor = "rgb(139, 203, 200)";
+                
+                elt.childNodes[1].childNodes[1].src = ("img/star.svg");
+                
             }
             else{
-                elt.style.backgroundColor="#3C2E3D";
+                elt.style.backgroundColor= "rgb(236, 199, 192)";
+                
+                elt.childNodes[1].childNodes[1].src = ("img/star_on.svg");
+                
             }
         }
+
 
         Util.one(".up").addEventListener("click",select);
         Util.one(".down").addEventListener("click",select);
 
-        Util.one("[id='knowledge']").addEventListener("click",general);
-        Util.one("[id='training']").addEventListener("click",alpha);
-        Util.one("[id='care']").addEventListener("click",beta);
+        Util.one("[id='knowledge']").addEventListener("click",()=>{
+            window.location.href = "qa.html?category=knowledge";
+        });
+        Util.one("[id='training']").addEventListener("click", ()=>{
+            window.location.href = "qa.html?category=training";
+        });
+        Util.one("[id='care']").addEventListener("click", ()=>{
+            window.location.href = "qa.html?category=care";
+        });
 
         Util.one(".main_text").addEventListener("click",dehighlight);
-        Util.one(".comment").addEventListener("click", ()=>{toggleComments(1)});
+
         Util.one("[id='question_button']").addEventListener("click",ask_question);
-        Util.one("#add_1").addEventListener("click", ()=>{comment(1)});
+            
         Util.one(".post").addEventListener("click",post);
         Util.one(".cancel").addEventListener("click",dehighlight);
 
@@ -411,28 +418,7 @@ Util.events(document, {
 
         Util.one(".favorite").addEventListener("click",star_select);
 
-        function toggleComments(index) {
-            if (Util.one("#comments_"+index).style.display == "none") {
-                Util.one("#comments_"+index).style.display = "inline";
-            } else {
-                Util.one("#comments_"+index).style.display = "none";
-            }
-            
-        }
-        function comment(i) {
-            let textbox = Util.one("#commentText"+i);
-            console.log(textbox.value);
-            let c = textbox.value;
-            textbox.value = "";
-            let parent = textbox.parentNode.parentNode;
-            
-            let number = parent.childNodes.length-4;
-            let newNode = (parent.childNodes[number]).cloneNode(true);
-            // newNode.id = "c_"+i+"_"+number+1;
-            newNode.innerHTML = State.getUsername() + ": " + c;
-            parent.insertBefore(newNode, parent.childNodes[number+1]);
-
-        }  
+        setupComments();        
 	},
 
 	// Keyboard events arrive here
@@ -454,3 +440,41 @@ Util.events(document, {
 
     }
 });
+function setupComments() {
+    let n = 1;
+    let item = document.getElementById("add_1");
+    while (item != null) {
+        let index = n+0;
+        item.addEventListener("click", ()=>{comment(index)});
+        n += 1;
+        item = document.getElementById("add_"+n);
+    }
+}
+
+function toggleComments(index) {
+    if (Util.one("#comments_"+index).style.display == "none") {
+        Util.one("#comments_"+index).style.display = "inline";
+    } else {
+        Util.one("#comments_"+index).style.display = "none";
+    }
+    
+}
+function comment(i) {
+    let textbox = Util.one("#text_comment_"+i);
+    console.log(i);
+    console.log(textbox);
+    console.log(textbox.value);
+    let c = textbox.value;
+    if (c == "") {
+        return;
+    }
+    textbox.value = "";
+    let parent = textbox.parentNode.parentNode;
+    
+    let number = parent.childNodes.length-4;
+    let newNode = (parent.childNodes[number]).cloneNode(true);
+    // newNode.id = "c_"+i+"_"+number+1;
+    newNode.innerHTML = State.getUsername() + ": " + c;
+    parent.insertBefore(newNode, parent.childNodes[number+1]);
+
+}  
