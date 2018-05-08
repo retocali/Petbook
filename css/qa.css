@@ -29,14 +29,7 @@ body{
 
 #profile_button, #search_button, #care,
 #question_button, #knowledge, #training  {
-    height: 15vh;
-    width: 15vh;
-    margin-bottom: 10vh;
-    align-self: center;
-    justify-self: center;
-    border-radius:50%;
-    border: 5px solid #8BCBC8  !important;
-    border-width: 1px;
+
 }
 #question_button{
     margin-top: 5vh;
@@ -82,10 +75,22 @@ body{
     font-family: 'Lemon', cursive;
 }
 .main_buttons{
+    height: 14vh;
+    width: 14vh;
+    margin-bottom: 10vh;
+
+    align-self: center;
+    justify-self: center;
+    border-radius:50%;
+    border: 0.5vh solid #8BCBC8  !important;
+    border-width: 1px;
     margin-left: 4vw;
 
 } .main_buttons:hover {
-    background-color: whitesmoke;
+    height: 15vh;
+    width: 15vh;
+    border: 1vh solid var(--sakura-color)  !important;
+    transition: all 200ms ease-in;
 }
 .main_buttons:focus {
     outline: 0;
