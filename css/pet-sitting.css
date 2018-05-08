@@ -368,9 +368,7 @@ div#main, div.sides, div.catagories, div.type{
   border-left:0;
 }
 
-.postbtn{
 
-}
 
 .email_btn{
   height: 60%;
@@ -383,6 +381,7 @@ div#main, div.sides, div.catagories, div.type{
   margin: 1vw;
   border-radius: 10px;
   border: none;
+  outline: none; 
 }
 .email_container{
   height: 100%;
