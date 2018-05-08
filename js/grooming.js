@@ -42,7 +42,7 @@ Util.events(document, {
 
 function buttonPress(){
     let buttonObj = document.getElementById(button);
-    if(button.innerHTML == "Email User"){
+    if(buttonObj.innerHTML == "Email User"){
         document.getElementById("warning").innerHTML = "Send an email asking for a grooming service from this user?"
     }
     else{
