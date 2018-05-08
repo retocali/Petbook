@@ -6,6 +6,7 @@ Util.events(document, {
         data = new Data();
         showMyProfile();
         showMyFavorite();
+        showMyQAActivity();
 		showMyPets();
 		document.getElementById("addPet").addEventListener(
 			"click", () => {
@@ -42,6 +43,29 @@ Util.events(document, {
 
     }
 });
+function showMyQAActivity() {
+    let container = document.getElementById("questions");
+    let template = container.children[0];
+    let activity = State.getUserQAActivity();
+    console.log(activity);
+    let categories = ["knowledge", "training", "care"];
+    for (let i = 0; i < activity.length; i++) {
+        const type = activity[i][0];
+        const category = activity[i][1];
+
+        let newNode = template.cloneNode(true);
+        newNode.style.display = "inline";
+        if (type == "comment") {
+            newNode.children[1].href.baseVal = "img/chat.svg";
+        } else {
+            newNode.children[1].href.baseVal = "img/question_mark.png";
+        }
+        newNode.children[2].setAttribute("href", "qa.html?category=" + categories[category]);
+        container.appendChild(newNode);
+    }
+    
+}
+
 function showMyFavorite() {
     let pets = data.getAllData();
     let favoritePets = State.getFavoritePets();

@@ -354,17 +354,8 @@ Util.events(document, {
         }
         function post(event){
             //Handle data
-            var comment_query=document.getElementsByClassName("your_question")[0].value
             var question_query=document.getElementsByClassName("your_question")[1].value
 
-            
-            if (comment_query!=""){
-                //Comments
-                var cat_data=master_data[current_category];
-                var data_entry=cat_data[current_post-1];
-                data_entry["c1"].push(comment_query);
-                
-            }
             if (question_query!=""){
                 
                 current_category = document.getElementById("selection").options.selectedIndex
@@ -375,6 +366,7 @@ Util.events(document, {
                 var new_entry = {"pop":"0", "text": question_query, "liked":"0", "c1":new_comment};
                 cat_data.push(new_entry);
                 
+                State.madeQuestion(current_category);
                 storeQuestionData(master_data);
 
                 switch (current_category) {
@@ -519,7 +511,7 @@ function comment(i) {
     parent.insertBefore(newNode, Util.one("#postbox_"+i));
 
     master_data[current_category][i-2].c1.push(newNode.innerHTML);
-    
+    State.madeComment(current_category);
     storeQuestionData(master_data);
 }  
 
