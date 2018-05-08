@@ -340,7 +340,9 @@ function Data() {
       "status": "It's time for Tea!",
       "bio": "Survives on a healthy diet of tea and pop rocks",
       "profilePics" : [
-      
+                        "profiles/profile-posts/Birbsy1.jpg",
+                        "profiles/profile-posts/Birbsy2.jpg",
+                        "profiles/profile-posts/Birbsy3.jpg",
       ],
       "category": "bird",
       "adopted": false,
@@ -358,7 +360,9 @@ function Data() {
       "status": "duuuuuuuuuuude",
       "bio": "Tends to fixate on things and slowly melt.  Looking for someone to chill with",
       "profilePics" : [
-      
+                        "profiles/profile-posts/Fortweny1.jpg",
+                        "profiles/profile-posts/Fortweny2.jpg",
+                        "profiles/profile-posts/Fortweny3.jpg",
       ],
       "category": "bird",
       "adopted": false,
@@ -376,7 +380,9 @@ function Data() {
       "status": "weeeeeeeeeeeeeeeeeeeeeeeeee",
       "bio": "Incredibly throwable.  Flies through the air at Mach 2",
       "profilePics" : [
-      
+                        "profiles/profile-posts/Torpedo1.jpg",
+                        "profiles/profile-posts/Torpedo2.jpg",
+                        "profiles/profile-posts/Torpedo3.jpg",
       ],
       "category": "bird",
       "adopted": false,
@@ -393,7 +399,9 @@ function Data() {
       "status": "Haters gonna hate",
       "bio": "Coolest bird on the market.  Skating is her passion",
       "profilePics" : [
-      
+                        "profiles/profile-posts/Cool1.jpg",
+                        "profiles/profile-posts/Cool2.jpg",
+                        "profiles/profile-posts/Cool3.jpg",
       ],
       "category": "bird",
       "adopted": false,
@@ -410,7 +418,9 @@ function Data() {
       "status": "KickFlip!",
       "bio": "CoolBirb's mentor.  Retired from her skating career, she still got the moves",
       "profilePics" : [
-      
+                        "profiles/profile-posts/Tony1.jpg",
+                        "profiles/profile-posts/Tony2.jpg",
+                        "profiles/profile-posts/Tony3.jpg",
       ],
       "category": "bird",
       "adopted": false,
@@ -430,7 +440,9 @@ function Data() {
       "status": "Delicious",
       "bio": "Swims deep in the arctic, tends to be caught by fisherman.  Constantly gets resurrected from death",
       "profilePics" : [
-      
+                        "profiles/profile-posts/Sushi1.jpg",
+                        "profiles/profile-posts/Sushi2.jpg",
+                        "profiles/profile-posts/Sushi3.jpg",
       ],
       "category": "fish",
       "adopted": false,
@@ -448,7 +460,9 @@ function Data() {
       "status": "Safe, for now",
       "bio": "This fish can't swim.  Uses floatation devices to float out to the surface and escape.",
       "profilePics" : [
-      
+                        "profiles/profile-posts/Vest1.jpg",
+                        "profiles/profile-posts/Vest2.jpg",
+                        "profiles/profile-posts/Vest3.jpg",
       ],
       "category": "fish",
       "adopted": false,
@@ -465,7 +479,9 @@ function Data() {
       "status": "This was fate",
       "bio": "Doesn't eat much.  Needs little care.  Please give walks at least once a week",
       "profilePics" : [
-      
+                        "profiles/profile-posts/Filet1.jpg",
+                        "profiles/profile-posts/Filet2.jpg",
+                        "profiles/profile-posts/Filet3.jpg",
       ],
       "category": "fish",
       "adopted": false,
@@ -483,7 +499,9 @@ function Data() {
       "status": "Boxed up",
       "bio": "Hates being in boxes.  Prefers pina coladas and long airplane flights",
       "profilePics" : [
-      
+                        "profiles/profile-posts/Boxy1.jpg",
+                        "profiles/profile-posts/Boxy2.jpg",
+                        "profiles/profile-posts/Boxy3.jpg",
       ],
       "category": "fish",
       "adopted": false,
@@ -501,7 +519,9 @@ function Data() {
       "status": "Slaying Vampires",
       "bio": "Kills vampires and turns into balloons.  Read her novel (To Puff and Slay)",
       "profilePics" : [
-      
+                        "profiles/profile-posts/Puffy1.jpg",
+                        "profiles/profile-posts/Puffy2.jpg",
+                        "profiles/profile-posts/Puffy3.jpg",
       ],
       "category": "fish",
       "adopted": false,
