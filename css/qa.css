@@ -7,6 +7,7 @@
     --main-color: var(--cranberry-color);
     --accent-color: var(--orange-color);
     --opacity: 1.0;
+    --dark-main-color: #2C1E2D;
     --curr_comment:2;
 }
 body{
@@ -83,6 +84,8 @@ body{
 .main_buttons{
     margin-left: 4vw;
 
+} .main_buttons:hover {
+    background-color: whitesmoke;
 }
 .main_buttons:focus {
     outline: 0;
@@ -263,6 +266,8 @@ body{
     position: inline;
     border-width: 1px;
     outline: 0;
+} .up:hover {
+    background-color: var(--dark-main-color);
 }
 .down{
     grid-row: 3;
@@ -273,6 +278,8 @@ body{
     position: relative; 
     border-width: 1px;
     outline: 0;
+} .down:hover {
+    background-color: var(--dark-main-color);
 }
 .favorite{
     grid-row: 1;
@@ -281,7 +288,7 @@ body{
     background-color: rgb(139, 203, 200);
     border-width: 1px;
     outline: 0;
-}
+} 
 .comment{
     grid-row:1;
     grid-column:2;
@@ -289,7 +296,10 @@ body{
     background-color: var(--accent-color);
     border-width: 1px;
     outline: 0;
+} .comment:hover {
+    background-color: #FDAE74;
 }
+
 .popularity_num{
     -webkit-margin-before:0em;
     -webkit-margin-after:0em;
@@ -365,7 +375,6 @@ body{
     transition: all 100ms ease-out;
     cursor: pointer;
 }
-
 
 
 
