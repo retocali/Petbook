@@ -11,15 +11,17 @@ FORUM Q&A
 <!-- Use mobile-aware viewport -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="stylesheet" href="temp2.css">
-<link rel="stylesheet" href="css/style.css">
 
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/qa.css">
 <!-- Load any supplemental Javascript libraries here -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.2/seedrandom.js"></script>
 
 <!-- Constructible EventTarget polyfill — Only Chrome 64+ supports constructible EventTarget objects natively -->
 <script src="https://unpkg.com/event-target@latest/min.js"></script>
 <script src="js/util.js"></script>
+<script src="js/data.js"></script>
+
 
 
 
@@ -84,10 +86,13 @@ FORUM Q&A
             <div id="main_text_1" class="main_text">
                 <p id="question_1" class="popularity_num"> Can my doggo have pups with my cat?</p>
                 <br>
-                <div id="comments_1" class="comments">
+                <div id="comments_1" class="comments" style="display: none">
                     <p id="c_1_1" class="indv_comments">User1: Yeah Ofc</p>
                     <p id="c_1_2" class="indv_comments">User2: I don't think so</p>
                     <p id="c_1_3" class="indv_comments">User3: What a degen... gtfo</p>
+                    <div id="postCommentBox" style="margin: 0; text-indent: 0%">
+                    <button id="add_1" class="postComment" type="button">POST</button><input id="commentText1" class="add_comments" name="comment" placeholder="Add a comment?">
+                    </div>
                 </div>
             </div>
             <div class="voting">
@@ -106,7 +111,7 @@ FORUM Q&A
                     <img src="img/white_star.png" class="img">
                 </button>
                 <button id="comment_1" class="comment">
-                    <img src="img/pencil.png" class="img">
+                    <img src="img/comment.svg" class="img">
                 </button>
             </div>
         </div>
@@ -114,5 +119,5 @@ FORUM Q&A
     </div>
 </body>
 
-<script src="js/qa2.js"></script>
+<script src="js/qa.js"></script>
 </html>
