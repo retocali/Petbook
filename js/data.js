@@ -591,7 +591,7 @@ class State {
   static getUsername() {
     let result = sessionStorage.getItem("username");
     if(!result) {
-      return "username123";
+      return "Guest";
     }
     return result;
   }
