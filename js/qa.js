@@ -206,6 +206,9 @@ Util.events(document, {
                 for (var index in data["c1"]){
                     comment_parent.insertBefore(comment_child, currentNode);
                     comment_child=comment_child.cloneNode(true);
+                } if (data["c1"].length == 0) {
+                    comment_child.style.display = "none";
+                    comment_parent.insertBefore(comment_child, currentNode);
                 }
             }
             
@@ -508,10 +511,10 @@ function comment(i) {
     }
     textbox.value = "";
     let parent = textbox.parentNode.parentNode;
-    
-    let number = parent.childNodes.length-4;
-    let newNode = (parent.childNodes[number]).cloneNode(true);
+    console.log(parent.childNodes);
+    let newNode = (parent.childNodes[0]).cloneNode(true);
     // newNode.id = "c_"+i+"_"+number+1;
+    newNode.style.display = "";
     newNode.innerHTML = State.getUsername() + ": " + c;
     parent.insertBefore(newNode, Util.one("#postbox_"+i));
 
