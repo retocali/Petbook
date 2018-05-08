@@ -84,6 +84,9 @@ body{
     margin-left: 4vw;
 
 }
+.main_buttons:focus {
+    outline: 0;
+}
 
 [id="forum_container"]{
     grid-column: 1/5;
@@ -103,6 +106,7 @@ body{
 }
 
 [id="comment_input"]{
+    
     grid-row:var(--curr_comment);
     grid-column: 1;
     z-index: 5;
