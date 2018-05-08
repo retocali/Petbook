@@ -152,6 +152,8 @@ div#main, div.sides, div.catagories, div.type{
   background-color: white;
   grid-template-columns: 12% auto auto auto 12%;
   grid-row-gap: 0;
+  border-radius: 10px;
+  border: 0.6vh solid var(--icing-color)
 
 }
 .post{
