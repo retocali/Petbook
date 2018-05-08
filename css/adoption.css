@@ -215,6 +215,7 @@ div#main, div.sides, div.catagories, div.type{
   margin: 1vw;
   border-radius: 10px;
   border: none;
+  outline: none; 
 }
 #adopt_container{
   height: 100%;
