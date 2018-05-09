@@ -42,7 +42,7 @@ Util.events(document, {
             if(adopted){
                 document.getElementById("warning").innerHTML = "Cancle adoption process?"
             }else{
-                document.getElementById("warning").innerHTML = "Contact pet owner about adopting this pet?"
+                document.getElementById("warning").innerHTML = "Email pet owner about adopting this pet?"
             }
 
             //show menu
